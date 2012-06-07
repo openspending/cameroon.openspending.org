@@ -1,0 +1,18 @@
+---
+layout: default
+title: Cameroon
+---
+
+<div id="nav-map"></div>
+
+<script>
+    $(function() {
+        window.map = $K.map('#nav-map');
+        map.loadMap('/img/communes.svg', function(map) {
+            map.addLayer('commune');
+
+            //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
+            //map.getLayer('commune').applyFilter('oglow');
+        });
+    });
+</script>
