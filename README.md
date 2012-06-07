@@ -18,7 +18,7 @@ To run the site for local development, follow these steps:
 Generate the site
 -----------------
 
-The site can be generated with this command: 
+The site can be generated with this command from the repository root: 
 
     jekyll --server --auto 
 
