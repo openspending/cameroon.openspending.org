@@ -3,11 +3,18 @@ layout: default
 title: Cameroon
 ---
 
-<div id="nav-map"></div>
+<div id="map"></div>
+
+
+<hr>
+
+<ul>
+    <li><a href="bti.html">Local Council Budget Transparency (Adamawa)</a></li>
+</ul>
 
 <script>
     $(function() {
-        window.map = $K.map('#nav-map');
+        window.map = $K.map('#map');
         map.loadMap('/img/communes.svg', function(map) {
             map.addLayer('commune');
 

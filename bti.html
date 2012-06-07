@@ -1,0 +1,44 @@
+---
+layout: default
+title: Local Council Budget Transparency
+---
+
+<h1>Local Council Budget Transparency</h1>
+<br><br>
+
+<style>
+    #map {
+        /*max-width: 620px;*/
+    }   
+</style>
+
+<div class="row">
+    <div class="span8">
+        <div id="map"></div>
+    </div>
+    <div class="span4">
+        <h3>See how well Councils budget, compare them by:</h3>
+        <ul>
+            <li>overall score</li>
+            <li>% of revenue realized</li>
+            <li>% of expenditure realized</li>
+            <li>documents produced:
+                <ul>
+                    <li>...</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(function() {
+        window.map = $K.map('#map');
+        map.loadMap('/img/adamawa.svg', function(map) {
+            map.addLayer('commune');
+
+            //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
+            //map.getLayer('commune').applyFilter('oglow');
+        });
+    });
+</script>
