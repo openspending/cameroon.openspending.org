@@ -12,6 +12,7 @@
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -24,6 +25,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -36,6 +38,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -48,6 +51,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -60,6 +64,7 @@
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }
@@ -138,6 +143,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -150,6 +156,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -162,6 +169,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -174,6 +182,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -186,6 +195,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -266,6 +276,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -278,6 +289,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -290,6 +302,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -302,6 +315,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -314,6 +328,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }
@@ -389,6 +404,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -401,6 +417,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -413,6 +430,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -425,6 +443,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -437,6 +456,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -515,6 +535,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -527,6 +548,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -539,6 +561,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -551,6 +574,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -563,6 +587,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -632,6 +657,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -644,6 +670,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -656,6 +683,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -668,6 +696,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -680,6 +709,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -747,6 +777,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -759,6 +790,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -771,6 +803,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -783,6 +816,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -795,6 +829,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -873,6 +908,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -885,6 +921,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -897,6 +934,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -909,6 +947,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -921,6 +960,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -980,6 +1020,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -992,6 +1033,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1004,6 +1046,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1016,6 +1059,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1028,6 +1072,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -1107,6 +1152,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1119,6 +1165,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1131,6 +1178,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1143,6 +1191,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1155,6 +1204,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -1233,6 +1283,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1245,6 +1296,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1257,6 +1309,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1269,6 +1322,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1281,6 +1335,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -1358,6 +1413,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1370,6 +1426,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1382,6 +1439,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1394,6 +1452,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1406,6 +1465,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -1486,6 +1546,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": false, 
         "public": true
       }, 
@@ -1498,6 +1559,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1510,6 +1572,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1522,6 +1585,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1534,6 +1598,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }
@@ -1614,6 +1679,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }, 
@@ -1626,6 +1692,7 @@
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1638,6 +1705,7 @@
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1650,6 +1718,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1662,6 +1731,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }
@@ -1742,6 +1812,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1754,6 +1825,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1766,6 +1838,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1778,6 +1851,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1790,6 +1864,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -1869,6 +1944,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1881,6 +1957,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1893,6 +1970,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -1905,6 +1983,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -1917,6 +1996,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }
@@ -1994,6 +2074,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2006,6 +2087,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2018,6 +2100,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": false, 
         "public": true
       }, 
@@ -2030,6 +2113,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -2042,6 +2126,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }
@@ -2118,6 +2203,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2130,6 +2216,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2142,6 +2229,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2154,6 +2242,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2166,6 +2255,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -2233,6 +2323,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2245,6 +2336,7 @@
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2257,6 +2349,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -2269,6 +2362,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -2281,6 +2375,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -2356,6 +2451,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -2368,6 +2464,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2380,6 +2477,7 @@
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2392,6 +2490,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
@@ -2404,6 +2503,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -2484,6 +2584,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2496,6 +2597,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2508,6 +2610,7 @@
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2520,6 +2623,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
@@ -2532,6 +2636,7 @@
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }

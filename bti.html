@@ -101,8 +101,8 @@ title: Local Council Budget Transparency
             });
 
         doc_colors = new chroma.ColorScale({
-            colors: chroma.brewer.RdYlGn,
-            limits: [0,3]
+            colors: chroma.brewer.Spectral,
+            limits: [-2,5]
             });
 
         $.get('/data/bti.json', function(bti_data) {
@@ -172,19 +172,9 @@ title: Local Council Budget Transparency
                 return spend_colors.getColor(d.spending_realized_num);
             }
 
-            var documentState = function(state) {
-                if (state.non_produit) return 0;
-                if (state.non_public) return 1;
-                if (state.sur_demande) return 2;
-                if (state.public) return 3;
-                return 0;
-            }
-
             var colorizeDocument = function(doc) {
                 return function(d) {
-                    var state = d.documents[doc];
-                    //console.log(state);
-                    return doc_colors.getColor(documentState(state));
+                    return doc_colors.getColor(d.documents[doc].score);
                 };
             }
 
