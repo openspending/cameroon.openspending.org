@@ -19,9 +19,9 @@ title: Local Council Budget Transparency
     <div class="span4">
         <h3>See how well Councils budget, compare them by:</h3>
         <ul>
-            <li>overall score</li>
-            <li>% of revenue realized</li>
-            <li>% of expenditure realized</li>
+            <li><a href="#" class="map-layer" data-layer="score">overall score</a></li>
+            <li><a href="#" class="map-layer" data-layer="revenue">% of revenue realized</a></li>
+            <li><a href="#" class="map-layer" data-layer="spending">% of expenditure realized</a></li>
             <li>documents produced:
                 <ul>
                     <li>...</li>
@@ -32,8 +32,35 @@ title: Local Council Budget Transparency
 </div>
 
 <div class="row">
-    <div class="span8 offset2">
-        <h3>For each region, on click show:</h3>
+    <div class="span8">
+        <h3>Ranking</h3>
+        <table id="ranking" class="table table-striped table-condensed">
+            <tr>
+                <th>Council</th>
+                <th>Score</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="modal hide" id="details-overlay">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>No title</h3>
+    </div>
+    <div class="modal-body">
+    </div>
+</div>
+
+{% raw %}
+<script id="details-overlay-content" type="application/handlebars">
+    <div>
+        RANK {{rank}}
+        <ul>
+            <li>Budget revenue realization: {{revenue_realized}}</li>
+            <li>Budget expenditure realization: {{spending_realized}}</li>
+        </ul>
+
         <ul>
             <li>Score</li>
             <li>Key Documents</li>
@@ -51,40 +78,103 @@ title: Local Council Budget Transparency
             </ul></li>
         </ul>
     </div>
-</div>
-
-<div class="modal hide" id="details-overlay">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">×</button>
-        <h3>No title</h3>
-    </div>
-    <div class="modal-body">
-    </div>
-</div>
-
-{% raw %}
-<script id="details-overlay-content" type="application/handlebars">
-    <div>
-    RANK {{rank}}
-    <ul>
-        <li>Budget revenue realization: {{revenue_realized}}</li>
-        <li>Budget expenditure realization: {{spending_realized}}</li>
-    </ul>
-    </div>
 </script>
 {% endraw %}
 
 <script>
     $(function() {
-        $.get('/data/bti.json', function(bti_data) {
-            bti_data = JSON.parse(bti_data);
-
-            colscale = new chroma.ColorScale({
-                colors: chroma.brewer.PuBu,
-                limits: [0,60]
+        score_colors = new chroma.ColorScale({
+            colors: chroma.brewer.PuBu,
+            limits: [0,60]
             });
 
+        realized_colors = new chroma.ColorScale({
+            colors: chroma.brewer.RdPu,
+            limits: [0,130]
+            });
+
+        $.get('/data/bti.json', function(bti_data) {
+            var bti_data = JSON.parse(bti_data);
             window.map = $K.map('#map');
+
+            var showDetails = function(commune) {
+                var data = bti_data[commune];
+                var tmpl = Handlebars.compile($("#details-overlay-content").html());
+                var $e = $("#details-overlay");
+                $e.find("h3").html(data.sheet_name);
+                $e.find(".modal-body").html(tmpl(data));
+                $e.modal();
+            }
+
+            var colorizeMap = function(colorize) {
+                map.choropleth({
+                    data: function(e) {
+                        return bti_data[e.commune];
+                    },
+                    key: 'commune',
+                    colors: function(d, pathdata) {
+                        if (!d) return '#ddd';
+                        return colorize(d)
+                    }
+                });
+            }
+
+            var sorted_bti_data = _.sortBy(bti_data, function (e) { return e.rank; })
+            _.each(sorted_bti_data, function(k) {
+                $("#ranking").append("<tr data-commune='"+k.key+"'><td><a href='#'>"+
+                    k.sheet_name+"</a></td><td>" + k.score + "</td></tr>")
+            });
+
+            $("#ranking a").click(function(e) { 
+                var commune = $(e.currentTarget).parents('tr').data('commune');
+                showDetails(commune);
+                return false;
+            });
+
+            $("#ranking tr").mouseenter(function(e) { 
+                var commune = $(e.currentTarget).data('commune');
+                var path = map.getLayerPath('commune', commune);
+                path.realFill = path.svgPath.attrs.fill;
+                path.svgPath.attr({'fill': 'orange'});
+                return false;
+            });
+
+            $("#ranking tr").mouseleave(function(e) { 
+                var commune = $(e.currentTarget).data('commune');
+                var path = map.getLayerPath('commune', commune);
+                path.svgPath.attr({'fill': path.realFill});
+                return false;
+            });
+
+
+            var colorizeScores = function(d) {
+                if (d.score=='-') return '#ddd';
+                return score_colors.getColor(d.score);
+            }
+
+            var colorizeRevenue = function(d) {
+                return realized_colors.getColor(d.revenue_realized_num);
+            }
+
+            var colorizeSpending = function(d) {
+                return realized_colors.getColor(d.spending_realized_num);
+            }
+
+            $(".map-layer").click(function(e) {
+                var layer = $(e.currentTarget).data('layer');
+                if (layer == 'score') {
+                    colorizeMap(colorizeScores);
+                } else if (layer == 'revenue') {
+                    colorizeMap(colorizeRevenue);
+                } else if (layer == 'spending') {
+                    colorizeMap(colorizeSpending);
+                }
+                return false;
+            });
+
+
+            
+            
             map.loadMap('/img/adamawa.svg', function(map) {
 
                 //map.addLayer('commune', 'glow');
@@ -96,35 +186,12 @@ title: Local Council Budget Transparency
                 //map.addFilter('oglow', 'glow', { size: 2, color: '#666', strength: 0.6, inner: false });
                 //map.getLayer('glow').applyFilter('oglow');
 
-                var colorize = function(d) {
-                    if (d.score=='-') return '#ddd';
-                    return colscale.getColor(d.score);
-                }
 
-                //var colorize = function(d) {
-                //    return colscale.getColor(d.revenue_realized_num);
-                //}
 
-                map.choropleth({
-                    data: function(e) {
-                        console.log(e.commune);
-                        console.log(e.commune.length);
-                        return bti_data[e.commune];
-                    },
-                    key: 'commune',
-                    colors: function(d, pathdata) {
-                        if (!d) return '#ddd';
-                        return colorize(d)
-                    }
-                });
+                colorizeMap(colorizeScores);
                 
                 map.onLayerEvent('click', function(d) {
-                    var data = bti_data[d.commune];
-                    var tmpl = Handlebars.compile($("#details-overlay-content").html());
-                    var $e = $("#details-overlay");
-                    $e.find("h3").html(data.sheet_name);
-                    $e.find(".modal-body").html(tmpl(data));
-                    $e.modal();
+                    showDetails(d.commune);
                 });
             });
         });
