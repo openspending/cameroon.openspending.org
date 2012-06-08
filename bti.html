@@ -24,6 +24,8 @@ title: Local Council Budget Transparency
             <li><a href="#" class="map-layer" data-layer="spending">% of expenditure realized</a></li>
             <li>documents produced:
                 <ul>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">Adopted Budget</a></li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">Audit Report</a></li>
                     <li>...</li>
                 </ul>
             </li>
@@ -98,6 +100,11 @@ title: Local Council Budget Transparency
             limits: [0,130]
             });
 
+        doc_colors = new chroma.ColorScale({
+            colors: chroma.brewer.RdYlGn,
+            limits: [0,3]
+            });
+
         $.get('/data/bti.json', function(bti_data) {
             var bti_data = JSON.parse(bti_data);
             window.map = $K.map('#map');
@@ -165,6 +172,22 @@ title: Local Council Budget Transparency
                 return spend_colors.getColor(d.spending_realized_num);
             }
 
+            var documentState = function(state) {
+                if (state.non_produit) return 0;
+                if (state.non_public) return 1;
+                if (state.sur_demande) return 2;
+                if (state.public) return 3;
+                return 0;
+            }
+
+            var colorizeDocument = function(doc) {
+                return function(d) {
+                    var state = d.documents[doc];
+                    //console.log(state);
+                    return doc_colors.getColor(documentState(state));
+                };
+            }
+
             $(".map-layer").click(function(e) {
                 var layer = $(e.currentTarget).data('layer');
                 if (layer == 'score') {
@@ -173,6 +196,9 @@ title: Local Council Budget Transparency
                     colorizeMap(colorizeRevenue);
                 } else if (layer == 'spending') {
                     colorizeMap(colorizeSpending);
+                } else if (layer == 'document') {
+                    var doc = $(e.currentTarget).data('document');
+                    colorizeMap(colorizeDocument(doc));
                 }
                 return false;
             });
