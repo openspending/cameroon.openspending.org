@@ -1,0 +1,2475 @@
+{
+  "Martap": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }
+    }, 
+    "rank": 8, 
+    "sheet_name": "Martap '11", 
+    "score": 35, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "1", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Nyambaka": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 12, 
+    "sheet_name": "Nyambaka '10", 
+    "score": 25, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "c.\u00a0\u00a0\u00a0\u00a0 Entre 50-75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "b.\u00a0 Non ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "d.\u00a0 Le rapport n'est pas publi\u00e9. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "d.\u00a0 Des comptes d'audit finals ne sont pas accomplis dans les 24 mois \u00e0 compter de la fin de l'exercice budg\u00e9taire ou eux ne sont pas pr\u00e9sent\u00e9s au public. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Galim-Tign\u00e8re": {
+    "revenue_realized_num": 125, 
+    "spending_realized_num": 125, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 14, 
+    "sheet_name": "Galim Tignere '10", 
+    "score": 24, 
+    "questions": {
+      "5": {
+        "answer": "c.\u00a0 Non, l'information sur les actifs financiers n'est pas pr\u00e9sent\u00e9e. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "comment": "", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? "
+      }, 
+      "8": {
+        "comment": "", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? "
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "1)\u00a0\u00a0\u00a0\u00a0 participation active des citoyens au cours des discussions du conseil local ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "100%+", 
+    "revenue_realized": "100%+"
+  }, 
+  "Djohong": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 0, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 11, 
+    "sheet_name": "Djohong '10", 
+    "score": 27, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs non financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "1)\u00a0\u00a0\u00a0\u00a0 participation active des citoyens au cours des discussions du conseil local ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "1", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": "1"
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "-", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Ngaoui": {
+    "revenue_realized_num": 100, 
+    "spending_realized_num": 100, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 17, 
+    "sheet_name": "Ngaoui '10", 
+    "score": 15, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "c.\u00a0 Aucune source d'assistance des donateurs n'est identifi\u00e9e individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "comment": "", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "12": {
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "13": {
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "75-100%", 
+    "revenue_realized": "75-100%"
+  }, 
+  "B\u00e9l\u00e9l": {
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "score": "-", 
+    "questions": {
+      "5": {
+        "comment": "", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? "
+      }, 
+      "6": {
+        "comment": "", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? "
+      }, 
+      "7": {
+        "comment": "", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? "
+      }, 
+      "8": {
+        "comment": "", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? "
+      }, 
+      "9": {
+        "comment": "", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? "
+      }, 
+      "10": {
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "comment": "", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "12": {
+        "comment": "", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "13": {
+        "comment": "", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "rank": 20, 
+    "sheet_name": "Belel"
+  }, 
+  "Tibati": {
+    "revenue_realized_num": 100, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 7, 
+    "sheet_name": "Tibati '10", 
+    "score": 36, 
+    "questions": {
+      "5": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "comment": "", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? "
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "75-100%"
+  }, 
+  "Mayo-Darle": {
+    "revenue_realized_num": 50, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 16, 
+    "sheet_name": "Mayo-Darle '10", 
+    "score": 18, 
+    "questions": {
+      "5": {
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? "
+      }, 
+      "6": {
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? "
+      }, 
+      "7": {
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? "
+      }, 
+      "8": {
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? "
+      }, 
+      "9": {
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? "
+      }, 
+      "10": {
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "12": {
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "13": {
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "25-50%"
+  }, 
+  "Banyo": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }
+    }, 
+    "rank": 3, 
+    "sheet_name": "Banyo '10", 
+    "score": 50, 
+    "questions": {
+      "5": {
+        "answer": "c.\u00a0 Non, l'information sur les actifs financiers n'est pas pr\u00e9sent\u00e9e. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "comment": "", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? "
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "2)\u00a0\u00a0\u00a0\u00a0 les conseils locaux discutent le budget avec des citoyens dans leurs districts ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "b.\u00a0 Le rapport est publi\u00e9 6 mois ou moins (mais plus de 3 mois) apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "a.\u00a0 Des comptes d'audit finals sont publi\u00e9s au moins six mois apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Ngaound\u00e9r\u00e9 I": {
+    "revenue_realized_num": 50, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 17, 
+    "sheet_name": "Ngaoundere I '10", 
+    "score": 15, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "c.\u00a0 Aucune donn\u00e9e non financi\u00e8re n'est pr\u00e9sent\u00e9e. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "c.\u00a0 Aucun indicateur de performance n'est pr\u00e9sent\u00e9. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "1)\u00a0\u00a0\u00a0\u00a0 participation active des citoyens au cours des discussions du conseil local ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "d.\u00a0 Le rapport n'est pas publi\u00e9. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "25-50%"
+  }, 
+  "Nganha": {
+    "revenue_realized_num": 50, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 12, 
+    "sheet_name": "Ngan-ha '10", 
+    "score": 25, 
+    "questions": {
+      "5": {
+        "comment": "1", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? "
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "2)\u00a0\u00a0\u00a0\u00a0 les conseils locaux discutent le budget avec des citoyens dans leurs districts ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "1", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "25-50%"
+  }, 
+  "Dir": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 100, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 5, 
+    "sheet_name": "Dir '10", 
+    "score": 39, 
+    "questions": {
+      "5": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "c.\u00a0\u00a0\u00a0\u00a0 Entre 50-75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "a.\u00a0 Des comptes d'audit finals sont publi\u00e9s au moins six mois apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "75-100%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Tign\u00e8re": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": true
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": true
+      }
+    }, 
+    "rank": 4, 
+    "sheet_name": "Tignere '10", 
+    "score": 44, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "c.\u00a0 Aucune donn\u00e9e non financi\u00e8re n'est pr\u00e9sent\u00e9e. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "d.\u00a0 Des comptes d'audit finals ne sont pas accomplis dans les 24 mois \u00e0 compter de la fin de l'exercice budg\u00e9taire ou eux ne sont pas pr\u00e9sent\u00e9s au public. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Mayo-Bal\u00e9o": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 100, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": true
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": true, 
+        "press_announcement": true, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": true
+      }
+    }, 
+    "rank": 1, 
+    "sheet_name": "Mayo-Baleo", 
+    "score": 53, 
+    "questions": {
+      "5": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs non financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "b.\u00a0 Des comptes d'audit finals sont publi\u00e9s pendant 12 mois ou moins (mais plus de six mois) apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "75-100%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Ngaound\u00e9r\u00e9 II": {
+    "revenue_realized_num": 50, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }
+    }, 
+    "rank": 7, 
+    "sheet_name": "Ngaoundere II '10", 
+    "score": 36, 
+    "questions": {
+      "5": {
+        "answer": "c.\u00a0 Non, l'information sur les actifs financiers n'est pas pr\u00e9sent\u00e9e. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "b.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour quelques programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "2)\u00a0\u00a0\u00a0\u00a0 les conseils locaux discutent le budget avec des citoyens dans leurs districts ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "25-50%"
+  }, 
+  "Ngaoundal": {
+    "revenue_realized_num": 100, 
+    "spending_realized_num": 100, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": true
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }
+    }, 
+    "rank": 5, 
+    "sheet_name": "Ngaroundal '10", 
+    "score": 39, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "2)\u00a0\u00a0\u00a0\u00a0 les conseils locaux discutent le budget avec des citoyens dans leurs districts ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "75-100%", 
+    "revenue_realized": "75-100%"
+  }, 
+  "Ngaound\u00e9r\u00e9 III": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": true
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 19, 
+    "sheet_name": "N'oundere III '10", 
+    "score": 11, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs non financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "c.\u00a0 Aucune source d'assistance des donateurs n'est identifi\u00e9e individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "c.\u00a0 Aucune donn\u00e9e non financi\u00e8re n'est pr\u00e9sent\u00e9e. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "b.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour quelques programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "comment": "", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Meiganga": {
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "score": "-", 
+    "questions": {
+      "5": {
+        "comment": "", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? "
+      }, 
+      "6": {
+        "comment": "", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? "
+      }, 
+      "7": {
+        "comment": "", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? "
+      }, 
+      "8": {
+        "comment": "", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? "
+      }, 
+      "9": {
+        "comment": "", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? "
+      }, 
+      "10": {
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "comment": "", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "12": {
+        "comment": "", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  "
+      }, 
+      "13": {
+        "comment": "", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  "
+      }, 
+      "15": {
+        "comment": "", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "rank": 21, 
+    "sheet_name": "Meiganga"
+  }, 
+  "Kontcha": {
+    "revenue_realized_num": 25, 
+    "spending_realized_num": 50, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": true, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 10, 
+    "sheet_name": "Kontcha '10", 
+    "score": 28, 
+    "questions": {
+      "5": {
+        "comment": "1", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? "
+      }, 
+      "6": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs non financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "b.\u00a0 Quelques sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "comment": "1", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? "
+      }, 
+      "9": {
+        "comment": "", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? "
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "b.\u00a0\u00a0\u00a0\u00a0 Entre 25-50% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "3)\u00a0\u00a0\u00a0\u00a0 autre (svp produire un descriptif)\u00a0:", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "comment": "1", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  "
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": "1"
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "25-50%", 
+    "revenue_realized": "0-25%"
+  }, 
+  "Bankim": {
+    "revenue_realized_num": 75, 
+    "spending_realized_num": 75, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "printed_copies": true, 
+        "public": false
+      }
+    }, 
+    "rank": 2, 
+    "sheet_name": "Bankim '10", 
+    "score": 50, 
+    "questions": {
+      "5": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "a.\u00a0 Oui, l'information exhaustive sur les actifs non financiers est pr\u00e9sent\u00e9e, y compris une liste des capitaux, une discussion de leur but, et une \u00e9valuation de leur valeur marchande. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "a.\u00a0 Des donn\u00e9es non financi\u00e8res sont pr\u00e9sent\u00e9es pour tous les programmes. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "a. Oui", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "d.\u00a0\u00a0\u00a0\u00a0 Plus de 75% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "a.\u00a0 Oui ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 3 mois ou moins apr\u00e8s la fin de la p\u00e9riode. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "a.\u00a0 Le rapport est publi\u00e9 six mois ou moins apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "answer": "a.\u00a0 Des comptes d'audit finals sont publi\u00e9s au moins six mois apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  ", 
+        "comment": ""
+      }
+    }, 
+    "spending_realized": "50-75%", 
+    "revenue_realized": "50-75%"
+  }, 
+  "Mb\u00e9": {
+    "revenue_realized_num": 100, 
+    "spending_realized_num": 100, 
+    "documents": {
+      "Rapport d\u0092audit": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "R\u00e9sum\u00e9 du Budget": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport en Milieu d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": true, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Budget adopt\u00e9": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "Rapport de fin d\u0092ann\u00e9e": {
+        "press_conference": false, 
+        "press_announcement": false, 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "printed_copies": false, 
+        "public": false
+      }
+    }, 
+    "rank": 15, 
+    "sheet_name": "Mbe '10", 
+    "score": 19, 
+    "questions": {
+      "5": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9, avec quelques d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs financiers  (par exemple, les d\u00e9p\u00f4ts en banque, dette, parts, etc.) d\u00e9tenu par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "6": {
+        "answer": "b.\u00a0 Oui, l'information est pr\u00e9sent\u00e9e, accentuant l'information cl\u00e9,  avec quelques  d\u00e9tails. ", 
+        "text": "Est-ce que les documents de budget pr\u00e9sentent des informations sur les actifs non financiers (par exemple  b\u00e2timents, v\u00e9hicules, etc.) d\u00e9tenus par le Conseil municipal? ", 
+        "comment": ""
+      }, 
+      "7": {
+        "answer": "a.\u00a0 Toutes les sources d'assistance des donateurs sont identifi\u00e9es individuellement. ", 
+        "text": "Les documents de budget fournissent-ils des d\u00e9tails sur les sources de l'aide des donateurs, tant financier que mat\u00e9riels (par exemple, le mat\u00e9riel fourni, infrastructure \u00e9tablie, etc.)? ", 
+        "comment": ""
+      }, 
+      "8": {
+        "answer": "c.\u00a0 Aucune donn\u00e9e non financi\u00e8re n'est pr\u00e9sent\u00e9e. ", 
+        "text": "Les documents de budget (comme le budget ou le compte rendu de la session budg\u00e9taire ou de la session administrative de compte) pr\u00e9sentent- t-ils  des donn\u00e9es non financi\u00e8res, telles que le nombre de b\u00e9n\u00e9ficiaires, des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "9": {
+        "answer": "a.\u00a0 Des indicateurs de performance sont pr\u00e9sent\u00e9s pour tous les programmes. ", 
+        "text": "Les documents de budget contiennent-ils des indicateurs de performances (par exemple nombre de kilom\u00e8tres des routes construites, nombre de salles de classe construites, nombre de bureaux d'\u00e9cole fournis, etc.) pour des programmes de d\u00e9pense? ", 
+        "comment": ""
+      }, 
+      "10": {
+        "answer": "b. Non", 
+        "text": "Est ce que le Conseil municipal publie la pr\u00e9sentation non technique destin\u00e9e  aux citoyens  qui d\u00e9crit le budget et ses propositions (par exemple un sommaire de budget, une version citoyen-amicale du budget, etc.)? "
+      }, 
+      "11": {
+        "answer": "b.\u00a0\u00a0\u00a0\u00a0 Entre 25-50% ", 
+        "text": "Quel pourcentage de membres de Conseils municipaux participent ou sont consult\u00e9s r\u00e9ellement dans le processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "12": {
+        "answer": "2)\u00a0\u00a0\u00a0\u00a0 les conseils locaux discutent le budget avec des citoyens dans leurs districts ", 
+        "text": "Le maire tient-il des consultations avec le public en tant qu'\u00e9l\u00e9ment de son processus d\u0092identification des axes prioritaires du budget?  ", 
+        "comment": ""
+      }, 
+      "13": {
+        "answer": "d.\u00a0 Le rapport n'est pas publi\u00e9. ", 
+        "text": "Pour le rapport en milieu d'ann\u00e9e sur des d\u00e9penses effectives actuelles pr\u00e9sent\u00e9 au public par le maire, combien de temps s'\u00e9coule typiquement entre la fin de la p\u00e9riode de reportage et la pr\u00e9sentation du rapport au public (par exemple, le rapport a \u00e9t\u00e9 pr\u00e9sent\u00e9 au public moins de 4 semaines apr\u00e8s la fin du deuxi\u00e8me trimestre)?  ", 
+        "comment": ""
+      }, 
+      "14": {
+        "answer": "c.\u00a0 Le rapport est publi\u00e9 plus de 12 mois apr\u00e8s la fin de l'exercice budg\u00e9taire. ", 
+        "text": "Combien de temps apr\u00e8s la fin de l'ann\u00e9e budg\u00e9taire le maire pr\u00e9sente au public un rapport de fin d'ann\u00e9e qui discute les r\u00e9sultats r\u00e9els du budget pendant l'ann\u00e9e?  ", 
+        "comment": ""
+      }, 
+      "15": {
+        "comment": "1", 
+        "text": "Combien de temps apr\u00e8s la fin de l'exercice budg\u00e9taire les d\u00e9penses annuelles finales sont audit\u00e9es et pr\u00e9sent\u00e9s au public?  "
+      }
+    }, 
+    "spending_realized": "75-100%", 
+    "revenue_realized": "75-100%"
+  }
+}
