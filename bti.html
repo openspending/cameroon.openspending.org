@@ -88,7 +88,12 @@ title: Local Council Budget Transparency
             limits: [0,60]
             });
 
-        realized_colors = new chroma.ColorScale({
+        rev_colors = new chroma.ColorScale({
+            colors: chroma.brewer.BuGn,
+            limits: [0,130]
+            });
+
+        spend_colors = new chroma.ColorScale({
             colors: chroma.brewer.RdPu,
             limits: [0,130]
             });
@@ -153,11 +158,11 @@ title: Local Council Budget Transparency
             }
 
             var colorizeRevenue = function(d) {
-                return realized_colors.getColor(d.revenue_realized_num);
+                return rev_colors.getColor(d.revenue_realized_num);
             }
 
             var colorizeSpending = function(d) {
-                return realized_colors.getColor(d.spending_realized_num);
+                return spend_colors.getColor(d.spending_realized_num);
             }
 
             $(".map-layer").click(function(e) {
