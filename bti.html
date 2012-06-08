@@ -7,8 +7,8 @@ title: Local Council Budget Transparency
 <br><br>
 
 <style>
-    #map {
-        /*max-width: 620px;*/
+    #map svg .commune {
+        stroke: #ccc;
     }   
 </style>
 
@@ -53,14 +53,80 @@ title: Local Council Budget Transparency
     </div>
 </div>
 
+<div class="modal hide" id="details-overlay">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>No title</h3>
+    </div>
+    <div class="modal-body">
+    </div>
+</div>
+
+{% raw %}
+<script id="details-overlay-content" type="application/handlebars">
+    <div>
+    RANK {{rank}}
+    <ul>
+        <li>Budget revenue realization: {{revenue_realized}}</li>
+        <li>Budget expenditure realization: {{spending_realized}}</li>
+    </ul>
+    </div>
+</script>
+{% endraw %}
+
 <script>
     $(function() {
-        window.map = $K.map('#map');
-        map.loadMap('/img/adamawa.svg', function(map) {
-            map.addLayer('commune');
+        $.get('/data/bti.json', function(bti_data) {
+            bti_data = JSON.parse(bti_data);
 
-            //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
-            //map.getLayer('commune').applyFilter('oglow');
+            colscale = new chroma.ColorScale({
+                colors: chroma.brewer.PuBu,
+                limits: [0,60]
+            });
+
+            window.map = $K.map('#map');
+            map.loadMap('/img/adamawa.svg', function(map) {
+
+                //map.addLayer('commune', 'glow');
+                map.addLayer({
+                    id: 'commune',
+                    key: 'commune'
+                });
+
+                //map.addFilter('oglow', 'glow', { size: 2, color: '#666', strength: 0.6, inner: false });
+                //map.getLayer('glow').applyFilter('oglow');
+
+                var colorize = function(d) {
+                    if (d.score=='-') return '#ddd';
+                    return colscale.getColor(d.score);
+                }
+
+                //var colorize = function(d) {
+                //    return colscale.getColor(d.revenue_realized_num);
+                //}
+
+                map.choropleth({
+                    data: function(e) {
+                        console.log(e.commune);
+                        console.log(e.commune.length);
+                        return bti_data[e.commune];
+                    },
+                    key: 'commune',
+                    colors: function(d, pathdata) {
+                        if (!d) return '#ddd';
+                        return colorize(d)
+                    }
+                });
+                
+                map.onLayerEvent('click', function(d) {
+                    var data = bti_data[d.commune];
+                    var tmpl = Handlebars.compile($("#details-overlay-content").html());
+                    var $e = $("#details-overlay");
+                    $e.find("h3").html(data.sheet_name);
+                    $e.find(".modal-body").html(tmpl(data));
+                    $e.modal();
+                });
+            });
         });
     });
 </script>
