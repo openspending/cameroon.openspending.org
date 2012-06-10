@@ -3,13 +3,32 @@ layout: default
 title: Local Council Budget Transparency
 ---
 
-<h1>Local Council Budget Transparency</h1>
+<h1>Budget Transparency in the Adamawa Region</h1>
 <br><br>
 
 <style>
     #map svg .commune {
         stroke: #ccc;
     }   
+
+    .details-content table {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+
+    .details-content table .has-large {
+        
+    }
+
+    .details-content table .has-large td {
+        vertical-align: middle;
+        padding-bottom: 1em;
+    }
+
+    .details-content .large {
+        font-size: 2em;
+        font-weight: bold;
+    }
 </style>
 
 <div class="row">
@@ -56,17 +75,29 @@ title: Local Council Budget Transparency
 
 {% raw %}
 <script id="details-overlay-content" type="application/handlebars">
-    <div>
-        RANK {{rank}}
-        <ul>
-            <li>Budget revenue realization: {{revenue_realized}}</li>
-            <li>Budget expenditure realization: {{spending_realized}}</li>
-        </ul>
+    <div class="details-content">
+        <table>
+            <tr class="has-large">
+                <td>Place:</td>
+                <td class="large">{{rank}}</td>
+                
+                <td>Score:</td>
+                <td class="large">{{score}}</td>
+                <td>points</td>
+            </tr>
+
+            <tr class="has-large">
+                <td>Revenue realized:</td>
+                <td class="large">{{revenue_realized}}</td>
+                
+                <td>Spending realized:</td>
+                <td class="large">{{spending_realized}}</td>
+                <td></td>
+            </tr>
+        </table>
 
         <ul>
-            <li>Score</li>
             <li>Key Documents</li>
-            <li>% Income / % Expenditure</li>
             <li>Then:<ul>
                 <li>Assets (Short-term and Long-term) published</li>
                 <li>Aid Transparency</li>
@@ -193,26 +224,26 @@ title: Local Council Budget Transparency
                 return false;
             });
 
-
-            
-            
             map.loadMap('/img/adamawa.svg', function(map) {
-
-                //map.addLayer('commune', 'glow');
                 map.addLayer({
                     id: 'commune',
                     key: 'commune'
                 });
 
-                //map.addFilter('oglow', 'glow', { size: 2, color: '#666', strength: 0.6, inner: false });
-                //map.getLayer('glow').applyFilter('oglow');
-
-
-
                 colorizeMap(colorizeScores);
                 
                 map.onLayerEvent('click', function(d) {
                     showDetails(d.commune);
+                });
+
+                map.tooltips({
+                    layer: 'commune',
+                    content: function(data) {
+                        return data.commune;
+                    },
+                    style: { 
+                        name: 'dark'
+                    }
                 });
             });
         });
