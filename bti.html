@@ -3,13 +3,41 @@ layout: default
 title: Local Council Budget Transparency
 ---
 
-<h1>Local Council Budget Transparency</h1>
+<h1>Budget Transparency in the Adamawa Region</h1>
 <br><br>
 
 <style>
     #map svg .commune {
         stroke: #ccc;
     }   
+
+    .details-content table {
+        width: 100%;
+        margin-bottom: 2em;
+        font-weight: bold;
+    }
+
+    .details-content table td {
+        padding-bottom: 0.5em;
+    }
+
+    .details-content table td.large {
+        font-size: 1.5em;
+        vertical-align: middle;
+        /*font-weight: bold;*/
+    }
+
+    .details-content table td.large small {
+        font-size: 0.75em;
+        color: #999;
+    }
+
+    .details-content table td.field {
+        color: #777;
+        /*font-weight: bold;*/
+        vertical-align: bottom;
+        padding-bottom: 0.2em;
+    }
 </style>
 
 <div class="row">
@@ -20,11 +48,21 @@ title: Local Council Budget Transparency
         <h3>See how well Councils budget, compare them by:</h3>
         <ul>
             <li><a href="#" class="map-layer" data-layer="score">overall score</a></li>
-            <li><a href="#" class="map-layer" data-layer="revenue">% of revenue realized</a></li>
-            <li><a href="#" class="map-layer" data-layer="spending">% of expenditure realized</a></li>
+            <li><a href="#" class="map-layer" data-layer="revenue">
+                 <img src="/img/icons/revenue_24.png"> % of revenue realized</a></li>
+            <li><a href="#" class="map-layer" data-layer="spending">
+                 <img src="/img/icons/spending_24.png"> % of expenditure realized</a></li>
             <li>documents produced:
                 <ul>
-                    <li>...</li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
+                        <img src="/img/icons/adopted_24.png"> Adopted Budget</a></li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
+                        <img src="/img/icons/summary_24.png"> Budget Summary</a></li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png"> Mid-year Report</a></li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
+                        <img src="/img/icons/end_of_year_24.png"> End of Year-Report</a></li>
+                    <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
+                        <img src="/img/icons/audit_report_24.png"> Audit Report</a></li>
                 </ul>
             </li>
         </ul>
@@ -54,17 +92,33 @@ title: Local Council Budget Transparency
 
 {% raw %}
 <script id="details-overlay-content" type="application/handlebars">
-    <div>
-        RANK {{rank}}
-        <ul>
-            <li>Budget revenue realization: {{revenue_realized}}</li>
-            <li>Budget expenditure realization: {{spending_realized}}</li>
-        </ul>
+    <div class="details-content">
+        <table>
+            <tr>
+                <td colspan="2" class="field">Place</td>
+                <td colspan="2" class="field">Score</td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="large">{{rank}} <small>out of 21</small></td>
+                <td colspan="2" class="large">{{score}} <small>points</small></td>
+            </tr>
+
+            <tr>
+                <td rowspan="2"><img src="/img/icons/revenue_32.png"></td>
+                <td class="field">Revenue realized</td>
+                <td rowspan="2"><img src="/img/icons/spending_32.png"></td>
+                <td class="field">Spending realized</td>
+            </tr>
+
+            <tr>
+                <td class="large">{{revenue_realized}}</td>
+                <td class="large">{{spending_realized}}</td>
+            </tr>
+        </table>
 
         <ul>
-            <li>Score</li>
             <li>Key Documents</li>
-            <li>% Income / % Expenditure</li>
             <li>Then:<ul>
                 <li>Assets (Short-term and Long-term) published</li>
                 <li>Aid Transparency</li>
@@ -88,13 +142,22 @@ title: Local Council Budget Transparency
             limits: [0,60]
             });
 
-        realized_colors = new chroma.ColorScale({
+        rev_colors = new chroma.ColorScale({
+            colors: chroma.brewer.BuGn,
+            limits: [0,130]
+            });
+
+        spend_colors = new chroma.ColorScale({
             colors: chroma.brewer.RdPu,
             limits: [0,130]
             });
 
-        $.get('/data/bti.json', function(bti_data) {
-            var bti_data = JSON.parse(bti_data);
+        doc_colors = new chroma.ColorScale({
+            colors: chroma.brewer.Spectral,
+            limits: [-2,5]
+            });
+
+        $.getJSON('/data/bti.json', function(bti_data) {
             window.map = $K.map('#map');
 
             var showDetails = function(commune) {
@@ -153,11 +216,17 @@ title: Local Council Budget Transparency
             }
 
             var colorizeRevenue = function(d) {
-                return realized_colors.getColor(d.revenue_realized_num);
+                return rev_colors.getColor(d.revenue_realized_num);
             }
 
             var colorizeSpending = function(d) {
-                return realized_colors.getColor(d.spending_realized_num);
+                return spend_colors.getColor(d.spending_realized_num);
+            }
+
+            var colorizeDocument = function(doc) {
+                return function(d) {
+                    return doc_colors.getColor(d.documents[doc].score);
+                };
             }
 
             $(".map-layer").click(function(e) {
@@ -168,30 +237,33 @@ title: Local Council Budget Transparency
                     colorizeMap(colorizeRevenue);
                 } else if (layer == 'spending') {
                     colorizeMap(colorizeSpending);
+                } else if (layer == 'document') {
+                    var doc = $(e.currentTarget).data('document');
+                    colorizeMap(colorizeDocument(doc));
                 }
                 return false;
             });
 
-
-            
-            
             map.loadMap('/img/adamawa.svg', function(map) {
-
-                //map.addLayer('commune', 'glow');
                 map.addLayer({
                     id: 'commune',
                     key: 'commune'
                 });
 
-                //map.addFilter('oglow', 'glow', { size: 2, color: '#666', strength: 0.6, inner: false });
-                //map.getLayer('glow').applyFilter('oglow');
-
-
-
                 colorizeMap(colorizeScores);
                 
                 map.onLayerEvent('click', function(d) {
                     showDetails(d.commune);
+                });
+
+                map.tooltips({
+                    layer: 'commune',
+                    content: function(data) {
+                        return data.commune;
+                    },
+                    style: { 
+                        name: 'dark'
+                    }
                 });
             });
         });

@@ -3,58 +3,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "score": 1, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": true, 
-        "sur_demande": false, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": false, 
-        "press_announcement": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": true, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }
@@ -124,58 +134,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
+      "mid_year": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "score": 1, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "adopted": {
+        "press_announcement": false, 
         "press_conference": true, 
-        "press_announcement": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
+      "summary": {
+        "press_announcement": true, 
         "press_conference": false, 
-        "press_announcement": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
-        "non_produit": true, 
-        "sur_demande": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -247,58 +267,68 @@
     "revenue_realized_num": 125, 
     "spending_realized_num": 125, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 2, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
-        "month_ahead": true, 
-        "non_public": true, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": false, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": false, 
-        "press_announcement": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
         "non_public": true, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }
@@ -365,58 +395,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 0, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 2, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": false, 
-        "press_announcement": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": true, 
-        "same_day": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
         "non_produit": false, 
-        "sur_demande": false, 
+        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -486,58 +526,68 @@
     "revenue_realized_num": 100, 
     "spending_realized_num": 100, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -598,58 +648,68 @@
   }, 
   "B\u00e9l\u00e9l": {
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -708,58 +768,68 @@
     "revenue_realized_num": 100, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -829,58 +899,68 @@
     "revenue_realized_num": 50, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
+      "end_of_year": {
+        "press_announcement": true, 
         "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -931,58 +1011,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -1053,58 +1143,68 @@
     "revenue_realized_num": 50, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -1174,58 +1274,68 @@
     "revenue_realized_num": 50, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -1294,58 +1404,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 100, 
     "documents": {
-      "Rapport d\u0092audit": {
+      "end_of_year": {
+        "press_announcement": false, 
         "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": true, 
-        "sur_demande": false, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": true, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "score": 1, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "mid_year": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "adopted": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "summary": {
+        "press_announcement": false, 
+        "press_conference": true, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }
@@ -1417,59 +1537,69 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
+      "end_of_year": {
+        "press_announcement": true, 
         "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 4, 
+        "printed_copies": false, 
+        "public": true
+      }, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": false, 
-        "printed_copies": true, 
-        "public": true
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": true, 
-        "month_ahead": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
+        "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
-        "printed_copies": false, 
+        "score": 4, 
+        "printed_copies": true, 
         "public": true
       }
     }, 
@@ -1540,58 +1670,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 100, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": true, 
+      "end_of_year": {
         "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": true, 
-        "sur_demande": false, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "R\u00e9sum\u00e9 du Budget": {
         "press_conference": true, 
-        "press_announcement": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": true, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": true, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
+      "mid_year": {
+        "press_announcement": false, 
         "press_conference": true, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "score": 1, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": true, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": true, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": true, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
         "public": true
       }
@@ -1663,58 +1803,68 @@
     "revenue_realized_num": 50, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
+      "end_of_year": {
+        "press_announcement": true, 
         "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 2, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
-        "non_public": true, 
-        "same_day": true, 
+        "non_public": false, 
+        "same_day": false, 
         "non_produit": false, 
-        "sur_demande": false, 
+        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -1785,60 +1935,70 @@
     "revenue_realized_num": 100, 
     "spending_realized_num": 100, 
     "documents": {
-      "Rapport d\u0092audit": {
+      "end_of_year": {
+        "press_announcement": true, 
         "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": false, 
-        "printed_copies": true, 
-        "public": true
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
-        "sur_demande": true, 
+        "sur_demande": false, 
+        "score": 4, 
         "printed_copies": true, 
-        "public": false
+        "public": true
       }
     }, 
     "key": "Ngaoundal", 
@@ -1905,58 +2065,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": true, 
-        "same_day": false, 
-        "non_produit": false, 
-        "sur_demande": false, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": false, 
-        "press_announcement": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "mid_year": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 4, 
         "printed_copies": false, 
         "public": true
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
-        "non_public": false, 
+        "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }
@@ -2024,58 +2194,68 @@
   }, 
   "Meiganga": {
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }
@@ -2134,59 +2314,69 @@
     "revenue_realized_num": 25, 
     "spending_realized_num": 50, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
+        "month_ahead": true, 
+        "non_public": true, 
+        "same_day": false, 
+        "non_produit": false, 
+        "sur_demande": false, 
+        "score": 2, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": true, 
         "sur_demande": false, 
+        "score": 1, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": true, 
-        "press_announcement": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": true, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
-        "month_ahead": true, 
-        "non_public": true, 
-        "same_day": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
         "non_produit": false, 
-        "sur_demande": false, 
-        "printed_copies": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
         "public": false
       }
     }, 
@@ -2252,58 +2442,68 @@
     "revenue_realized_num": 75, 
     "spending_realized_num": 75, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
         "press_conference": false, 
-        "press_announcement": false, 
-        "month_ahead": false, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": true, 
-        "sur_demande": false, 
-        "printed_copies": false, 
-        "public": false
-      }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
-        "press_announcement": true, 
-        "month_ahead": true, 
-        "non_public": false, 
-        "same_day": true, 
-        "non_produit": false, 
-        "sur_demande": true, 
-        "printed_copies": true, 
-        "public": false
-      }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
-        "press_announcement": true, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": true, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "audit_report": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "mid_year": {
+        "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
+        "month_ahead": false, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": true, 
+        "sur_demande": false, 
+        "score": 1, 
+        "printed_copies": false, 
+        "public": false
+      }, 
+      "adopted": {
+        "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
+        "printed_copies": true, 
+        "public": false
+      }, 
+      "summary": {
+        "press_announcement": true, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
+        "month_ahead": true, 
+        "non_public": false, 
+        "same_day": true, 
+        "non_produit": false, 
+        "sur_demande": true, 
+        "score": 3, 
         "printed_copies": true, 
         "public": false
       }
@@ -2375,58 +2575,68 @@
     "revenue_realized_num": 100, 
     "spending_realized_num": 100, 
     "documents": {
-      "Rapport d\u0092audit": {
-        "press_conference": false, 
+      "end_of_year": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport de fin d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "R\u00e9sum\u00e9 du Budget": {
-        "press_conference": false, 
+      "audit_report": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Rapport d\u0092audit", 
         "month_ahead": false, 
-        "non_public": true, 
+        "non_public": false, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport en Milieu d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "mid_year": {
         "press_announcement": true, 
+        "press_conference": false, 
+        "title": "Rapport en Milieu d\u0092ann\u00e9e", 
         "month_ahead": false, 
         "non_public": false, 
         "same_day": true, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 0, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Budget adopt\u00e9": {
-        "press_conference": false, 
+      "adopted": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "Budget adopt\u00e9", 
         "month_ahead": false, 
         "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }, 
-      "Rapport de fin d\u0092ann\u00e9e": {
-        "press_conference": false, 
+      "summary": {
         "press_announcement": false, 
+        "press_conference": false, 
+        "title": "R\u00e9sum\u00e9 du Budget", 
         "month_ahead": false, 
-        "non_public": false, 
+        "non_public": true, 
         "same_day": false, 
         "non_produit": false, 
         "sur_demande": false, 
+        "score": 2, 
         "printed_copies": false, 
         "public": false
       }
