@@ -14,20 +14,29 @@ title: Local Council Budget Transparency
     .details-content table {
         width: 100%;
         margin-bottom: 2em;
-    }
-
-    .details-content table .has-large {
-        
-    }
-
-    .details-content table .has-large td {
-        vertical-align: middle;
-        padding-bottom: 1em;
-    }
-
-    .details-content .large {
-        font-size: 2em;
         font-weight: bold;
+    }
+
+    .details-content table td {
+        padding-bottom: 0.5em;
+    }
+
+    .details-content table td.large {
+        font-size: 1.5em;
+        vertical-align: middle;
+        /*font-weight: bold;*/
+    }
+
+    .details-content table td.large small {
+        font-size: 0.75em;
+        color: #999;
+    }
+
+    .details-content table td.field {
+        color: #777;
+        /*font-weight: bold;*/
+        vertical-align: bottom;
+        padding-bottom: 0.2em;
     }
 </style>
 
@@ -77,22 +86,24 @@ title: Local Council Budget Transparency
 <script id="details-overlay-content" type="application/handlebars">
     <div class="details-content">
         <table>
-            <tr class="has-large">
-                <td>Place:</td>
-                <td class="large">{{rank}}</td>
-                
-                <td>Score:</td>
-                <td class="large">{{score}}</td>
-                <td>points</td>
+            <tr>
+                <td class="field">Place</td>
+                <td class="field">Score</td>
             </tr>
 
-            <tr class="has-large">
-                <td>Revenue realized:</td>
+            <tr>
+                <td class="large">{{rank}} <small>out of 21</small></td>
+                <td class="large">{{score}} <small>points</small></td>
+            </tr>
+
+            <tr>
+                <td class="field">Revenue realized</td>
+                <td class="field">Spending realized</td>
+            </tr>
+
+            <tr>
                 <td class="large">{{revenue_realized}}</td>
-                
-                <td>Spending realized:</td>
                 <td class="large">{{spending_realized}}</td>
-                <td></td>
             </tr>
         </table>
 
@@ -136,8 +147,7 @@ title: Local Council Budget Transparency
             limits: [-2,5]
             });
 
-        $.get('/data/bti.json', function(bti_data) {
-            //var bti_data = JSON.parse(bti_data);
+        $.getJSON('/data/bti.json', function(bti_data) {
             window.map = $K.map('#map');
 
             var showDetails = function(commune) {
