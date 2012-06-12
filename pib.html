@@ -1,9 +1,9 @@
 ---
 layout: default
-title: North-West Region of Cameroon
+title: National Investment Budget
 ---
 
-<h1>North-West Region Investment Budget</h1>
+<h1>National Investment Budget</h1>
 <br>
 <div class="alert alert-error">
   This is total values. We'll probably want to do this per-capita if we're going to put it on a map.
@@ -34,9 +34,17 @@ title: North-West Region of Cameroon
 
      complete: function() {
         var bubblemap = new OpenSpending.BubbleMap({
-            query: {
-                cuts: ['year:2010', 'reporting_type:AMOUNT'],
-            }
+          query: {
+            dataset: 'cm-pib',
+            cuts: ['year:2011'],
+            drilldowns: ['cofog1', 'chapter'],
+            breakdown: 'region'
+          },
+          map: {
+            url: 'img/regions.svg',
+            layerName: 'region',
+            keyAttribute: 'region'
+          }
         });
     }
    }

@@ -2,4 +2,4 @@ pygments: true
 auto: true
 
 title: Where Does Cameroons Money Go?
-
+openspendingjs: '/js/openspendingjs'
