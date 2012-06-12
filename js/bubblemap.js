@@ -1,27 +1,44 @@
 var OpenSpending = OpenSpending || {};
 
+OpenSpending.getBubbleMapDependencies = function(os_path) {
+    return [
+        os_path + '/lib/vendor/base64.js',
+        os_path + '/lib/boot.js',
+        os_path + '/lib/vendor/accounting.js',
+        os_path + '/lib/utils/utils.js',
+        os_path + '/lib/aggregator.js',
+        os_path + '/lib/vendor/bubbletree/2.0/bubbletree.js',
+        os_path + '/lib/vendor/vis4.js',
+        os_path + '/lib/vendor/Tween.js',
+        os_path + '/lib/vendor/jquery.history.js',
+        os_path + '/lib/vendor/bubbletree/1.0/bubbletree.css',
+        'css/map.css',
+        '/img/functions/functions.js',
+        '/js/bubblemap.js'
+        ];
+};
+
 OpenSpending.BubbleMap = function (config) {
     var self = this;
 
     opts = $.extend(true, {
         query: {
             apiUrl: 'http://openspending.org/api',
-            dataset: 'cm-nwr-investments',
-            drilldowns: ['cofog1', 'chapter'],
-            rootNodeLabel: 'Total Spending (2010)',
-            breakdown: 'commune'
+            dataset: null,
+            drilldowns: [],
+            cuts: [],
+            rootNodeLabel: null,
+            breakdown: null
         },
         bubbleStyles: {
             cofog1:  BubbleTree.Styles.Cofog1
         },
         map: {
-            url: 'img/north_west_departements.svg',
-            layerName: 'departement',
-            keyAttribute: 'departemen'
+            url: null,
+            layerName: null,
+            keyAttribute: null
         }
     }, config);
-
-    console.log(opts);
 
     $('#preloader .txt').html('loading spending data');
 
