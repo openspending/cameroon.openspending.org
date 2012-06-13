@@ -3,14 +3,78 @@ layout: default
 title: Cameroon
 ---
 
-<div id="map"></div>
+<style>
+    #map{
+        display:block;
+        height:544;
+    }
+    #map svg .region {
+        stroke: #fff;
+        stroke-opacity: 1;
+        stroke-width:1px;
+        fill: #696;
+        fill-opacity: 1;
+    }
+    #map svg .region:hover {
+        stroke: #ff9;
+        fill: #f00;
+        fill-opacity: 1;
+        stroke-width:2px;
+
+    }
+
+    #budget-data{
+        background-color: #f8f8f8;
+
+    }
+    .budget-list{
+        list-style-type:none;
+    }
+
+</style>
+
+<h2>Cameroon Budget Map</h2>
+<div class="row">
+    <div class="span7">
+        <div id="map"></div>
+    </div>
+    <div class="span5">
+        <div id="budget-data">
+            <div class="panel-label">National</div>
+            <ul class="budget-list">
+                <li><div>National Investment Budget:</div>
+                    <div><a id="nib-link" href="">Find out more</a></div>
+                </li>
+            </ul>
+
+            <div class="panel-label">Regional</div>
+            <div id="region-title">Region: Click region</div>
+            <ul class="budget-list">
+                <li><div>Public Investment Budget:</div>
+                    <div><a id="pib-link" href="">N/A</a></div>
+                </li>
+                <li><div>Regional Investment Budget:</div>
+                    <div><a id="rib-link" href="">N/A</a></div>
+                </li>
+                <li><div>Council Budget:</div>
+                    <div><a id="cb-link" href="">N/A</a></div>
+                </li>
+                <li><div>Budget Transparency Index:</div>
+                    <div><a id="bti-link" href="">N/A</a></div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+</div>
 
 
 <hr>
 
 <ul>
     <li><h3><span class="label label-info">Survey</span> How well do local councils mange their budgets?
-        <small>Amadawa Region  01</small>
+        <small>Amadawa Region</small>
     </h3></li>
     <li><h3><span class="label label-info">Investments</span> How are regional-level investments made?
         <small>North-West Region</small>
@@ -33,12 +97,106 @@ title: Cameroon
 
 <script>
     $(function() {
-        window.map = $K.map('#map');
-        map.loadMap('/img/communes.svg', function(map) {
-            map.addLayer('commune');
+        var baseUrl = "http://cameroon.openspending.org/";
+        var nationalInvestmentUrl = "pib.html#/~/total--2011-"
+        $("#nib-link").attr("href",baseUrl+nationalInvestmentUrl);
+        /*
 
-            //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
-            //map.getLayer('commune').applyFilter('oglow');
+
+         nwregion.html#/~/total--2010-
+         bti.html
+
+         http://cameroon.openspending.org/bti.html
+         http://cameroon.openspending.org/nwregion.html#/~/total--2010-
+         http://cameroon.openspending.org/pib.html#/~/total--2011-
+        */
+        var dataTypes={"PIB":{},"RIB":{},"CB":{},"BTI":{}};
+        $.getJSON('/data/main_map.json', function(map_data) {
+            window.map = $K.map('#map',500,544);//('#map',368,544);
+
+            var showData = function(region) {
+                var regionData = map_data[region];
+                // reset budget links
+
+                if(regionData){
+                    $("#region-title").text("Region: "+region);
+                    var linksIds = ["#pib-link","#rib-link","#cb-link","#bti-link"];
+                    var linkText = "Find out more";
+                    for(var i=0;i<linksIds.length;i++){
+                        $(linksIds[i]).attr("href","#");
+                        $(linksIds[i]).text("N/A");
+                    }
+
+                    for(var key in regionData){
+                        var obj = regionData[key];
+                        var budgetCode = obj.budget;
+                        var link = baseUrl+obj.link;
+                        switch(budgetCode){
+                            case "PIB":
+                                $("#pib-link").attr("href",link);
+                                $("#pib-link").text(linkText);
+                                break;
+                            case "RIB":
+                                $("#rib-link").attr("href",link);
+                                $("#rib-link").text(linkText);
+                                break;
+                            case "CB":
+                                $("#cb-link").attr("href",link);
+                                $("#cb-link").text(linkText);
+                                break;
+                            case "BTI":
+                                $("#bti-link").attr("href",link);
+                                $("#bti-link").text(linkText);
+                                break;
+                        }
+                        console.log("budgetCode " + budgetCode);
+                    }
+
+
+                }
+                else{
+                    // no data for region
+                }
+                /*
+                var tmpl = Handlebars.compile($("#details-overlay-content").html());
+                var $e = $("#details-overlay");
+                $e.find("h3").html(data.sheet_name);
+                $e.find(".modal-body").html(tmpl(data));
+                $e.modal();
+                */
+            }
+
+
+            // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg
+            map.loadMap('/img/regions.svg', function(map) {
+                var layerStr = 'region';
+                //map.addLayer('commune');
+                map.addLayer({
+                    id: layerStr,
+                    key: layerStr
+                });
+
+                map.tooltips({
+                    layer: 'region',
+                    content: function(data) {
+
+                        //return data.region;
+                        return data;
+                    },
+                    style: {
+                        name: 'dark'
+                    }
+                });
+
+                map.onLayerEvent('click', function(d) {
+                    showData(d.region);
+
+                });
+
+                //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
+                //map.getLayer('commune').applyFilter('oglow');
+            });
         });
     });
+
 </script>
