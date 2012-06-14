@@ -8,20 +8,19 @@ title: Cameroon
         display:block;
         height:544;
     }
-    #map svg .region {
-        stroke: #fff;
-        stroke-opacity: 1;
-        stroke-width:1px;
-        fill: #696;
-        fill-opacity: 1;
-    }
-    #map svg .region:hover {
-        stroke: #ff9;
-        fill: #f00;
-        fill-opacity: 1;
-        stroke-width:2px;
 
-    }
+        #map svg .region {
+            stroke: #fff;
+            stroke-opacity: 1;
+            /*stroke-width:1px;*/
+
+        }
+
+        #map svg .region:hover {
+            stroke: #fff;
+            /*stroke-width:3px;*/
+
+        }
 
     #budget-data{
         background-color: #f8f8f8;
@@ -97,12 +96,13 @@ title: Cameroon
 
 <script>
     $(function() {
+        var regionCol = '#007a5e';
+        var regionSelectedCol = '#cc0033';
+        var selectedRegion = null;
         var baseUrl = "http://cameroon.openspending.org/";
-        var nationalInvestmentUrl = "pib.html#/~/total--2011-"
+        var nationalInvestmentUrl = "pib.html#/~/total--2011-";
         $("#nib-link").attr("href",baseUrl+nationalInvestmentUrl);
         /*
-
-
          nwregion.html#/~/total--2010-
          bti.html
 
@@ -110,22 +110,24 @@ title: Cameroon
          http://cameroon.openspending.org/nwregion.html#/~/total--2010-
          http://cameroon.openspending.org/pib.html#/~/total--2011-
         */
-        var dataTypes={"PIB":{},"RIB":{},"CB":{},"BTI":{}};
+        //var dataTypes={"PIB":{},"RIB":{},"CB":{},"BTI":{}};
+
         $.getJSON('/data/main_map.json', function(map_data) {
-            window.map = $K.map('#map',500,544);//('#map',368,544);
+            window.map = $K.map('#map',500,450);//('#map',368,544);
 
             var showData = function(region) {
                 var regionData = map_data[region];
                 // reset budget links
 
+                $("#region-title").text("Region: "+region);
+                var linksIds = ["#pib-link","#rib-link","#cb-link","#bti-link"];
+                var linkText = "Find out more";
+                for(var i=0;i<linksIds.length;i++){
+                    $(linksIds[i]).attr("href","#");
+                    $(linksIds[i]).text("N/A");
+                }
+
                 if(regionData){
-                    $("#region-title").text("Region: "+region);
-                    var linksIds = ["#pib-link","#rib-link","#cb-link","#bti-link"];
-                    var linkText = "Find out more";
-                    for(var i=0;i<linksIds.length;i++){
-                        $(linksIds[i]).attr("href","#");
-                        $(linksIds[i]).text("N/A");
-                    }
 
                     for(var key in regionData){
                         var obj = regionData[key];
@@ -167,20 +169,53 @@ title: Cameroon
             }
 
 
-            // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg
+
+            var setPathCol = function(path,col){
+                path.realFill = path.svgPath.attrs.fill;
+                path.svgPath.attr({'fill': col});
+            }
+
+            var setRegionCol = function(region,col){
+                var path = map.getLayerPath('region', region);
+                setPathCol(path,col);
+            }
+
+            var selectRegion= function(region){
+                var path;
+                if(selectedRegion!=null){
+                    setRegionCol(selectedRegion,regionCol);
+                    var path = map.getLayerPath('region', selectedRegion);
+
+                    path.svgPath.attr({'stroke-width': 1});
+                }
+                selectedRegion = region;
+                setRegionCol(selectedRegion,regionSelectedCol);
+
+                var path = map.getLayerPath('region', selectedRegion);
+                //path.realFill = path.svgPath.attrs.fill;
+                path.svgPath.attr({'stroke-width': 3});
+
+            }
+
+            // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg region_communes.svg
             map.loadMap('/img/regions.svg', function(map) {
                 var layerStr = 'region';
-                //map.addLayer('commune');
+                /*
+                map.addLayer({
+                    id: 'commune',
+                    key:'commune'
+                });
+                */
                 map.addLayer({
                     id: layerStr,
                     key: layerStr
                 });
 
+
+
                 map.tooltips({
                     layer: 'region',
                     content: function(data) {
-
-                        //return data.region;
                         return data;
                     },
                     style: {
@@ -189,7 +224,25 @@ title: Cameroon
                 });
 
                 map.onLayerEvent('click', function(d) {
+                    selectRegion(d.region);
                     showData(d.region);
+
+                });
+
+                var layer = map.getLayer('region');
+                for(var i=0;i<layer.paths.length;i++){
+                    var path = layer.paths[i];
+                    setPathCol(path,regionCol);
+                }
+
+                map.onLayerEvent('mouseover', function(d) {
+                    setRegionCol(d.region, regionSelectedCol);
+                });
+
+                map.onLayerEvent('mouseout', function(d) {
+                    if(d.region!=selectedRegion){
+                        setRegionCol(d.region, regionCol);
+                    }
 
                 });
 
