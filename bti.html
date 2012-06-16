@@ -38,6 +38,11 @@ title: Local Council Budget Transparency
         vertical-align: bottom;
         padding-bottom: 0.2em;
     }
+
+    .nav.facets img {
+        width: 16px;
+        height: 16px;
+    }
 </style>
 
 <div class="row">
@@ -45,26 +50,26 @@ title: Local Council Budget Transparency
         <div id="map"></div>
     </div>
     <div class="span4">
-        <h3>See how well Councils budget, compare them by:</h3>
-        <ul>
-            <li><a href="#" class="map-layer" data-layer="score">overall score</a></li>
+        <ul class="nav nav-list facets">
+            <li class="nav-header">Compare councils</li>
+            <li><a href="#" class="map-layer" data-layer="score">
+                <img src="/img/icons/score_24.png"> Overall score</a></li>
             <li><a href="#" class="map-layer" data-layer="revenue">
-                 <img src="/img/icons/revenue_24.png"> % of revenue realized</a></li>
+                 <img src="/img/icons/revenue_24.png"> Revenue realization</a></li>
             <li><a href="#" class="map-layer" data-layer="spending">
-                 <img src="/img/icons/spending_24.png"> % of expenditure realized</a></li>
-            <li>documents produced:
-                <ul>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
-                        <img src="/img/icons/adopted_24.png"> Adopted Budget</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
-                        <img src="/img/icons/summary_24.png"> Budget Summary</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png"> Mid-year Report</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
-                        <img src="/img/icons/end_of_year_24.png"> End of Year-Report</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
-                        <img src="/img/icons/audit_report_24.png"> Audit Report</a></li>
-                </ul>
-            </li>
+                 <img src="/img/icons/spending_24.png"> Expenditure realization</a></li>
+
+            <li class="nav-header">Compare document availability</li>
+            
+            <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
+                <img src="/img/icons/adopted_24.png"> Adopted Budget</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
+                <img src="/img/icons/summary_24.png"> Budget Summary</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png"> Mid-year Report</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
+                <img src="/img/icons/end_of_year_24.png"> End of Year-Report</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
+                <img src="/img/icons/audit_report_24.png"> Audit Report</a></li>
         </ul>
     </div>
 </div>
@@ -259,6 +264,7 @@ title: Local Council Budget Transparency
                 map.tooltips({
                     layer: 'commune',
                     content: function(data) {
+                        console.log(data);
                         return data.commune;
                     },
                     style: { 
