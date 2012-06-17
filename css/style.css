@@ -1,4 +1,10 @@
-@import url('http://assets.openspending.org/branding/fonts/opensans/stylesheet.css');
+a {
+    color: #007b5f;
+}
+
+body {
+    font-family: "OpenSans", Helvetica, sans-serif;
+}
 
 header {
     margin-top: 1em;
@@ -7,4 +13,91 @@ header {
 
 .logo {
     margin-left: -45px;
+}
+
+header {
+  display:block;
+  height:80px;
+  background-color: #23403b;
+  margin: 0 0 20px 0;
+
+}
+
+footer {
+  display:block;
+  height:80px;
+  background-color: #475c57;
+  margin: 30px 0 0 0;
+}
+
+#title {
+  color:#fff;
+  display:block;
+  position:relative;
+  /*font-size: 2.5em;*/
+  top:23px;
+  left:0;
+  font-weight: normal;
+  line-height:24px;
+
+}
+
+#title-stripe {
+  display:block;
+  position:relative;
+  top:0px;
+  left:0px;
+  padding: 0;
+  margin: 0;
+  line-height:0;
+
+}
+
+
+.bti #map svg .commune {
+    stroke: #fff;
+    stroke-width: 2px;
+}   
+
+.bti .details-content table {
+    width: 100%;
+    margin-bottom: 2em;
+    /*font-weight: bold;*/
+}
+
+.bti .details-content table td {
+    padding-bottom: 0.5em;
+}
+
+.bti .details-content table td.large {
+    font-size: 1.5em;
+    vertical-align: middle;
+    /*font-weight: bold;*/
+}
+
+.bti .details-content table td.large small {
+    font-size: 0.75em;
+    color: #999;
+}
+
+.bti .details-content table .field {
+    color: #777;
+    /*font-weight: bold;*/
+    vertical-align: bottom;
+    padding-bottom: 0.2em;
+}
+
+.bti .nav.facets img {
+    width: 16px;
+    height: 16px;
+}
+
+.bti .checkmatrix td, 
+.bti .checkmatrix th {
+    text-align: center;
+}
+
+.bti .checkmatrix td.q, 
+.bti .checkmatrix th.q {
+    text-align: left;
 }
