@@ -20,11 +20,10 @@ title: Tignere Council Budget
         var bubblemap = new OpenSpending.BubbleChart({
 
             query: {
-                dataset: 'tignere_test_01',
-                cuts: ['year:2009', 'reporting_type:AMOUNT'],
-                drilldowns: ['Head-Account Description'],//,'Sub-account-description'],
-                rootNodeLabel: 'Total (2009)',
-                breakdown: 'Council Name'
+                dataset: 'cm-tignere',
+                cuts: ['year:2009', 'reporting_type:Actual', 'financial_flow:EXPENDITURE'],
+                drilldowns: ['headaccount', 'subaccount'],//,'Sub-account-description'],
+                rootNodeLabel: 'Total (2009)'
             }
             /*
 

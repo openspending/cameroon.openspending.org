@@ -27,8 +27,7 @@ OpenSpending.BubbleChart = function (config) {
             dataset: null,
             drilldowns: [],
             cuts: [],
-            rootNodeLabel: null,
-            breakdown: null
+            rootNodeLabel: null
         },
         bubbleStyles: {
             cofog1:  BubbleTree.Styles.Cofog1
@@ -123,7 +122,6 @@ OpenSpending.BubbleChart = function (config) {
         drilldowns: opts.query.drilldowns,
         cuts: opts.query.cuts,
         rootNodeLabel: opts.query.rootNodeLabel,
-        breakdown: opts.query.breakdown,
         callback: function(data) {
             //console.log(data);
             
