@@ -44,6 +44,8 @@ section: bti
                 <tr>
                     <th>Council</th>
                     <th>Score</th>
+                    <th>Revenue realization</th>
+                    <th>Expenditure realization</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -239,7 +241,9 @@ section: bti
             var sorted_bti_data = _.sortBy(bti_data, function (e) { return e.rank; })
             _.each(sorted_bti_data, function(k) {
                 $("#ranking tbody").append("<tr data-commune='"+k.key+"'><td><a href='#'>"+
-                    k.sheet_name+"</a></td><td>" + k.score + "</td></tr>")
+                    k.sheet_name+"</a></td><td>" + k.score + "</td>"+
+                    "<td>" + k.revenue_realized+"</a></td><td>" + k.spending_realized + "</td>"+
+                    "</tr>")
             });
 
             $("#ranking tbody a").click(function(e) { 
