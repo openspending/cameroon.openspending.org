@@ -38,18 +38,36 @@ section: bti
 
 <div class="row">
     <div class="span8">
-        <h3>Ranking</h3>
-        <table id="ranking" class="table table-striped table-condensed">
+        <!--h3>Ranking</h3-->
+        <table id="ranking" class="table table-condensed">
             <thead>
                 <tr>
-                    <th>Council</th>
-                    <th>Score</th>
+                    <th class="name">Council</th>
+                    <th width="20%">Score</th>
                     <th>Revenue realization</th>
                     <th>Expenditure realization</th>
                 </tr>
             </thead>
             <tbody></tbody>
         </table>
+    </div>
+    <div class="span4">
+        <h3>Budget Transparency Index</h3>
+        <p>
+            The survey measures fifteen criteria regarding
+            the managament of local council budgets: are
+            the documents produced, published and
+            disseminated in a way that allows media and 
+            citizens to review the budget?
+        </p>
+        <p>
+            The data was collected in 2010 and 2011 and
+            includes all but two of the municipalities of 
+            the Adamawa region.
+        </p>
+        <ul>
+            <li><a href="/data/bti/Survey.xlsx">Download the survey</a> (xlsx)</li>
+        </ul>
     </div>
 </div>
 
@@ -100,20 +118,12 @@ section: bti
                 <th><img src="/img/icons/audit_report_24.png" title="Audit Report"></th>
             </tr>
             <tr>
-                <td class="q">Not produced</td>
-                <td>{{check documents.adopted.non_produit}}</td>
-                <td>{{check documents.summary.non_produit}}</td>
-                <td>{{check documents.mid_year.non_produit}}</td>
-                <td>{{check documents.end_of_year.non_produit}}</td>
-                <td>{{check documents.audit_report.non_produit}}</td>
-            </tr>
-            <tr>
-                <td class="q">Produced but not public</td>
-                <td>{{check documents.adopted.non_public}}</td>
-                <td>{{check documents.summary.non_public}}</td>
-                <td>{{check documents.mid_year.non_public}}</td>
-                <td>{{check documents.end_of_year.non_public}}</td>
-                <td>{{check documents.audit_report.non_public}}</td>
+                <td class="q">Publicly distributed</td>
+                <td>{{check documents.adopted.public}}</td>
+                <td>{{check documents.summary.public}}</td>
+                <td>{{check documents.mid_year.public}}</td>
+                <td>{{check documents.end_of_year.public}}</td>
+                <td>{{check documents.audit_report.public}}</td>
             </tr>
             <tr>
                 <td class="q">Available upon demand</td>
@@ -124,54 +134,21 @@ section: bti
                 <td>{{check documents.audit_report.sur_demande}}</td>
             </tr>
             <tr>
-                <td class="q">Publicly distributed</td>
-                <td>{{check documents.adopted.public}}</td>
-                <td>{{check documents.summary.public}}</td>
-                <td>{{check documents.mid_year.public}}</td>
-                <td>{{check documents.end_of_year.public}}</td>
-                <td>{{check documents.audit_report.public}}</td>
-            </tr>
-            <!-- tr>
-                <th></th>
-                <th><img src="/img/icons/adopted_24.png" title="Adopted Budget"></th>
-                <th><img src="/img/icons/summary_24.png" title="Budget Summary"></th>
-                <th><img src="/img/icons/mid_year_24.png" title="Mid-year Report"></th>
-                <th><img src="/img/icons/end_of_year_24.png" title="End of Year-Report"></th>
-                <th><img src="/img/icons/audit_report_24.png" title="Audit Report"></th>
-
+                <td class="q">Produced but not public</td>
+                <td>{{check documents.adopted.non_public}}</td>
+                <td>{{check documents.summary.non_public}}</td>
+                <td>{{check documents.mid_year.non_public}}</td>
+                <td>{{check documents.end_of_year.non_public}}</td>
+                <td>{{check documents.audit_report.non_public}}</td>
             </tr>
             <tr>
-                <td class="q">Release announced one month ahead</td>
-                <td>{{check documents.adopted.month_ahead}}</td>
-                <td>{{check documents.summary.month_ahead}}</td>
-                <td>{{check documents.mid_year.month_ahead}}</td>
-                <td>{{check documents.end_of_year.month_ahead}}</td>
-                <td>{{check documents.audit_report.month_ahead}}</td>
+                <td class="q">Not produced</td>
+                <td>{{check documents.adopted.non_produit}}</td>
+                <td>{{check documents.summary.non_produit}}</td>
+                <td>{{check documents.mid_year.non_produit}}</td>
+                <td>{{check documents.end_of_year.non_produit}}</td>
+                <td>{{check documents.audit_report.non_produit}}</td>
             </tr>
-            <tr>
-                <td class="q">Media are invited to the release</td>
-                <td>{{check documents.adopted.press_announcement}}</td>
-                <td>{{check documents.summary.press_announcement}}</td>
-                <td>{{check documents.mid_year.press_announcement}}</td>
-                <td>{{check documents.end_of_year.press_announcement}}</td>
-                <td>{{check documents.audit_report.press_announcement}}</td>
-            </tr>
-            <tr>
-                <td class="q">Media and public release are on the same day</td>
-                <td>{{check documents.adopted.same_day}}</td>
-                <td>{{check documents.summary.same_day}}</td>
-                <td>{{check documents.mid_year.same_day}}</td>
-                <td>{{check documents.end_of_year.same_day}}</td>
-                <td>{{check documents.audit_report.same_day}}</td>
-            </tr>
-            <tr>
-                <td class="q">Available on the internet</td>
-                <td>{{check documents.adopted.same_day}}</td>
-                <td>{{check documents.summary.same_day}}</td>
-                <td>{{check documents.mid_year.same_day}}</td>
-                <td>{{check documents.end_of_year.same_day}}</td>
-                <td>{{check documents.audit_report.same_day}}</td>
-            </tr -->
         </table>
 
         See the full survey:
@@ -202,7 +179,7 @@ section: bti
             });
 
         doc_colors = new chroma.ColorScale({
-            colors: chroma.brewer.Spectral,
+            colors: chroma.brewer.Purples,
             limits: [-2,5]
             });
 
@@ -233,17 +210,23 @@ section: bti
                     key: 'commune',
                     colors: function(d, pathdata) {
                         if (!d) return '#ddd';
-                        return colorize(d)
+                        color = colorize(d);
+                        $("#ranking tbody tr").each(function(i, e) {
+                            if ($(e).data('commune') == d.key) {
+                                $(e).css('color', color);
+                                $(e).find('a').css('color', color);
+                            };
+                        });
+                        return color;
                     }
                 });
             }
 
             var sorted_bti_data = _.sortBy(bti_data, function (e) { return e.rank; })
             _.each(sorted_bti_data, function(k) {
-                $("#ranking tbody").append("<tr data-commune='"+k.key+"'><td><a href='#'>"+
-                    k.sheet_name+"</a></td><td>" + k.score + "</td>"+
-                    "<td>" + k.revenue_realized+"</a></td><td>" + k.spending_realized + "</td>"+
-                    "</tr>")
+                var rev = k.revenue_realized||'-';
+                var spe = k.spending_realized||'-'
+                $("#ranking tbody").append("<tr data-commune='"+k.key+"'><td class='name'><a href='#'>"+ k.sheet_name+"</a></td><td>" + k.score + "</td><td>" + rev + "</a></td><td>" + spe + "</td></tr>")
             });
 
             $("#ranking tbody a").click(function(e) { 
@@ -269,7 +252,7 @@ section: bti
 
 
             var colorizeScores = function(d) {
-                if (d.score=='-') return '#ddd';
+                if (d.score=='-') return chroma.hex('#dddddd');
                 return score_colors.getColor(d.score);
             }
 
@@ -301,6 +284,8 @@ section: bti
                 }
                 return false;
             });
+
+            $('#ranking').tablesorter();
 
             map.loadMap('/img/adamawa.svg', function(map) {
                 map.addLayer({

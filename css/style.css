@@ -6,6 +6,10 @@ body {
     font-family: "OpenSans", Helvetica, sans-serif;
 }
 
+h3 {
+    margin-bottom: 0.5em;
+}
+
 header {
     margin-top: 1em;
     margin-bottom: 1em;
@@ -100,6 +104,7 @@ footer {
 .bti #map svg .commune {
     stroke: #fff;
     stroke-width: 2px;
+    cursor: pointer;
 }   
 
 .bti .details-content table {
@@ -128,6 +133,24 @@ footer {
     /*font-weight: bold;*/
     vertical-align: bottom;
     padding-bottom: 0.2em;
+}
+
+.bti #ranking th {
+    cursor: pointer;
+}
+
+.bti #ranking th,
+.bti #ranking td {
+    text-align: right;
+}
+
+.bti #ranking th.name,
+.bti #ranking td.name {
+    text-align: left;
+}
+
+.bti #ranking a {
+    font-weight: bold;
 }
 
 .bti .nav.facets img {
