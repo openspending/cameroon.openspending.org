@@ -89,14 +89,61 @@ footer {
 
 }
 
-.home #budget-data{
+.home #sidebar {
     background-color: #f8f8f8;
-
+    padding: 2em;
 }
 
-.home .budget-list{
+.home #sidebar ul {
+    margin: 0;
+}
+
+.home #sidebar li {
     list-style-type:none;
+    padding-bottom: 1em;
 }
+
+.home #sidebar li a {
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: #ce1127;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+} 
+
+.home #sidebar li a:hover {
+    text-decoration: none;
+    color: #ce1127;
+    background-color: #fff !important;
+}
+
+.home #sidebar h3 {
+    font-weight: normal;
+    margin-top: 0.5em;
+}
+
+.home #sidebar li.national a {
+    background-color: #007b5f;
+}
+
+.home #sidebar li.national a:hover {
+    color: #007b5f;
+}
+
+.home #sidebar li.council a {
+    background-color: #fdd116;
+}
+
+.home #sidebar li.council a:hover {
+    color: #fdd116;
+}
+
+
 
 
 /* Budget Transparency Index */

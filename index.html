@@ -10,32 +10,12 @@ section: home
         <div id="map"></div>
     </div>
     <div class="span5">
-        <div id="budget-data">
-            <div class="panel-label">National</div>
-            <ul class="budget-list">
-                <li><div>National Investment Budget:</div>
-                    <div><a id="nib-link" href="">Find out more</a></div>
-                </li>
-            </ul>
-
-            <div class="panel-label">Regional</div>
-            <div id="region-title">Region: Click region</div>
-            <ul class="budget-list">
-                <li><div>Public Investment Budget:</div>
-                    <div><a id="pib-link" href="">N/A</a></div>
-                </li>
-                <li><div>Regional Investment Budget:</div>
-                    <div><a id="rib-link" href="">N/A</a></div>
-                </li>
-                <li><div>Council Budget:</div>
-                    <div><a id="cb-link" href="">N/A</a></div>
-                </li>
-                <li><div>Budget Transparency Index:</div>
-                    <div><a id="bti-link" href="">N/A</a></div>
-                </li>
-
-            </ul>
-
+        <div id="sidebar">
+            <h3>How does my region spend its funds?</h3>
+            <p>
+                Select a region to see budget and survey 
+                information related to it. 
+            </p>
         </div>
     </div>
 </div>
@@ -62,129 +42,87 @@ section: home
     </h3></li>
 </ul>
 
+{% raw %}
+<script id="region-sidebar" type="application/handlebars">
+    <h3>National Level</h3>
+    <ul class="budget-list">
+        {{#national}}
+            <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/national}}
+    </ul>
+    {{#if regional}}
+        <h3>Region: <strong>{{regionLabel}}</strong></h3>
+        <ul class="budget-list">
+            {{#regional}}
+                <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+            {{/regional}}
+        </ul>
+    {{/if}}
+    {{#if council}}
+    <h3>Local Councils</h3>
+    <ul class="budget-list">
+        {{#council}}
+            <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/council}}
+    </ul>
+    {{/if}}
+</script>
+{% endraw %}
+
 <script>
     $(function() {
-        var regionCol = '#007a5e';
-        var regionSelectedCol = '#cc0033';
         var selectedRegion = null;
-        var baseUrl = "http://cameroon.openspending.org/";
-        var nationalInvestmentUrl = "pib.html#/~/total--2011-";
-        $("#nib-link").attr("href",baseUrl+nationalInvestmentUrl);
-        /*
-         nwregion.html#/~/total--2010-
-         bti.html
-
-         http://cameroon.openspending.org/bti.html
-         http://cameroon.openspending.org/nwregion.html#/~/total--2010-
-         http://cameroon.openspending.org/pib.html#/~/total--2011-
-        */
-        //var dataTypes={"PIB":{},"RIB":{},"CB":{},"BTI":{}};
-
-        $.getJSON('/data/main_map.json', function(map_data) {
+        var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
+        
+        $.getJSON('/data/datasets.json', function(datasets) {
             window.map = $K.map('#map',500,450);//('#map',368,544);
 
             var showData = function(region) {
-                var regionData = map_data[region];
-                // reset budget links
-
-                $("#region-title").text("Region: "+region);
-                var linksIds = ["#pib-link","#rib-link","#cb-link","#bti-link"];
-                var linkText = "Find out more";
-                for(var i=0;i<linksIds.length;i++){
-                    $(linksIds[i]).attr("href","#");
-                    $(linksIds[i]).text("N/A");
-                }
-
-                if(regionData){
-
-                    for(var key in regionData){
-                        var obj = regionData[key];
-                        var budgetCode = obj.budget;
-                        var link = baseUrl+obj.link;
-                        switch(budgetCode){
-                            case "PIB":
-                                $("#pib-link").attr("href",link);
-                                $("#pib-link").text(linkText);
-                                break;
-                            case "RIB":
-                                $("#rib-link").attr("href",link);
-                                $("#rib-link").text(linkText);
-                                break;
-                            case "CB":
-                                $("#cb-link").attr("href",link);
-                                $("#cb-link").text(linkText);
-                                break;
-                            case "BTI":
-                                $("#bti-link").attr("href",link);
-                                $("#bti-link").text(linkText);
-                                break;
-                        }
-                        console.log("budgetCode " + budgetCode);
-                    }
-
-
-                }
-                else{
-                    // no data for region
-                }
-                /*
-                var tmpl = Handlebars.compile($("#details-overlay-content").html());
-                var $e = $("#details-overlay");
-                $e.find("h3").html(data.sheet_name);
-                $e.find(".modal-body").html(tmpl(data));
-                $e.modal();
-                */
+                var data = _.groupBy(
+                        _.filter(datasets, function(ds) {
+                            return !ds.region||ds.region==region;
+                        }), 
+                    function(e) { return e.level; });
+                data.regionLabel = region;
+                console.log(data);
+                $('#sidebar').html(sidebarTemplate(data));
             }
 
-
-
-            var setPathCol = function(path,col){
+            var setPathCol = function(path, selected, border){
                 path.realFill = path.svgPath.attrs.fill;
-                path.svgPath.attr({'fill': col});
+                path.svgPath.attr({'fill': selected ? '#cc0033' : '#007a5e'});
+                return path;
             }
 
-            var setRegionCol = function(region,col){
+            var setRegionCol = function(region, col, border){
                 var path = map.getLayerPath('region', region);
-                setPathCol(path,col);
+                return setPathCol(path, col, border);
             }
 
             var selectRegion= function(region){
-                var path;
                 if(selectedRegion!=null){
-                    setRegionCol(selectedRegion,regionCol);
-                    var path = map.getLayerPath('region', selectedRegion);
-
+                    var path = setRegionCol(selectedRegion, false, false);
                     path.svgPath.attr({'stroke-width': 1});
                 }
                 selectedRegion = region;
-                setRegionCol(selectedRegion,regionSelectedCol);
-
-                var path = map.getLayerPath('region', selectedRegion);
-                //path.realFill = path.svgPath.attrs.fill;
+                var path = setRegionCol(selectedRegion, true, true);
                 path.svgPath.attr({'stroke-width': 3});
-
             }
 
             // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg region_communes.svg
             map.loadMap('/img/regions.svg', function(map) {
-                var layerStr = 'region';
-                /*
                 map.addLayer({
-                    id: 'commune',
-                    key:'commune'
+                    id: 'region',
+                    key: 'region'
                 });
-                */
-                map.addLayer({
-                    id: layerStr,
-                    key: layerStr
-                });
-
-
 
                 map.tooltips({
                     layer: 'region',
                     content: function(data) {
-                        return data;
+                        var count = _.filter(datasets, function(ds) {
+                            return !ds.region||ds.region==data;
+                        }).length;
+                        return data + ' (' + count + ')';
                     },
                     style: {
                         name: 'dark'
@@ -194,28 +132,23 @@ section: home
                 map.onLayerEvent('click', function(d) {
                     selectRegion(d.region);
                     showData(d.region);
-
                 });
 
                 var layer = map.getLayer('region');
                 for(var i=0;i<layer.paths.length;i++){
                     var path = layer.paths[i];
-                    setPathCol(path,regionCol);
+                    setPathCol(path, false, false);
                 }
 
                 map.onLayerEvent('mouseover', function(d) {
-                    setRegionCol(d.region, regionSelectedCol);
+                    setRegionCol(d.region, true, false);
                 });
 
                 map.onLayerEvent('mouseout', function(d) {
                     if(d.region!=selectedRegion){
-                        setRegionCol(d.region, regionCol);
+                        setRegionCol(d.region, false, false);
                     }
-
                 });
-
-                //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
-                //map.getLayer('commune').applyFilter('oglow');
             });
         });
     });
