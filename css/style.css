@@ -50,9 +50,40 @@ footer {
   padding: 0;
   margin: 0;
   line-height:0;
+}
+
+
+/* Home page */
+
+.home #map {
+    display:block;
+    height:544;
+}
+
+.home #map svg .region {
+    stroke: #fff;
+    stroke-opacity: 1;
+    /*stroke-width:1px;*/
 
 }
 
+.home #map svg .region:hover {
+    stroke: #fff;
+    /*stroke-width:3px;*/
+
+}
+
+.home #budget-data{
+    background-color: #f8f8f8;
+
+}
+
+.home .budget-list{
+    list-style-type:none;
+}
+
+
+/* Budget Transparency Index */
 
 .bti #map svg .commune {
     stroke: #fff;
