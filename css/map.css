@@ -67,13 +67,10 @@
     height: 500px;
 }
 
-#cm-map svg .IRL {
-    stroke: none;
-    fill: #eee;
-}
-
-#cm-map svg .departement {
+#cm-map svg path {
     stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
 }
 
 /*
