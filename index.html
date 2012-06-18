@@ -72,7 +72,7 @@ section: home
 
 <script>
     $(function() {
-        
+        var selectedRegion = null;
         var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
 
         $.getJSON('/data/datasets.json', function(datasets) {
