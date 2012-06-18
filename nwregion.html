@@ -24,6 +24,40 @@ title: North-West Region of Cameroon
                 url: 'img/north_west_departements.svg',
                 layerName: 'departement',
                 keyAttribute: 'departemen'
+            },
+            table: {
+              columns: [
+                {
+                    name: 'chapter',
+                    label: 'Chapter',
+                    width: '20%',
+                    data: function(d) { return d.chapter.label; }
+                },
+                {
+                    name: 'physical-unit-demanded',
+                    label: 'Unit',
+                    width: '40%',
+                    data: function(d) { return d['physical-unit-demanded']; }
+                },
+                                {
+                    name: 'to',
+                    label: 'Beneficiary',
+                    width: '20%',
+                    data: function(d) { return d['to'].label; }
+                },
+                {
+                    name: 'amount',
+                    label: 'Amount (Fr)',
+                    width: '16%',
+                    data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
+                },
+                {
+                    name: 'details',
+                    label: '',
+                    width: '2%',
+                    data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+                }
+              ]
             }
         });
     }

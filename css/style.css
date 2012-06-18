@@ -72,6 +72,14 @@ footer {
     color: #fff;
 }
 
+.dataTable th {
+    cursor: pointer;
+}
+
+.dataTable .row {
+    display: none;
+}
+
 
 /* Home page */
 

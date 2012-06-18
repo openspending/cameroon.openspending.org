@@ -12,6 +12,9 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
         os_path + '/lib/vendor/Tween.js',
         os_path + '/lib/vendor/jquery.history.js',
         os_path + '/lib/vendor/bubbletree/1.0/bubbletree.css',
+        os_path + '/lib/vendor/datatables/js/jquery.dataTables.js',
+        os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
+        os_path + '/app/data_table/openspending.data_table.js',
         'css/map.css',
         '/img/functions/functions.js',
         '/js/bubblemap.js'
@@ -40,6 +43,11 @@ OpenSpending.BubbleMap = function (config) {
             url: null,
             layerName: null,
             keyAttribute: null
+        },
+        table: {
+            show: true,
+            columns: [],
+            sorting: [['amount', 'desc']]
         }
     }, config);
 
@@ -119,6 +127,7 @@ OpenSpending.BubbleMap = function (config) {
         });
         // create tooltips
         currentNode = node;
+        updateTable();
     };
 
     var nodeCuts = function(node) {
@@ -196,6 +205,34 @@ OpenSpending.BubbleMap = function (config) {
             });
         }); // map.loadMap(function())
     }); // map.loadStyles(function())
+
+    var updateTable = function() {
+        if (!opts.table.show)
+            return;
+        self.dt.filters = {};
+        _.each(allCuts(), function(c) {
+            var parts = c.split(':');
+            if (parts[0]=='year') parts[0] = 'time.year';
+            self.dt.filters[parts[0]] = parts[1];
+        });
+        console.log(self.dt.filters);
+        self.dt.redraw();
+    };
+
+    if (opts.table.show) {
+        self.dt = new OpenSpending.DataTable($('#datatable'), {
+            source: opts.query.apiUrl + '/2/search',
+            sorting: opts.table.sorting,
+            columns: opts.table.columns,
+            defaultParams: { dataset: opts.query.dataset },
+            tableOptions: {
+                bFilter: false,
+                sDom: "<'row'<'span0'l><'span9'f>r>t<'row'<'span4'i><'span5'p>>",
+                sPaginationType: "bootstrap"
+                }
+            });
+        self.dt.init();
+    }
     
     $('#cm-map').hide();
     loadData();
