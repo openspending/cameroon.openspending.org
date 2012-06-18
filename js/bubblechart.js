@@ -72,6 +72,7 @@ OpenSpending.BubbleChart = function (config) {
         if(node.level>=2) return;
 
         node.color = "#ff0000";
+        $("#cm-budget-panel").css("visibility", "visible");
         $("#cm-budget-table").empty();
         $("#cm-budget-table").append('<tr><td class="table-title" colspan="2">'+node.label+' - '+node.currency+' '+node.amount+'</td></tr>');
         //$("#cm-budget-table").append('<tr><td class="left-table-title">'+node.amount+'</td><td class="table-title">'+node.label+'</td></tr>');

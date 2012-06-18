@@ -6,11 +6,13 @@ title: Tignere Council Budget
 <style>
     #cm-budget-panel {
         background-color: #F8F8F8;
-        position: absolute;
-        left: 560px;
-        top: 50px;
+        position: relative;/*absolute;*/
+        
+        top: 20px;
         width: 380px;
-        height: 500px;
+        min-height: 500px;
+        visibility:hidden;
+        float:right;
 
     }
     #cm-budget-table{
@@ -62,6 +64,8 @@ title: Tignere Council Budget
 <script src="js/bubblechart.js"></script>
 <script type="text/javascript">
 (function ($) {
+
+  //$("#cm-budget-panel").css("visibility", "hidden");
   yepnope.errorTimeout = 1000;
   yepnope([
    { load: OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}'),
@@ -122,3 +126,4 @@ title: Tignere Council Budget
 
 
 </div><!-- /#bt-map -->
+<div style="clear:both"></div>
