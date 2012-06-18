@@ -24,6 +24,40 @@ title: National Investment Budget
             url: 'img/regions.svg',
             layerName: 'region',
             keyAttribute: 'region'
+          },
+          table: {
+            columns: [
+              {
+                  name: 'chapter',
+                  label: 'Chapter',
+                  width: '20%',
+                  data: function(d) { return d.chapter.label; }
+              },
+              {
+                  name: 'libelle-activite-fr',
+                  label: 'Activity',
+                  width: '48%',
+                  data: function(d) { return d['libelle-activite-fr']; }
+              },
+              {
+                  name: 'localite',
+                  label: 'Location',
+                  width: '20%',
+                  data: function(d) { return d.localite; }
+              },
+              {
+                  name: 'amount',
+                  label: 'Amount (Fr)',
+                  width: '8%',
+                  data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
+              },
+              {
+                  name: 'details',
+                  label: '',
+                  width: '2%',
+                  data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+              }
+            ]
           }
         });
     }

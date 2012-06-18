@@ -12,6 +12,9 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
         os_path + '/lib/vendor/Tween.js',
         os_path + '/lib/vendor/jquery.history.js',
         os_path + '/lib/vendor/bubbletree/1.0/bubbletree.css',
+        os_path + '/lib/vendor/datatables/js/jquery.dataTables.js',
+        os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
+        os_path + '/app/data_table/openspending.data_table.js',
         'css/map.css',
         '/img/functions/functions.js',
         '/js/bubblemap.js'
@@ -22,6 +25,7 @@ OpenSpending.BubbleMap = function (config) {
     var self = this;
 
     selectedRegion = null;
+    currentNode = null;
 
     opts = $.extend(true, {
         query: {
@@ -39,6 +43,11 @@ OpenSpending.BubbleMap = function (config) {
             url: null,
             layerName: null,
             keyAttribute: null
+        },
+        table: {
+            show: true,
+            columns: [],
+            sorting: [['amount', 'desc']]
         }
     }, config);
 
@@ -117,22 +126,43 @@ OpenSpending.BubbleMap = function (config) {
             delay: 300
         });
         // create tooltips
+        currentNode = node;
+        updateTable();
+    };
+
+    var nodeCuts = function(node) {
+        var cuts = [];
+        if (node&&node.parent) {
+            cuts = nodeCuts(node.parent);
+        }
+        if (node&&node.taxonomy) {
+            cuts.push(node.taxonomy+":"+node.name);
+        }
+        return cuts;
+    };
+
+    var regionCuts = function() {
+        return selectedRegion ?
+            opts.query.cuts.concat(opts.query.breakdown+':'+selectedRegion) :
+            opts.query.cuts;
     };
     
+    var allCuts = function() {
+        var cuts = regionCuts();
+        cuts = cuts.concat(nodeCuts(currentNode));
+        return cuts;
+    }
+
     var loadData = function() {
-        
         $('#cm-map').hide();
         $('#cm-map-legend').hide();
         $('#preloader').show();
         // init bubbletree
-        cuts = selectedRegion ?
-            opts.query.cuts.concat('region:'+selectedRegion) :
-            opts.query.cuts;
         new OpenSpending.Aggregator({
             apiUrl: opts.query.apiUrl,
             dataset: opts.query.dataset,
             drilldowns: opts.query.drilldowns,
-            cuts: cuts,
+            cuts: regionCuts(),
             rootNodeLabel: opts.query.rootNodeLabel,
             breakdown: opts.query.breakdown,
             callback: function(data) {
@@ -170,13 +200,39 @@ OpenSpending.BubbleMap = function (config) {
 
 
             map.onLayerEvent('click', function(d) {
-                console.log(d);
                 selectedRegion = selectedRegion==d.region ? null : d.region;
-                console.log(selectedRegion);
                 loadData();
             });
         }); // map.loadMap(function())
     }); // map.loadStyles(function())
+
+    var updateTable = function() {
+        if (!opts.table.show)
+            return;
+        self.dt.filters = {};
+        _.each(allCuts(), function(c) {
+            var parts = c.split(':');
+            if (parts[0]=='year') parts[0] = 'time.year';
+            self.dt.filters[parts[0]] = parts[1];
+        });
+        console.log(self.dt.filters);
+        self.dt.redraw();
+    };
+
+    if (opts.table.show) {
+        self.dt = new OpenSpending.DataTable($('#datatable'), {
+            source: opts.query.apiUrl + '/2/search',
+            sorting: opts.table.sorting,
+            columns: opts.table.columns,
+            defaultParams: { dataset: opts.query.dataset },
+            tableOptions: {
+                bFilter: false,
+                sDom: "<'row'<'span0'l><'span9'f>r>t<'row'<'span4'i><'span5'p>>",
+                sPaginationType: "bootstrap"
+                }
+            });
+        self.dt.init();
+    }
     
     $('#cm-map').hide();
     loadData();
