@@ -1,83 +1,74 @@
 ---
 layout: default
 title: Local Council Budget Transparency
+section: bti
 ---
 
-<h1>Budget Transparency in the Adamawa Region</h1>
-<br><br>
-
-<style>
-    #map svg .commune {
-        stroke: #ccc;
-    }   
-
-    .details-content table {
-        width: 100%;
-        margin-bottom: 2em;
-        font-weight: bold;
-    }
-
-    .details-content table td {
-        padding-bottom: 0.5em;
-    }
-
-    .details-content table td.large {
-        font-size: 1.5em;
-        vertical-align: middle;
-        /*font-weight: bold;*/
-    }
-
-    .details-content table td.large small {
-        font-size: 0.75em;
-        color: #999;
-    }
-
-    .details-content table td.field {
-        color: #777;
-        /*font-weight: bold;*/
-        vertical-align: bottom;
-        padding-bottom: 0.2em;
-    }
-</style>
+<h2 class="page-header">Budget Transparency in the Adamawa Region</h2>
 
 <div class="row">
     <div class="span8">
         <div id="map"></div>
     </div>
     <div class="span4">
-        <h3>See how well Councils budget, compare them by:</h3>
-        <ul>
-            <li><a href="#" class="map-layer" data-layer="score">overall score</a></li>
+        <ul class="nav nav-list facets">
+            <li class="nav-header">Compare councils</li>
+            <li><a href="#" class="map-layer" data-layer="score">
+                <img src="/img/icons/score_24.png"> Overall score</a></li>
             <li><a href="#" class="map-layer" data-layer="revenue">
-                 <img src="/img/icons/revenue_24.png"> % of revenue realized</a></li>
+                 <img src="/img/icons/revenue_24.png"> Revenue realization</a></li>
             <li><a href="#" class="map-layer" data-layer="spending">
-                 <img src="/img/icons/spending_24.png"> % of expenditure realized</a></li>
-            <li>documents produced:
-                <ul>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
-                        <img src="/img/icons/adopted_24.png"> Adopted Budget</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
-                        <img src="/img/icons/summary_24.png"> Budget Summary</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png"> Mid-year Report</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
-                        <img src="/img/icons/end_of_year_24.png"> End of Year-Report</a></li>
-                    <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
-                        <img src="/img/icons/audit_report_24.png"> Audit Report</a></li>
-                </ul>
-            </li>
+                 <img src="/img/icons/spending_24.png"> Expenditure realization</a></li>
+
+            <li class="nav-header">Compare document availability</li>
+            
+            <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
+                <img src="/img/icons/adopted_24.png"> Adopted Budget</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
+                <img src="/img/icons/summary_24.png"> Budget Summary</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png"> Mid-year Report</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
+                <img src="/img/icons/end_of_year_24.png"> End of Year-Report</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
+                <img src="/img/icons/audit_report_24.png"> Audit Report</a></li>
         </ul>
     </div>
 </div>
 
+<hr/>
+
 <div class="row">
     <div class="span8">
-        <h3>Ranking</h3>
-        <table id="ranking" class="table table-striped table-condensed">
-            <tr>
-                <th>Council</th>
-                <th>Score</th>
-            </tr>
+        <!--h3>Ranking</h3-->
+        <table id="ranking" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th class="name">Council</th>
+                    <th width="20%">Score</th>
+                    <th>Revenue realization</th>
+                    <th>Expenditure realization</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
         </table>
+    </div>
+    <div class="span4">
+        <h3>Budget Transparency Index</h3>
+        <p>
+            The survey measures fifteen criteria regarding
+            the managament of local council budgets: are
+            the documents produced, published and
+            disseminated in a way that allows media and 
+            citizens to review the budget?
+        </p>
+        <p>
+            The data was collected in 2010 and 2011 and
+            includes all but two of the municipalities of 
+            the Adamawa region.
+        </p>
+        <ul>
+            <li><a href="/data/bti/Survey.xlsx">Download the survey</a> (xlsx)</li>
+        </ul>
     </div>
 </div>
 
@@ -95,12 +86,13 @@ title: Local Council Budget Transparency
     <div class="details-content">
         <table>
             <tr>
-                <td colspan="2" class="field">Place</td>
+                <td rowspan="2"><img src="/img/icons/score_32.png"></td>
+                <td class="field">Place</td>
                 <td colspan="2" class="field">Score</td>
             </tr>
 
             <tr>
-                <td colspan="2" class="large">{{rank}} <small>out of 21</small></td>
+                <td class="large">{{rank}} <small>out of 21</small></td>
                 <td colspan="2" class="large">{{score}} <small>points</small></td>
             </tr>
 
@@ -117,20 +109,55 @@ title: Local Council Budget Transparency
             </tr>
         </table>
 
-        <ul>
-            <li>Key Documents</li>
-            <li>Then:<ul>
-                <li>Assets (Short-term and Long-term) published</li>
-                <li>Aid Transparency</li>
-                <li>References to programmes and beneficiaries</li>
-                <li>KPI</li>
-                <li>Citizen Budgets</li>
-                <li>Council say in Budgeting</li>
-                <li>Public has a say in Budgeting (PB)</li>
-                <li>Time between reporting period & report</li>
-                <li>Report after budget</li>
-            </ul></li>
-        </ul>
+        <table class="checkmatrix table table-striped">
+            <tr>
+                <th width="40%" class="q">Documents</th>
+                <th><img src="/img/icons/adopted_24.png" title="Adopted Budget"></th>
+                <th><img src="/img/icons/summary_24.png" title="Budget Summary"></th>
+                <th><img src="/img/icons/mid_year_24.png" title="Mid-year Report"></th>
+                <th><img src="/img/icons/end_of_year_24.png" title="End of Year-Report"></th>
+                <th><img src="/img/icons/audit_report_24.png" title="Audit Report"></th>
+            </tr>
+            <tr>
+                <td class="q">Publicly distributed</td>
+                <td>{{check documents.adopted.public}}</td>
+                <td>{{check documents.summary.public}}</td>
+                <td>{{check documents.mid_year.public}}</td>
+                <td>{{check documents.end_of_year.public}}</td>
+                <td>{{check documents.audit_report.public}}</td>
+            </tr>
+            <tr>
+                <td class="q">Available upon demand</td>
+                <td>{{check documents.adopted.sur_demande}}</td>
+                <td>{{check documents.summary.sur_demande}}</td>
+                <td>{{check documents.mid_year.sur_demande}}</td>
+                <td>{{check documents.end_of_year.sur_demande}}</td>
+                <td>{{check documents.audit_report.sur_demande}}</td>
+            </tr>
+            <tr>
+                <td class="q">Produced but not public</td>
+                <td>{{check documents.adopted.non_public}}</td>
+                <td>{{check documents.summary.non_public}}</td>
+                <td>{{check documents.mid_year.non_public}}</td>
+                <td>{{check documents.end_of_year.non_public}}</td>
+                <td>{{check documents.audit_report.non_public}}</td>
+            </tr>
+            <tr>
+                <td class="q">Not produced</td>
+                <td>{{check documents.adopted.non_produit}}</td>
+                <td>{{check documents.summary.non_produit}}</td>
+                <td>{{check documents.mid_year.non_produit}}</td>
+                <td>{{check documents.end_of_year.non_produit}}</td>
+                <td>{{check documents.audit_report.non_produit}}</td>
+            </tr>
+        </table>
+
+        See the full survey:
+        <div class="pull-right">
+            <a class="btn btn-small" href="data/bti/{{sheet_name}}.pdf"><i class='icon-list-alt'></i>
+            PDF for {{sheet_name}}</a>
+            <a class="btn btn-small btn-primary" href="data/bti/Survey.xlsx"><i class='icon-download icon-white'></i> Excel (Full Survey)</a>
+        </div>
     </div>
 </script>
 {% endraw %}
@@ -153,9 +180,16 @@ title: Local Council Budget Transparency
             });
 
         doc_colors = new chroma.ColorScale({
-            colors: chroma.brewer.Spectral,
+            colors: chroma.brewer.Purples,
             limits: [-2,5]
             });
+
+        Handlebars.registerHelper('check', function(flag) {
+            if (!flag) {
+                return new Handlebars.SafeString('');;
+            }
+            return new Handlebars.SafeString('<i class="icon-ok"></i>');
+        });
 
         $.getJSON('/data/bti.json', function(bti_data) {
             window.map = $K.map('#map');
@@ -177,32 +211,40 @@ title: Local Council Budget Transparency
                     key: 'commune',
                     colors: function(d, pathdata) {
                         if (!d) return '#ddd';
-                        return colorize(d)
+                        color = colorize(d);
+                        $("#ranking tbody tr").each(function(i, e) {
+                            if ($(e).data('commune') == d.key) {
+                                $(e).css('color', color);
+                                $(e).find('a').css('color', color);
+                            };
+                        });
+                        return color;
                     }
                 });
             }
 
             var sorted_bti_data = _.sortBy(bti_data, function (e) { return e.rank; })
             _.each(sorted_bti_data, function(k) {
-                $("#ranking").append("<tr data-commune='"+k.key+"'><td><a href='#'>"+
-                    k.sheet_name+"</a></td><td>" + k.score + "</td></tr>")
+                var rev = k.revenue_realized||'-';
+                var spe = k.spending_realized||'-'
+                $("#ranking tbody").append("<tr data-commune='"+k.key+"'><td class='name'><a href='#'>"+ k.sheet_name+"</a></td><td>" + k.score + "</td><td>" + rev + "</a></td><td>" + spe + "</td></tr>")
             });
 
-            $("#ranking a").click(function(e) { 
+            $("#ranking tbody a").click(function(e) { 
                 var commune = $(e.currentTarget).parents('tr').data('commune');
                 showDetails(commune);
                 return false;
             });
 
-            $("#ranking tr").mouseenter(function(e) { 
+            $("#ranking tbody tr").mouseenter(function(e) { 
                 var commune = $(e.currentTarget).data('commune');
                 var path = map.getLayerPath('commune', commune);
                 path.realFill = path.svgPath.attrs.fill;
-                path.svgPath.attr({'fill': 'orange'});
+                path.svgPath.attr({'fill': '#fdd116'});
                 return false;
             });
 
-            $("#ranking tr").mouseleave(function(e) { 
+            $("#ranking tbody tr").mouseleave(function(e) { 
                 var commune = $(e.currentTarget).data('commune');
                 var path = map.getLayerPath('commune', commune);
                 path.svgPath.attr({'fill': path.realFill});
@@ -211,7 +253,7 @@ title: Local Council Budget Transparency
 
 
             var colorizeScores = function(d) {
-                if (d.score=='-') return '#ddd';
+                if (d.score=='-') return chroma.hex('#dddddd');
                 return score_colors.getColor(d.score);
             }
 
@@ -244,6 +286,8 @@ title: Local Council Budget Transparency
                 return false;
             });
 
+            $('#ranking').tablesorter();
+
             map.loadMap('/img/adamawa.svg', function(map) {
                 map.addLayer({
                     id: 'commune',
@@ -259,7 +303,7 @@ title: Local Council Budget Transparency
                 map.tooltips({
                     layer: 'commune',
                     content: function(data) {
-                        return data.commune;
+                        return data;
                     },
                     style: { 
                         name: 'dark'

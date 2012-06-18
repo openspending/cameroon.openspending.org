@@ -3,12 +3,7 @@ layout: default
 title: Tignere Council Budget
 ---
 
-<h1>Tignere Council Budget</h1>
-<br>
-<div class="alert alert-error">
-  This is total values. We'll probably want to do this per-capita if we're going to put it on a map.
-</div>
-<br>
+<h2 class="page-header">Tignere Council Budget</h2>
 
 <script src="js/bubblechart.js"></script>
 <script type="text/javascript">
@@ -20,23 +15,11 @@ title: Tignere Council Budget
         var bubblemap = new OpenSpending.BubbleChart({
 
             query: {
-                dataset: 'tignere_test_01',
-                cuts: ['year:2009', 'reporting_type:AMOUNT'],
-                drilldowns: ['Head-Account Description'],//,'Sub-account-description'],
-                rootNodeLabel: 'Total (2009)',
-                breakdown: 'Council Name'
+                dataset: 'cm-tignere',
+                cuts: ['year:2009','reporting_type:Actual','financial_flow:EXPENDITURE'],
+                drilldowns: ['headaccount', 'subaccount'],
+                rootNodeLabel: 'Total (2009)'
             }
-            /*
-
-            query: {
-                dataset: 'cm-nwr-investments',
-                cuts: ['year:2010', 'reporting_type:AMOUNT'],
-                drilldowns: ['cofog1', 'chapter'],
-                rootNodeLabel: 'Total (2010)',
-                breakdown: 'commune'
-            }
-            */
-
         });
     }
    }

@@ -1,332 +1,129 @@
 ---
 layout: default
 title: Cameroon
+section: home
 ---
 
-<style>
-    #map{
-        display:block;
-        height:544;
-    }
+<h2 class="page-header">Where does Cameroons Money Go?</h2>
 
-    #map svg .region {
-        stroke: #fff;
-        stroke-opacity: 1;
-        /*stroke-width:1px;*/
-
-    }
-
-    #map svg .region:hover {
-        stroke: #fff;
-        /*stroke-width:3px;*/
-
-    }
-
-    #call-to-action{
-        height:100px;
-        text-align: right;
-    }
-    #budget-data{
-        background-color: #f8f8f8;
-        padding-bottom: 12px;
-
-    }
-    #region-panel p{
-        padding:8px 16px 8px 16px;
-        color: #666666;
-        font-size: 14px;
-        font-family: "OpenSansLight", sans-serif;
-    }
-    .budget-list{
-          list-style-type:none;
-    }
-
-    .budget-list li{
-        margin-top: 16px;
-        margin-bottom: 16px;
-    }
-    .budget-inline li{
-        display: inline;
-        padding-right:4px;
-        line-height:36px;
-        /*vertical-align: top;*/
-    }
-
-
-
-    .budget-link{
-        font-size: 16px;/*10.998px;*/
-        font-weight: bold;
-        line-height: 16px; /*14px;*/
-        color: #ffffff;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-        white-space: nowrap;
-        vertical-align: baseline;
-        background-color: #999999;
-        padding: 3px 8px 4px 8px; /*1px 4px 2px;*/
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-    }
-
-    a.budget-link:hover {
-        color: #ffffff;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .national-budget-link {
-        background-color:
-            #199a7b;
-    }
-    .regional-budget-link {
-        background-color:
-            #df3e67;
-    }
-    .regional-budget-link:hover {
-        background-color:
-            #ff0000;
-    }
-    .council-budget-link {
-          background-color:
-              #f95611;
-    }
-    .question-budget-link {
-        padding: 1px 4px 2px;
-        background-color:
-            #475e58;
-    }
-    h3{
-        color: #666666;
-    }
-
-    h3.panel-label{
-        font-size: 16px;
-        font-weight: normal;
-        border-bottom:1px solid #e7e7e7;
-        padding:10px 0 5px 16px;
-        margin: 0px 0 16px 0;
-    }
-    .budget-region{
-        font-weight: bold;
-    }
-
-
-
-
-</style>
-
-<h2>Cameroon Budget Map</h2>
 <div class="row">
     <div class="span7">
         <div id="map"></div>
     </div>
     <div class="span5">
-        <div id="call-to-action">
-            Call to action
-        </div>
-        <div id="budget-data">
-            <h3 class="panel-label">National: <span class="budget-region">Cameroon</span></h3>
-            <ul class="budget-list">
-                <li><a id="nib-link" class="budget-link national-budget-link" >National Investment Budget</a>
-                </li>
-            </ul>
-
-            <h3 class="panel-label">Region: <span id="region-title" class="budget-region"></span></h3>
-            <div id="region-panel">
-                <p>Click region to view data</p>
-                <!--
-            <ul class="budget-list">
-                <li><a id="pib-link" class="budget-link regional-budget-link">Public Investment Budget</a>
-                </li>
-                <li><a id="rib-link" class="budget-link regional-budget-link">Regional Investment Budget</a>
-                </li>
-                <li><a id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>
-                </li>
-            </ul>
-            <h3 id="councils-title" class="panel-label">Councils:</h3>
-            <ul class="budget-list budget-inline">
-                <li><a class="budget-link council-budget-link">Yaounde 2</a>
-                </li>
-                <li><a class="budget-link council-budget-link">Yaounde 6</a>
-                </li>
-                <li><a class="budget-link council-budget-link">Yaounde 2</a>
-                </li>
-                <li><a class="budget-link council-budget-link">Yaounde 6</a>
-                </li>
-            </ul>
-            -->
-            </div>
-
+        <div id="sidebar">
+            <h3>How does my region spend its funds?</h3>
+            <p>
+                Select a region to see budget and survey
+                information related to it.
+            </p>
         </div>
     </div>
 </div>
 
-
 <hr>
 
 <ul>
-    <li><h3><span class="budget-link question-budget-link">Survey</span> How well do local councils mange their budgets?
+    <li><h3><span class="label label-info">Survey</span>
+        <a href="bti.html">How well do local councils mange their budgets?</a>
         <small>Amadawa Region</small>
     </h3></li>
-    <li><h3><span class="budget-link question-budget-link">Investments</span> How are regional-level investments made?
+    <li><h3>
+        <span class="label label-info">Investments</span>
+        <a href="nwregion.html">What does my region invest in?</a>
         <small>North-West Region</small>
     </h3></li>
-    <li><h3><span class="budget-link question-budget-link">Investments</span> How are national-level investments made?
+    <li><h3>
+        <span class="label label-info">Investments</span>
+        <a href="pib.html">What does Cameroon invest in?</a>
         <small>Cameroon</small>
     </h3></li>
-    <li><h3><span class="budget-link question-budget-link">Budget</span> How does a council budget look?
+    <li><h3><span class="label label-info">Budget</span> How does my council spend its money?
         <small>Tignere, Amadawa</small>
     </h3></li>
-    <li><h3><span class="budget-link question-budget-link">PB</span> How would citizens spend their funds?
-        <small>Yaounde</small>
-    </h3></li>
 </ul>
 
-
-<ul>
-    <li><a href="bti.html">Local Council Budget Transparency (Adamawa)</a></li>
-</ul>
+{% raw %}
+<script id="region-sidebar" type="application/handlebars">
+    <h3>National Level</h3>
+    <ul class="budget-list">
+        {{#national}}
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/national}}
+    </ul>
+    {{#if regional}}
+    <h3>Region: <strong>{{regionLabel}}</strong></h3>
+    <ul class="budget-list">
+        {{#regional}}
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/regional}}
+    </ul>
+    {{/if}}
+    {{#if council}}
+    <h3>Local Councils</h3>
+    <ul class="budget-list">
+        {{#council}}
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/council}}
+    </ul>
+    {{/if}}
+</script>
+{% endraw %}
 
 <script>
     $(function() {
-        var regionCol = '#007a5e';
-        var regionSelectedCol = '#cc0033';
-        var selectedRegion = null;
-        var baseUrl = "http://cameroon.openspending.org/";
-        var nationalInvestmentUrl = "pib.html#/~/total--2011-";
-        $("#nib-link").attr("href",baseUrl+nationalInvestmentUrl);
-        /*
-         nwregion.html#/~/total--2010-
-         bti.html
+        
+        var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
 
-         http://cameroon.openspending.org/bti.html
-         http://cameroon.openspending.org/nwregion.html#/~/total--2010-
-         http://cameroon.openspending.org/pib.html#/~/total--2011-
-        */
-        //var dataTypes={"PIB":{},"RIB":{},"CB":{},"BTI":{}};
-
-        $.getJSON('/data/main_map.json', function(map_data) {
+        $.getJSON('/data/datasets.json', function(datasets) {
             window.map = $K.map('#map',500,450);//('#map',368,544);
 
             var showData = function(region) {
-                var regionData = map_data[region];
-                // reset budget links
-
-                $("#region-title").text(region);
-
-                /*
-                var linksIds = ["#pib-link","#rib-link","#cb-link","#bti-link"];
-                var linkText = "Find out more";
-                for(var i=0;i<linksIds.length;i++){
-                    $(linksIds[i]).attr("href","#");
-                    //$(linksIds[i]).text("N/A");
-                }
-                */
-                $("#region-panel").empty();
-                if(regionData){
-                    var $regionList = $('<ul class="budget-list"></ul>');
-                    var $councilTitle = $('<h3 id="councils-title" class="panel-label">Councils:</h3>');
-                    var $councilList = $('<ul class="budget-list budget-inline"></ul>');
-                    var nRegionLinks = 0;
-                    var nCouncilLinks = 0;
-                    for(var key in regionData){
-                        var obj = regionData[key];
-                        var budgetCode = obj.budget;
-                        var link = baseUrl+obj.link;
-                        switch(budgetCode){
-                            case "PIB":
-                                $regionList.append('<li><a href="'+link+'" id="pib-link" class="budget-link regional-budget-link">Public Investment Budget</a></li>');
-                                nRegionLinks+=1;
-
-                                break;
-                            case "RIB":
-                                $regionList.append('<li><a href="'+link+'" id="rib-link" class="budget-link regional-budget-link">Regional Investment Budget</a></li>');
-                                nRegionLinks+=1;
-                                break;
-
-                            case "BTI":
-                                $regionList.append('<li><a href="'+link+'" id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>');
-                                nRegionLinks+=1;
-                                break;
-                            case "CB":
-                                $councilList.append('<li><a href="'+link+'" class="budget-link council-budget-link">'+obj.council+'</a></li>');
-                                nCouncilLinks +=1;
-                                break;
-                        }
-                        //console.log("budgetCode " + budgetCode);
-                    }
-                    if(nRegionLinks>0){
-                        $("#region-panel").append($regionList);
-                    }
-                    if(nCouncilLinks>0){
-                        $("#region-panel").append($councilTitle);
-                        $("#region-panel").append($councilList);
-                    }
-
-
-                }
-                else{
-                    $("#region-panel").append('<p>No Data available for this region.</p>');
-                }
-                /*
-                var tmpl = Handlebars.compile($("#details-overlay-content").html());
-                var $e = $("#details-overlay");
-                $e.find("h3").html(data.sheet_name);
-                $e.find(".modal-body").html(tmpl(data));
-                $e.modal();
-                */
+                var data = _.groupBy(
+                        _.filter(datasets, function(ds) {
+                            return !ds.region||ds.region==region;
+                        }),
+                        function(e) { return e.level; });
+                data.regionLabel = region;
+                console.log(data);
+                $('#sidebar').html(sidebarTemplate(data));
             }
 
-
-
-            var setPathCol = function(path,col){
+            var setPathCol = function(path, selected, border){
                 path.realFill = path.svgPath.attrs.fill;
-                path.svgPath.attr({'fill': col});
+                path.svgPath.attr({'fill': selected ? '#cc0033' : '#007a5e'});
+                return path;
             }
 
-            var setRegionCol = function(region,col){
+            var setRegionCol = function(region, col, border){
                 var path = map.getLayerPath('region', region);
-                setPathCol(path,col);
+                return setPathCol(path, col, border);
             }
 
             var selectRegion= function(region){
-                var path;
                 if(selectedRegion!=null){
-                    setRegionCol(selectedRegion,regionCol);
-                    var path = map.getLayerPath('region', selectedRegion);
-
+                    var path = setRegionCol(selectedRegion, false, false);
                     path.svgPath.attr({'stroke-width': 1});
                 }
                 selectedRegion = region;
-                setRegionCol(selectedRegion,regionSelectedCol);
-
-                var path = map.getLayerPath('region', selectedRegion);
-                //path.realFill = path.svgPath.attrs.fill;
+                var path = setRegionCol(selectedRegion, true, true);
                 path.svgPath.attr({'stroke-width': 3});
-
             }
 
             // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg region_communes.svg
             map.loadMap('/img/regions.svg', function(map) {
-                var layerStr = 'region';
-                /*
                 map.addLayer({
-                    id: 'commune',
-                    key:'commune'
+                    id: 'region',
+                    key: 'region'
                 });
-                */
-                map.addLayer({
-                    id: layerStr,
-                    key: layerStr
-                });
-
-
 
                 map.tooltips({
                     layer: 'region',
                     content: function(data) {
-                        return data;
+                        var count = _.filter(datasets, function(ds) {
+                            return !ds.region||ds.region==data;
+                        }).length;
+                        return data + ' (' + count + ')';
                     },
                     style: {
                         name: 'dark'
@@ -336,28 +133,23 @@ title: Cameroon
                 map.onLayerEvent('click', function(d) {
                     selectRegion(d.region);
                     showData(d.region);
-
                 });
 
                 var layer = map.getLayer('region');
                 for(var i=0;i<layer.paths.length;i++){
                     var path = layer.paths[i];
-                    setPathCol(path,regionCol);
+                    setPathCol(path, false, false);
                 }
 
                 map.onLayerEvent('mouseover', function(d) {
-                    setRegionCol(d.region, regionSelectedCol);
+                    setRegionCol(d.region, true, false);
                 });
 
                 map.onLayerEvent('mouseout', function(d) {
                     if(d.region!=selectedRegion){
-                        setRegionCol(d.region, regionCol);
+                        setRegionCol(d.region, false, false);
                     }
-
                 });
-
-                //map.addFilter('oglow', 'glow', { size: 1, color: '#ddd', strength: 1, inner: false });
-                //map.getLayer('commune').applyFilter('oglow');
             });
         });
     });
