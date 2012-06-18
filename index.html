@@ -14,8 +14,8 @@ section: home
         <div id="sidebar">
             <h3>How does my region spend its funds?</h3>
             <p>
-                Select a region to see budget and survey 
-                information related to it. 
+                Select a region to see budget and survey
+                information related to it.
             </p>
         </div>
     </div>
@@ -48,22 +48,22 @@ section: home
     <h3>National Level</h3>
     <ul class="budget-list">
         {{#national}}
-            <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
         {{/national}}
     </ul>
     {{#if regional}}
-        <h3>Region: <strong>{{regionLabel}}</strong></h3>
-        <ul class="budget-list">
-            {{#regional}}
-                <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
-            {{/regional}}
-        </ul>
+    <h3>Region: <strong>{{regionLabel}}</strong></h3>
+    <ul class="budget-list">
+        {{#regional}}
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        {{/regional}}
+    </ul>
     {{/if}}
     {{#if council}}
     <h3>Local Councils</h3>
     <ul class="budget-list">
         {{#council}}
-            <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
+        <li class="{{level}}"><a href="{{link}}">{{label}} <i class='icon-white icon-share-alt'></i></a></li>
         {{/council}}
     </ul>
     {{/if}}
@@ -74,7 +74,7 @@ section: home
     $(function() {
         var selectedRegion = null;
         var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
-        
+
         $.getJSON('/data/datasets.json', function(datasets) {
             window.map = $K.map('#map',500,450);//('#map',368,544);
 
@@ -82,8 +82,8 @@ section: home
                 var data = _.groupBy(
                         _.filter(datasets, function(ds) {
                             return !ds.region||ds.region==region;
-                        }), 
-                    function(e) { return e.level; });
+                        }),
+                        function(e) { return e.level; });
                 data.regionLabel = region;
                 console.log(data);
                 $('#sidebar').html(sidebarTemplate(data));

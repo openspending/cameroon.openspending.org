@@ -35,19 +35,19 @@ header {
 */
 
 footer {
-  display:block;
-  height:80px;
-  background-color: #475c57;
-  margin: 30px 0 0 0;
+    display:block;
+    height:80px;
+    background-color: #475c57;
+    margin: 30px 0 0 0;
 }
 
 #title {
-  padding-top: 23px;
-  font-weight: normal;
+    padding-top: 23px;
+    font-weight: normal;
 }
 
 #title a {
-  color:#fff;
+    color:#fff;
 }
 
 #title a:hover {
@@ -55,9 +55,9 @@ footer {
 }
 
 #title-stripe {
-  padding: 0;
-  margin: 0;
-  line-height:0;
+    padding: 0;
+    margin: 0;
+    line-height:0;
 
 }
 
@@ -114,11 +114,11 @@ footer {
     padding-left: 6px;
     padding-right: 6px;
     background-color: #ce1127;
-  -webkit-border-radius: 3px;
-          border-radius: 3px;
-  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 
-} 
+}
 
 .home #sidebar li a:hover {
     text-decoration: none;
@@ -156,7 +156,7 @@ footer {
     stroke: #fff;
     stroke-width: 2px;
     cursor: pointer;
-}   
+}
 
 .bti .details-content table {
     width: 100%;
@@ -209,12 +209,12 @@ footer {
     height: 16px;
 }
 
-.bti .checkmatrix td, 
+.bti .checkmatrix td,
 .bti .checkmatrix th {
     text-align: center;
 }
 
-.bti .checkmatrix td.q, 
+.bti .checkmatrix td.q,
 .bti .checkmatrix th.q {
     text-align: left;
 }
