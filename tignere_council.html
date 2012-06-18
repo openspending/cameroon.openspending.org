@@ -3,6 +3,60 @@ layout: default
 title: Tignere Council Budget
 ---
 
+<style>
+    #cm-budget-panel {
+        background-color: #F8F8F8;
+        position: absolute;
+        left: 560px;
+        top: 50px;
+        width: 380px;
+        height: 500px;
+
+    }
+    #cm-budget-table{
+        border: 0px; 
+        cellpadding: 4px;
+        margin: 16px;
+        
+    }
+    .left-column {
+        text-align: right;
+        font-size: 1em;
+        width:110px;
+        color: #fc5216;
+        font-weight: 600;
+        vertical-align: top;
+    }
+
+    .right-column {
+        text-align: left;
+        font-size: 	0.9em;
+        font-weight: 300;
+        color: #585858 ;
+    }
+    .table-title {
+        text-align: left;
+        font-size: 	1.1em;
+        font-weight: 600;
+        color: #585858;
+        line-height: 1.3em;
+        padding-left: 24px;
+        padding-bottom: 12px;
+    }
+    .left-table-title {
+        text-align: right;
+        font-size: 1.1em;
+
+        width:110px;
+        color: #fc5216;
+        font-weight: 600;
+    }
+    body {
+        font-family: "OpenSans",Helvetica,sans-serif;
+    }
+
+</style>
+
 <h2 class="page-header">Tignere Council Budget</h2>
 
 <script src="js/bubblechart.js"></script>
@@ -27,5 +81,44 @@ title: Tignere Council Budget
   ]); // yepnope()   
 })(jQuery)
 </script>
-    
-{% include bubblemap.html %}
+
+<div id="bt-map">
+    <div id="preloader" style="text-align: center; padding: 100px"><img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
+
+    <div id="cm-bt">
+        <div class="bubbletree-wrapper">
+            <div id="cm-bubbletree" class="bubbletree"></div>
+        </div>
+    </div>
+    <div id="cm-map-legend"></div>
+    <!--<div id="cm-map">-->
+    <div>
+    <div id="cm-budget-panel">
+
+        <table id="cm-budget-table" cellpadding="5" >
+            <!--
+            <tr>
+                <td class="table-title" colspan="2">Materials and supplies used - 12,200 000</td>
+            </tr>
+            <tr>
+                <td class="left-column">7,000 000</td>
+                <td class="right-column">Fuel and lubricants</td>
+            </tr>
+            <tr>
+                <td class="left-column">1,200 000</td>
+                <td class="right-column">Maintenance of water and electricity networks</td>
+            </tr>
+            <tr>
+                <td class="left-column">989,000</td>
+                <td class="right-column">Stationary</td>
+            </tr>
+            -->
+        </table>
+
+
+    </div>
+    </div>
+    <!--</div>-->
+
+
+</div><!-- /#bt-map -->

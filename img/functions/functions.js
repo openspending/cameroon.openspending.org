@@ -22,19 +22,26 @@ BubbleTree.Styles.Cofog1 = {
 
 
 BubbleTree.Styles.CofogCouncil = {
-    '620-xxx': { color: '#C75746' },
-    '02': { color: '#0AB971' },
-    '03': { color: '#EC2406' },
-    '04': { color: '#790586' },
-    '05': { color: '#2A3A03' },
-    '06': { color: '#D33673' },
-    '07': { color: '#4E6D00' },
-    '08': { color: '#938626' },
-    '09': { color: '#44104e' },
-    '10': { color: '#935B3B' },
-    '11': { color: '#4E6D00' },
-    '12': { color: '#938626' },
-    '13': { color: '#44104e' },
-    '14': { color: '#935B3B' }
+    '710-xxx': { color: '#C75746' },
+    '713-xxx': { color: '#0AB971' },
+    '730-xxx': { color: '#EC2406' },
+    '7-20-xxx': { color: '#790586' },
+    '100-xxx': { color: '#D33673' },
+    '110-xxx': { color: '#4E6D00' },
+    '140-xxx': { color: '#938626' },
+    '150-xxx': { color: '#44104e' },
+    '610-xxx': { color: '#935B3B' },
+    '611-xxx': { color: '#4E6D00' },
+    '612-xxx': { color: '#938626' },
+    '620-xxx': { color: '#44104e' },
+    '630-xxx': { color: '#935B3B' },
+    '650-xxx': { color: '#4E6D00' },
+    '660-xxx': { color: '#2A3A03' },
+    '670-xxx': { color: '#0AB971' },
+    '160-xxx': { color: '#EC2406' },
+    '170-xxx': { color: '#790586' },
+    '220-xxx': { color: '#D33673' },
+    '221-xxx': { color: '#4E6D00' },
+    '222-xxx': { color: '#4E6D00' }
 
 };

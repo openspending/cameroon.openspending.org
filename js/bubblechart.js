@@ -50,6 +50,7 @@ OpenSpending.BubbleChart = function (config) {
     var formatAmount = BubbleTree.Utils.formatNumber;
 
     function updateLegend(title, colors, limits, currency) {
+        /*
         var currencyLabel = ' (' + currency + ')';
         var $lg = $('#cm-map-legend');
         $lg.html('');
@@ -62,9 +63,28 @@ OpenSpending.BubbleChart = function (config) {
             row.append('<div class="lbl">'+lbl+'</div>');
             $lg.append(row);
         });
+        */
     }
 
     var onNodeClick = function(node) {
+
+        // only top levels
+        if(node.level>=2) return;
+
+        node.color = "#ff0000";
+        $("#cm-budget-table").empty();
+        $("#cm-budget-table").append('<tr><td class="table-title" colspan="2">'+node.label+' - '+node.currency+' '+node.amount+'</td></tr>');
+        //$("#cm-budget-table").append('<tr><td class="left-table-title">'+node.amount+'</td><td class="table-title">'+node.label+'</td></tr>');
+
+        for(var i=0;i<node.children.length;i++){
+            var child = node.children[i];
+            var title = child.label;
+            var amount = child.amount;
+            var currency = child.currency;
+            $("#cm-budget-table").append('<tr><td class="left-column">'+child.amount+'</td><td class="right-column">'+child.label+'</td></tr>');
+
+        }
+
 
         /*
         var 
