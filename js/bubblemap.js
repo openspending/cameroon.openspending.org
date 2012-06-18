@@ -21,6 +21,8 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
 OpenSpending.BubbleMap = function (config) {
     var self = this;
 
+    selectedRegion = null;
+
     opts = $.extend(true, {
         query: {
             apiUrl: 'http://openspending.org/api',
@@ -52,8 +54,12 @@ OpenSpending.BubbleMap = function (config) {
         var currencyLabel = ' (' + currency + ')';
         var $lg = $('#cm-map-legend');
         $lg.html('');
-        $lg.append('<div class="title">Expenditure on '+title+'</div>');
+
+        title = selectedRegion ? title + ' in ' + selectedRegion : title;
+        $lg.append('<div class="title">Expenditure on ' + title + '</div>');
         $.each(colors, function(i,col) {
+            if (isNaN(limits[i])) limits[i] = 0;
+            if (isNaN(limits[i+1])) return;
             var row = $('<div class="row" />'),
                 lbl = formatAmount(limits[i])+'&nbsp;–&nbsp;'+formatAmount(limits[i+1])+
                     (i===0?currencyLabel:'');
@@ -61,13 +67,17 @@ OpenSpending.BubbleMap = function (config) {
             row.append('<div class="lbl">'+lbl+'</div>');
             $lg.append(row);
         });
+        $('#cm-map-legend').show();
     }
 
     var onNodeClick = function(node) {
+        $('.qtip').remove();
+        $('#preloader').hide();
+        $('#cm-map').show();
 
         var 
         // create a nice colorscale based on the selected bubble color
-        hcl = chroma.hex(node.color).hcl(),         
+        hcl = chroma.hex(node.color).hcl(),
         colsc = new chroma.ColorScale({
             colors: [
                 chroma.hcl(hcl[0], Math.min(1,hcl[1]), 0.95),
@@ -102,46 +112,51 @@ OpenSpending.BubbleMap = function (config) {
                 var v = node.breakdowns[e];
                 if (v === undefined ) return ['', ''];
                 var famount = OpenSpending.Utils.formatAmountWithCommas(v.amount, 0, node.currency);
-                return [e, '<div class="lbl">Expenditure on '+node.label+'</div><div class="amount">'+famount+'</div>'];
+                return [e, '<div class="lbl">'+node.label+'</div><div class="amount">'+famount+'</div>'];
             },
             delay: 300
         });
         // create tooltips
     };
     
-    // init bubbletree
-    new OpenSpending.Aggregator({
-        apiUrl: opts.query.apiUrl,
-        dataset: opts.query.dataset,
-        drilldowns: opts.query.drilldowns,
-        cuts: opts.query.cuts,
-        rootNodeLabel: opts.query.rootNodeLabel,
-        breakdown: opts.query.breakdown,
-        callback: function(data) {
-            //console.log(data);
-            
-            $('#preloader').remove();
-            $('#cm-map').show();
-
-            self.bt = new BubbleTree({
-                data: data,
-                container: '#cm-bubbletree',
-                bubbleType: 'icon',
-                nodeClickCallback: onNodeClick,
-                firstNodeCallback: onNodeClick,
-                rootPath: 'img/functions/',
-                tooltip: {
-                    qtip: true,
-                    delay: 800,
-                    content: function(node) {
-                        return [node.label, '<div class="desc">'+(node.description ? node.description : 'No description given')+'</div><div class="amount">£ '+node.famount+'</div>'];
-                    }
-                },
-                bubbleStyles: opts.bubbleStyles,
-                clearColors: true // remove all colors coming from OpenSpending API
-            });
-        }
-    });
+    var loadData = function() {
+        
+        $('#cm-map').hide();
+        $('#cm-map-legend').hide();
+        $('#preloader').show();
+        // init bubbletree
+        cuts = selectedRegion ?
+            opts.query.cuts.concat('region:'+selectedRegion) :
+            opts.query.cuts;
+        new OpenSpending.Aggregator({
+            apiUrl: opts.query.apiUrl,
+            dataset: opts.query.dataset,
+            drilldowns: opts.query.drilldowns,
+            cuts: cuts,
+            rootNodeLabel: opts.query.rootNodeLabel,
+            breakdown: opts.query.breakdown,
+            callback: function(data) {
+                $('#cm-bubbletree').empty();
+                self.bt = new BubbleTree({
+                    data: data,
+                    container: '#cm-bubbletree',
+                    bubbleType: 'icon',
+                    nodeClickCallback: onNodeClick,
+                    firstNodeCallback: onNodeClick,
+                    rootPath: 'img/functions/',
+                    tooltip: {
+                        qtip: true,
+                        delay: 800,
+                        content: function(node) {
+                            return [node.label, '<div class="desc">'+(node.description ? node.description : 'No description given')+'</div><div class="amount">'+node.famount+'</div>'];
+                        }
+                    },
+                    bubbleStyles: opts.bubbleStyles,
+                    clearColors: true // remove all colors coming from OpenSpending API
+                });
+            }
+        });
+    };
      
     // init map
     
@@ -152,8 +167,17 @@ OpenSpending.BubbleMap = function (config) {
                 id: opts.map.layerName,
                 key: opts.map.keyAttribute
             });
+
+
+            map.onLayerEvent('click', function(d) {
+                console.log(d);
+                selectedRegion = selectedRegion==d.region ? null : d.region;
+                console.log(selectedRegion);
+                loadData();
+            });
         }); // map.loadMap(function())
     }); // map.loadStyles(function())
     
     $('#cm-map').hide();
+    loadData();
 };
