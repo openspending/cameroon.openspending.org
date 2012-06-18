@@ -22,6 +22,7 @@ OpenSpending.BubbleMap = function (config) {
     var self = this;
 
     selectedRegion = null;
+    currentNode = null;
 
     opts = $.extend(true, {
         query: {
@@ -117,22 +118,42 @@ OpenSpending.BubbleMap = function (config) {
             delay: 300
         });
         // create tooltips
+        currentNode = node;
+    };
+
+    var nodeCuts = function(node) {
+        var cuts = [];
+        if (node&&node.parent) {
+            cuts = nodeCuts(node.parent);
+        }
+        if (node&&node.taxonomy) {
+            cuts.push(node.taxonomy+":"+node.name);
+        }
+        return cuts;
+    };
+
+    var regionCuts = function() {
+        return selectedRegion ?
+            opts.query.cuts.concat(opts.query.breakdown+':'+selectedRegion) :
+            opts.query.cuts;
     };
     
+    var allCuts = function() {
+        var cuts = regionCuts();
+        cuts = cuts.concat(nodeCuts(currentNode));
+        return cuts;
+    }
+
     var loadData = function() {
-        
         $('#cm-map').hide();
         $('#cm-map-legend').hide();
         $('#preloader').show();
         // init bubbletree
-        cuts = selectedRegion ?
-            opts.query.cuts.concat('region:'+selectedRegion) :
-            opts.query.cuts;
         new OpenSpending.Aggregator({
             apiUrl: opts.query.apiUrl,
             dataset: opts.query.dataset,
             drilldowns: opts.query.drilldowns,
-            cuts: cuts,
+            cuts: regionCuts(),
             rootNodeLabel: opts.query.rootNodeLabel,
             breakdown: opts.query.breakdown,
             callback: function(data) {
@@ -170,9 +191,7 @@ OpenSpending.BubbleMap = function (config) {
 
 
             map.onLayerEvent('click', function(d) {
-                console.log(d);
                 selectedRegion = selectedRegion==d.region ? null : d.region;
-                console.log(selectedRegion);
                 loadData();
             });
         }); // map.loadMap(function())
