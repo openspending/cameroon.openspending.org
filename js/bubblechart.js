@@ -30,7 +30,7 @@ OpenSpending.BubbleChart = function (config) {
             rootNodeLabel: null
         },
         bubbleStyles: {
-            cofog1:  BubbleTree.Styles.Cofog1
+            headaccount:  BubbleTree.Styles.CofogCouncil
         }
         /*,
         map: {
@@ -131,7 +131,7 @@ OpenSpending.BubbleChart = function (config) {
             self.bt = new BubbleTree({
                 data: data,
                 container: '#cm-bubbletree',
-                bubbleType: 'icon',
+                bubbleType: 'color',
                 nodeClickCallback: onNodeClick,
                 firstNodeCallback: onNodeClick,
                 rootPath: 'img/functions/',

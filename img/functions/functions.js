@@ -19,3 +19,22 @@ BubbleTree.Styles.Cofog1 = {
 	'10': { icon: 'helping-others.svg', color: '#935B3B' }	
 
 };
+
+
+BubbleTree.Styles.CofogCouncil = {
+    '620-xxx': { color: '#C75746' },
+    '02': { color: '#0AB971' },
+    '03': { color: '#EC2406' },
+    '04': { color: '#790586' },
+    '05': { color: '#2A3A03' },
+    '06': { color: '#D33673' },
+    '07': { color: '#4E6D00' },
+    '08': { color: '#938626' },
+    '09': { color: '#44104e' },
+    '10': { color: '#935B3B' },
+    '11': { color: '#4E6D00' },
+    '12': { color: '#938626' },
+    '13': { color: '#44104e' },
+    '14': { color: '#935B3B' }
+
+};
