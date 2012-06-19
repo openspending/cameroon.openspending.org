@@ -69,4 +69,20 @@ forum: Nord-Ouest
     
 {% include bubblemap.html %}
 
-{% include disqus.html %}
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#projects" data-toggle="tab">Projects</a></li>
+  <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="projects">
+    {% include datatable.html %}
+  </div>
+  <div class="tab-pane" id="discussion">
+    {% include disqus.html %}
+  </div>
+</div>
+
+
+
+
