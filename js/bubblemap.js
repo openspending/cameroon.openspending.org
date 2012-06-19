@@ -37,7 +37,8 @@ OpenSpending.BubbleMap = function (config) {
             breakdown: null
         },
         bubbleStyles: {
-            cofog1:  BubbleTree.Styles.Cofog1
+            cofog1:  BubbleTree.Styles.Cofog1,
+            sector: BubbleTree.Styles.Sector
         },
         map: {
             url: null,
