@@ -20,6 +20,29 @@ BubbleTree.Styles.Cofog1 = {
 
 };
 
+BubbleTree.Styles.Sector = {
+    '1': { icon: 'government.svg', color: '#C75746' },
+    '2': { icon: 'misc-services.svg', color: '#0AB971' },
+    '3': { icon: 'order-safety.svg', color: '#EC2406' }, 
+    '4': { icon: 'pollution.svg', color: '#790586' }, 
+    '5': { icon: 'environment.svg', color: '#2A3A03' },    
+    '6': { icon: 'manufactoring-construction.svg', color: '#D33673' },     
+    '7': { icon: 'health.svg', color: '#4E6D00' },                                         
+    '8': { icon: 'culture.svg', color: '#938626' },                    
+    '9': { icon: 'education.svg', color: '#44104e' },          
+    '10': { icon: 'helping-others.svg', color: '#935B3B' },
+
+    '12': { icon: 'education.svg', color: '#44104e' },          
+    '13': { icon: 'pre-school.svg', color: '#935B3B' },
+    '14': { icon: 'planning.svg', color: '#935B3B' },
+    '13': { icon: 'manufactoring-construction.svg', color: '#D33673' },
+    '15': { icon: 'railways.svg', color: '#938626' },
+    '16': { icon: 'microscope.svg', color: '#935B3B' },
+    '17': { icon: 'farms.svg', color: '#935B3B' },
+    '18': { icon: 'energy2.svg', color: '#935B3B' },
+    '19': { icon: 'pollution.svg', color: '#790586' }
+
+};
 
 BubbleTree.Styles.CofogCouncil = {
     '710-xxx': { color: '#C75746' },
