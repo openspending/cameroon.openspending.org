@@ -12,7 +12,10 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="http://assets.openspending.org/branding/fonts/opensans/stylesheet.css">
+  <link rel="stylesheet" href="open-sans-fontfacekit/stylesheet.css" type="text/css" charset="utf-8">
+
+    <!--  <link rel="stylesheet" href="http://assets.openspending.org/branding/fonts/opensans/stylesheet.css">-->
+
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
   <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.5.3/modernizr.min.js"></script>
@@ -35,18 +38,26 @@
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
   <header id="header">
     <div class="container" >
-      <div id="title-stripe"><img src="/img/cameroon_stripe.gif" height="12" width="330"/></div>
-      <div id="nav-menu">
-        <a href="/index.html">Home</a> |
-        <a href="/about.html">About</a>
-      </div>
+      <!--<div id="title-stripe"><img src="/img/cameroon_stripe.gif" height="12" width="330"/></div>-->
+
+        <ul id="nav-menu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a class="nav-button twitter" href="/about.html">twitter</a></li>
+            <li><a class="nav-button facebook" href="/about.html">facebook</a></li>
+        </ul>
       <h1 id="title"><a href="/index.html">{{ site.title }}</a></h1>
       <!--<div class="logo"></div>-->
       
     </div>
+
+
   </header>
 
   <div class="container">
+      <div class="homelink">
+          <a href="/index.html">Home</a>
+      </div>
     {{ content }}
   </div>
 
