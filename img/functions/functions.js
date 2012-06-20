@@ -44,7 +44,7 @@ BubbleTree.Styles.Sector = {
 
 };
 
-BubbleTree.Styles.CofogCouncil = {
+BubbleTree.Styles.CouncilAccount = {
     '710-xxx': { color: '#C75746' },
     '713-xxx': { color: '#0AB971' },
     '730-xxx': { color: '#EC2406' },
