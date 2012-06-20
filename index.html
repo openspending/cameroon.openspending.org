@@ -33,10 +33,12 @@ section: home
         display: block;
         font-family: "OpenSansBold", Helvetica, sans-serif;
         font-size: 1.1em;
+
     }
 
     #call-to-action a:hover {
         background-color: #999;
+        text-decoration: none;
     }
 
     #budget-data{
@@ -157,7 +159,7 @@ section: home
 </style>
 
 <div id="call-to-action">
-    <a href="/about.html">Send in your local council data</a>
+    <a href="/contribute.html">Send in your local council data</a>
 </div>
 
 <h2 class="page-title">Cameroon Budget Map</h2>
@@ -381,16 +383,19 @@ section: home
                 map.tooltips({
                     layer: 'region',
                     content: function(data) {
-                        var count = 0;
+                        var countStr = "";
                         if(map_data[data]){
-                            count = map_data[data].length;
+                            countStr = map_data[data].length.toString();
+                        }
+                        else{
+                            countStr = 'National budget';
                         }
                         /*
                         var count = _.filter(datasets, function(ds) {
                             return !ds.region||ds.region==data;
                         }).length;
                         */
-                        return data + ' (' + count + ')';
+                        return data + ' (' + countStr + ')';
 
                     },
                     style: {
