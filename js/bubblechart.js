@@ -30,7 +30,7 @@ OpenSpending.BubbleChart = function (config) {
             rootNodeLabel: null
         },
         bubbleStyles: {
-            headaccount:  BubbleTree.Styles.CofogCouncil
+            headaccount:  BubbleTree.Styles.CouncilAccount
         }
         /*,
         map: {
@@ -71,20 +71,27 @@ OpenSpending.BubbleChart = function (config) {
         // only top levels
         if(node.level>=2) return;
 
-        node.color = "#ff0000";
+
         $("#cm-budget-panel").css("visibility", "visible");
         $("#cm-budget-table").empty();
-        $("#cm-budget-table").append('<tr><td class="table-title" colspan="2">'+node.label+' - '+node.currency+' '+node.amount+'</td></tr>');
-        //$("#cm-budget-table").append('<tr><td class="left-table-title">'+node.amount+'</td><td class="table-title">'+node.label+'</td></tr>');
+        var currency = node.currency;
+        var amountFmt = OpenSpending.Utils.formatAmountWithCommas(node.amount, 0, currency)
+        $("#cm-budget-table").append('<tr><td class="table-title" colspan="2">'+node.label+' - '+amountFmt+'</td></tr>');
+        $("#cm-budget-table").append('<tr><td class="left-table-title">Amount (Fr)</td><td class="right-table-title">Account</td></tr>');
 
+        var budgetArray = [];
         for(var i=0;i<node.children.length;i++){
             var child = node.children[i];
-            var title = child.label;
-            var amount = child.amount;
-            var currency = child.currency;
-            $("#cm-budget-table").append('<tr><td class="left-column">'+child.amount+'</td><td class="right-column">'+child.label+'</td></tr>');
+            budgetArray[i] = {label:child.label,amount:child.amount};
+        }
+        budgetArray.sort(function(a,b){return b.amount-a.amount});
+        for(i=0;i<budgetArray.length;i++){
+            var child = budgetArray[i];
+            var amountFmt = OpenSpending.Utils.formatAmountWithCommas(child.amount, 0, "")
+            $("#cm-budget-table").append('<tr><td class="left-column">'+amountFmt+'</td><td class="right-column">'+child.label+'</td></tr>');
 
         }
+
 
 
         /*
