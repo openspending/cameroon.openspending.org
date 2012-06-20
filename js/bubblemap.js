@@ -166,7 +166,9 @@ OpenSpending.BubbleMap = function (config) {
             cuts: regionCuts(),
             rootNodeLabel: opts.query.rootNodeLabel,
             breakdown: opts.query.breakdown,
+            processEntry: opts.query.processEntry,
             callback: function(data) {
+                console.log(data);
                 $('#cm-bubbletree').empty();
                 self.bt = new BubbleTree({
                     data: data,
@@ -216,7 +218,6 @@ OpenSpending.BubbleMap = function (config) {
             if (parts[0]=='year') parts[0] = 'time.year';
             self.dt.filters[parts[0]] = parts[1];
         });
-        console.log(self.dt.filters);
         self.dt.redraw();
     };
 

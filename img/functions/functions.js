@@ -37,7 +37,7 @@ BubbleTree.Styles.Sector = {
     '14': { icon: 'planning.svg', color: '#935B3B' },
     '13': { icon: 'manufactoring-construction.svg', color: '#D33673' },
     '15': { icon: 'railways.svg', color: '#938626' },
-    '16': { icon: 'microscope.svg', color: '#935B3B' },
+    '16': { icon: 'microscope.svg', color: '#44104e' },
     '17': { icon: 'farms.svg', color: '#935B3B' },
     '18': { icon: 'energy2.svg', color: '#935B3B' },
     '19': { icon: 'pollution.svg', color: '#790586' }
