@@ -1,15 +1,9 @@
 {
 "Adamaoua":[
-{"budget":"PIB"},
-{"budget":"BTI","link":"bti.html"},
-{"budget":"CB","council":"Tignere"}
+{"budget":"transparency","link":"bti.html"},
+{"budget":"council","council":"Tignere", "link":"tignere_council.html"}
 ],
-"Centre":[
-{"budget":"PIB"},
-{"budget":"CB","council":"Yaounde 2"},
-{"budget":"CB","council":"Yaounde 6"}
-],
-"Est":[{"budget":"PIB"}],
-"Extrême-Nord":[{"budget":"PIB"}],
-"Nord-Ouest":[{"budget":"RIB","link":"nwregion.html#/~/total--2010-"}]
+"Nord-Ouest":[
+{"budget":"regional","link":"nwregion.html"}
+]
 }

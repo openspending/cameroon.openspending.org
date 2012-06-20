@@ -45,7 +45,7 @@ section: home
 
     }
     #region-panel p{
-        padding:8px 16px 8px 16px;
+        padding:4px 16px 4px 16px;
         color: #666666;
         font-size: 14px;
 
@@ -76,10 +76,11 @@ section: home
         white-space: nowrap;
         vertical-align: baseline;
         background-color: #999999;
-        padding: 3px 8px 4px 8px; /*1px 4px 2px;*/
+        padding: 3px 25px 4px 8px; /*1px 4px 2px;*/
         -webkit-border-radius: 3px;
         -moz-border-radius: 3px;
         border-radius: 3px;
+        background: transparent url('img/site/button_arrow_white.png') no-repeat right center;
     }
 
     a.budget-link:hover {
@@ -92,17 +93,28 @@ section: home
         background-color:
             #199a7b;
     }
+    .national-budget-link:hover {
+        background-color:
+            #007a5e;
+    }
+
+
     .regional-budget-link {
         background-color:
             #df3e67;
     }
     .regional-budget-link:hover {
         background-color:
-            #ff0000;
+            #de2c39;
     }
     .council-budget-link {
           background-color:
               #f95611;
+    }
+    .council-budget-link:hover {
+        background-color:
+            #e13506
+;
     }
     .question-budget-link {
         padding: 1px 4px 2px;
@@ -167,7 +179,7 @@ section: home
         -->
 
         <div id="budget-data">
-            <h3 class="panel-label">National: <span class="budget-region">Cameroon</span></h3>
+            <h3 class="panel-label">National Level:</h3>
             <ul class="budget-list">
                 <li><a href="pib.html" id="nib-link" class="budget-link national-budget-link" >National Investment Budget</a>
                 </li>
@@ -175,7 +187,7 @@ section: home
 
             <h3 class="panel-label">Region: <span id="region-title" class="budget-region"></span></h3>
             <div id="region-panel">
-                <!--<p><b>How does my region spend its funds?</b><br />-->
+                <p><b>How does my region spend its funds?</b></p>
                 <p>Select a region to see budget and survey information related to it.</p>
                 <!--
             <ul class="budget-list">
@@ -209,24 +221,26 @@ section: home
 
 <ul id="budget-questions">
 
-    <li><h3><img src="img/site/icon_transparency.png"><!--<span class="label label-info">Survey</span>-->
-        <a href="bti.html">How well do local councils mange their budgets?</a>
-        <small>Amadawa Region</small>
+    <li><h3><img src="img/site/icon_national_bubble.png">
+        <!--<span class="label label-info">Investments</span>-->
+        <a href="pib.html">What does Cameroon invest in?</a>
+        <small>Cameroon</small>
     </h3></li>
     <li><h3><img src="img/site/icon_regional_bubble.png">
         <!--<span class="label label-info">Investments</span>-->
         <a href="nwregion.html">What does my region invest in?</a>
         <small>North-West Region</small>
     </h3></li>
-    <li><h3><img src="img/site/icon_national_bubble.png">
-        <!--<span class="label label-info">Investments</span>-->
-        <a href="pib.html">What does Cameroon invest in?</a>
-        <small>Cameroon</small>
+    <li><h3><img src="img/site/icon_transparency.png"><!--<span class="label label-info">Survey</span>-->
+        <a href="bti.html">How well do local councils mange their budgets?</a>
+        <small>Adamawa Region</small>
     </h3></li>
+
+
     <li><h3><img src="img/site/icon_council_bubble.png">
         <!--<span class="label label-info">Budget</span>-->
         <a href="tignere_council.html">How does my council spend its money?</a>
-        <small>Tignere, Amadawa</small>
+        <small>Tignere, Adamawa</small>
     </h3></li>
     <!--
     <li><h3><span class="budget-link question-budget-link">Survey</span> How well do local councils mange their budgets?
@@ -271,6 +285,7 @@ section: home
                 $('#sidebar').html(sidebarTemplate(data));
                 */
                 var regionData = map_data[region];
+
                 // reset budget links
 
                 $("#region-title").text(region);
@@ -295,21 +310,17 @@ section: home
                         var budgetCode = obj.budget;
                         var link = "/"+obj.link;
                         switch(budgetCode){
-                            case "PIB":
-                                $regionList.append('<li><a href="'+link+'" id="pib-link" class="budget-link regional-budget-link">Public Investment Budget</a></li>');
-                                nRegionLinks+=1;
 
-                                break;
-                            case "RIB":
+                            case "regional":
                                 $regionList.append('<li><a href="'+link+'" id="rib-link" class="budget-link regional-budget-link">Regional Investment Budget</a></li>');
                                 nRegionLinks+=1;
                                 break;
 
-                            case "BTI":
+                            case "transparency":
                                 $regionList.append('<li><a href="'+link+'" id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>');
                                 nRegionLinks+=1;
                                 break;
-                            case "CB":
+                            case "council":
                                 $councilList.append('<li><a href="'+link+'" class="budget-link council-budget-link">'+obj.council+'</a></li>');
                                 nCouncilLinks +=1;
                                 break;

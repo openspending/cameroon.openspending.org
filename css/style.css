@@ -1,5 +1,6 @@
 a {
-    color: #007b5f;
+    /*color: #007b5f;*/
+    /*color:#ff6600;*/
 }
 
 body {
@@ -15,9 +16,9 @@ h3 {
 }
 
 .page-title {
-    font-size: 20px;
-    color: #333;
-    font-family: "OpenSansRegular";
+    font-size: 22px;
+    color: #666;
+    font-family: "OpenSansSemibold";
     padding-left:30px;
     padding-bottom: 17px;
     margin: 18px 0;
@@ -104,7 +105,7 @@ footer {
 
 #title a {
     /*color:#fff;*/
-    font-size: 20px;
+    font-size: 24px;
     color:#666;
 }
 
