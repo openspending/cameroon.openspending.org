@@ -166,7 +166,7 @@ section: bti
     $(function() {
         score_colors = new chroma.ColorScale({
             colors: chroma.brewer.PuBu,
-            limits: [0,60]
+            limits: [0,43]
             });
 
         rev_colors = new chroma.ColorScale({
@@ -175,7 +175,7 @@ section: bti
             });
 
         spend_colors = new chroma.ColorScale({
-            colors: chroma.brewer.RdPu,
+            colors: chroma.brewer.Oranges,
             limits: [0,130]
             });
 
@@ -212,10 +212,11 @@ section: bti
                     colors: function(d, pathdata) {
                         if (!d) return '#ddd';
                         color = colorize(d);
+                        dark = chroma.interpolate(color, "#000", .3, 'hsl').hex();
                         $("#ranking tbody tr").each(function(i, e) {
                             if ($(e).data('commune') == d.key) {
-                                $(e).css('color', color);
-                                $(e).find('a').css('color', color);
+                                $(e).css('color', dark);
+                                $(e).find('a').css('color', dark);
                             };
                         });
                         return color;
@@ -253,7 +254,7 @@ section: bti
 
 
             var colorizeScores = function(d) {
-                if (d.score=='-') return chroma.hex('#dddddd');
+                if (d.score==0) return chroma.hex('#dddddd');
                 return score_colors.getColor(d.score);
             }
 
