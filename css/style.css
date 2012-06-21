@@ -222,7 +222,7 @@ footer {
 
 .bti #map svg .commune {
     stroke: #fff;
-    stroke-width: 2px;
+    stroke-width: 1px;
     cursor: pointer;
 }
 
