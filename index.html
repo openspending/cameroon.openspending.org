@@ -19,6 +19,23 @@ section: home
         stroke: #fff;
     }
 
+    .intro-container {
+        font-size: 17px;
+        line-height: 22px;
+        color: #666;
+        font-family: "OpenSansItalic";
+        padding-left:30px;
+        padding-bottom: 17px;
+        margin: 6px 0 18px 0;
+
+        border-bottom: 1px solid #efefef;
+
+
+    }
+    .intro-text {
+        width:540px;
+    }
+
     #call-to-action {
         float:right;
     }
@@ -159,8 +176,11 @@ section: home
     <a href="/contribute.html">Send in your local council data</a>
 </div>
 
-<h2 class="page-title">Cameroon Budget Map</h2>
-
+<!--<h2 class="page-title">Cameroon Budget Map</h2>-->
+<h2 class="intro-container">
+    <div class="intro-text">Discover how Cameroon receives and spends its money and see how citizens vote for it to be spent
+    </div >
+</h2>
 
 
 <div class="row">
@@ -292,7 +312,7 @@ section: home
 
                 var setPathCol = function(path, selected, border){
                     path.realFill = path.svgPath.attrs.fill;
-                    path.svgPath.attr({'fill': selected ? '#cc0033' : '#007a5e'});
+                    path.svgPath.attr({'fill': selected ? '#df3e67':'#199a7b'});//'#cc0033' : '#007a5e'});
                     return path;
                 }
 
@@ -324,7 +344,7 @@ section: home
                         for(var i=0;i<layer.paths.length;i++){
                             var path = layer.paths[i];
                             //setPathCol(path, false, false);
-                            path.svgPath.attr({'fill': '#007a5e'});
+                            path.svgPath.attr({'fill': '#199a7b'});
                             path.svgPath.attr({'stroke-width': 1});
                             path.svgPath.attr({'stroke': '#fff'});
                         }
