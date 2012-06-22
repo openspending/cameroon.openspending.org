@@ -2,9 +2,10 @@
 layout: default
 title: National Investment Budget
 forum: National
+section: pib
 ---
 
-<h2 class="page-header">National Investment Budget</h2>
+<h2 class="page-header">National Investment Budget (2011)</h2>
 
 <script src="js/bubblemap.js"></script>
 <script type="text/javascript">
@@ -19,7 +20,7 @@ forum: National
             cuts: ['year:2011'],
             drilldowns: ['sector', 'chapter'],
             breakdown: 'region',
-            rootNodeLabel: 'Total (2011)'
+            rootNodeLabel: 'Total'
           },
           map: {
             url: 'img/regions.svg',
@@ -69,13 +70,13 @@ forum: National
     
 {% include bubblemap.html %}
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs under-curtain">
   <li class="active"><a href="#projects" data-toggle="tab">Projects</a></li>
   <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
   <li><a href="#about" data-toggle="tab">About</a></li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content under-curtain">
   <div class="tab-pane active" id="projects">
     {% include datatable.html %}
   </div>
@@ -83,21 +84,21 @@ forum: National
     {% include disqus.html %}
   </div>
   <div class="tab-pane" id="about">
-    <div class="span6">
+    <div class="span8">
         <p>This page displays the investments made by the Cameroon national government 
         in 2011. The figures are budgeted expenditure, not actual amounts. Investments
         are managed by the Planning Ministry (MINEPAT).</p>
 
-        <p>The data has been re-organized into a system of focus sectors which group
-          some of the chapters present in the original budget document into larger 
-          categories. The sector system is loosely based on the UN's <a href="http://unstats.un.org/unsd/cr/registry/regcst.asp?Cl=4">COFOG</a> scheme.
-        </p>
+        {% include sectors.html %}
     </div>
-    <div class="span5">
+    <div class="span3">
         <ul>
-          <li><a href="http://www.minepat.gov.cm/">Cameroon Ministry of Planning</a></li>
-          <li><a href="https://commondatastorage.googleapis.com/ckannet-storage/2012-06-19T164337/BIP-REGIONAL-2011-DA.xls">Source data</a> (raw form)</li>
+          <li>Source data in <a href="https://commondatastorage.googleapis.com/ckannet-storage/2012-06-19T164337/BIP-REGIONAL-2011-DA.xls">raw form</a> and 
+          <a href="http://data.openspending.org/worldbank/cameroon/CM-BIP-REGIONAL-2011-DA.csv">cleaned and processed</a>.</li>
+
+          <li><a href="http://openspending.org/cm-pib/views/new">Generate custom visualizations</a> at OpenSpending.org</li>
           <li><a href="http://datahub.io/dataset/cameroon-public-investment-budget">Dataset on datahub.io</a></li>
+          <li><a href="http://www.minepat.gov.cm/">Cameroon Ministry of Planning</a></li>
         </ul>
     </div>
   </div>

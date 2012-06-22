@@ -2,6 +2,7 @@
 layout: default
 title: Local Council Budget Transparency
 section: bti
+forum: Amadaoua
 ---
 
 <h2 class="page-header">Budget Transparency in the Adamawa Region</h2>
@@ -71,6 +72,8 @@ section: bti
         </ul>
     </div>
 </div>
+
+{% include disqus.html %}
 
 <div class="modal hide" id="details-overlay">
     <div class="modal-header">
@@ -156,7 +159,7 @@ section: bti
         <div class="pull-right">
             <a class="btn btn-small" href="data/bti/{{sheet_name}}.pdf"><i class='icon-list-alt'></i>
             PDF for {{sheet_name}}</a>
-            <a class="btn btn-small btn-primary" href="data/bti/Survey.xlsx"><i class='icon-download icon-white'></i> Excel (Full Survey)</a>
+            <a class="btn btn-small btn-primary" href="data/bti/BTI_Survey.xlsx"><i class='icon-download icon-white'></i> Excel (Full Survey)</a>
         </div>
     </div>
 </script>
@@ -166,7 +169,7 @@ section: bti
     $(function() {
         score_colors = new chroma.ColorScale({
             colors: chroma.brewer.PuBu,
-            limits: [0,60]
+            limits: [0,43]
             });
 
         rev_colors = new chroma.ColorScale({
@@ -175,7 +178,7 @@ section: bti
             });
 
         spend_colors = new chroma.ColorScale({
-            colors: chroma.brewer.RdPu,
+            colors: chroma.brewer.Oranges,
             limits: [0,130]
             });
 
@@ -201,6 +204,8 @@ section: bti
                 $e.find("h3").html(data.sheet_name);
                 $e.find(".modal-body").html(tmpl(data));
                 $e.modal();
+                $e.find('img[title]').qtip({ style: { name: 'dark', tip: true }, 
+                    position: { corner: { target: 'topMiddle', tooltip: 'bottomMiddle' }}});
             }
 
             var colorizeMap = function(colorize) {
@@ -212,10 +217,11 @@ section: bti
                     colors: function(d, pathdata) {
                         if (!d) return '#ddd';
                         color = colorize(d);
+                        dark = chroma.interpolate(color, "#000", .3, 'hsl').hex();
                         $("#ranking tbody tr").each(function(i, e) {
                             if ($(e).data('commune') == d.key) {
-                                $(e).css('color', color);
-                                $(e).find('a').css('color', color);
+                                $(e).css('color', dark);
+                                $(e).find('a').css('color', dark);
                             };
                         });
                         return color;
@@ -253,7 +259,7 @@ section: bti
 
 
             var colorizeScores = function(d) {
-                if (d.score=='-') return chroma.hex('#dddddd');
+                if (d.score==0) return chroma.hex('#dddddd');
                 return score_colors.getColor(d.score);
             }
 

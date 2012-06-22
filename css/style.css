@@ -101,8 +101,19 @@ header {
 footer {
     display:block;
     height:80px;
+    color: #fff;
+    padding-top: 2em;
     background-color: #475c57;
     margin: 30px 0 0 0;
+}
+
+footer a {
+    color: #fff;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #fff;
 }
 
 #title {
@@ -296,4 +307,12 @@ footer {
 .bti .checkmatrix td.q,
 .bti .checkmatrix th.q {
     text-align: left;
+}
+
+body.nwregion #content, body.pib #content{
+    min-height: 70em;
+}
+
+.under-curtain {
+    display: none;
 }
