@@ -2,6 +2,7 @@
 layout: default
 title: North-West Region of Cameroon
 forum: Nord-Ouest
+section: nwregion
 ---
 
 <h2 class="page-header">North-West Region Investment Budget (2010)</h2>
@@ -18,7 +19,7 @@ forum: Nord-Ouest
                 dataset: 'cm-nwr-investments',
                 cuts: ['year:2010', 'reporting_type:AMOUNT'],
                 drilldowns: ['sector', 'chapter'],
-                rootNodeLabel: 'Total (2010)',
+                rootNodeLabel: 'Total',
                 breakdown: 'commune'
             },
             map: {
@@ -69,35 +70,37 @@ forum: Nord-Ouest
     
 {% include bubblemap.html %}
 
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#projects" data-toggle="tab">Projects</a></li>
-  <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
-  <li><a href="#about" data-toggle="tab">About</a></li>
-</ul>
+<div class="under-curtain">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#projects" data-toggle="tab">Projects</a></li>
+    <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
+    <li><a href="#about" data-toggle="tab">About</a></li>
+  </ul>
 
-<div class="tab-content">
-  <div class="tab-pane active" id="projects">
-    {% include datatable.html %}
-  </div>
-  <div class="tab-pane" id="discussion">
-    {% include disqus.html %}
-  </div>
-  <div class="tab-pane" id="about">
-    <div class="span8">
-        <p>This page displays the investments made in the North-West region of Cameroon
-        in 2010. The figures are budgeted expenditure, as well as engaged and liquidated
-        spending.</p>
-
-        {% include sectors.html %}
+  <div class="tab-content">
+    <div class="tab-pane active" id="projects">
+      {% include datatable.html %}
     </div>
-    <div class="span3">
-        <ul>
-          <li>Source data in 
-          <a href="http://data.openspending.org/worldbank/cameroon/Cameroon-NW-Region-Investment-Budget.csv">cleaned and processed</a> form.</li>
-          <li><a href="http://openspending.org/cm-nwr-investments/views/new">Generate custom visualizations</a> at OpenSpending.org</li>
-          <li><a href="http://datahub.io/dataset/cm-nwr-investments">Dataset on datahub.io</a></li>
-          <li><a href="http://www.minepat.gov.cm/">Cameroon Ministry of Planning</a></li>
-        </ul>
+    <div class="tab-pane" id="discussion">
+      {% include disqus.html %}
+    </div>
+    <div class="tab-pane" id="about">
+      <div class="span8">
+          <p>This page displays the investments made in the North-West region of Cameroon
+          in 2010. The figures are budgeted expenditure, as well as engaged and liquidated
+          spending.</p>
+
+          {% include sectors.html %}
+      </div>
+      <div class="span3">
+          <ul>
+            <li>Source data in 
+            <a href="http://data.openspending.org/worldbank/cameroon/Cameroon-NW-Region-Investment-Budget.csv">cleaned and processed</a> form.</li>
+            <li><a href="http://openspending.org/cm-nwr-investments/views/new">Generate custom visualizations</a> at OpenSpending.org</li>
+            <li><a href="http://datahub.io/dataset/cm-nwr-investments">Dataset on datahub.io</a></li>
+            <li><a href="http://www.minepat.gov.cm/">Cameroon Ministry of Planning</a></li>
+          </ul>
+      </div>
     </div>
   </div>
 </div>

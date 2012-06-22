@@ -82,8 +82,7 @@ OpenSpending.BubbleMap = function (config) {
 
     var onNodeClick = function(node) {
         $('.qtip').remove();
-        $('#preloader').hide();
-        $('#cm-map').show();
+        curtainsUp();
 
         var 
         // create a nice colorscale based on the selected bubble color
@@ -152,12 +151,23 @@ OpenSpending.BubbleMap = function (config) {
         var cuts = regionCuts();
         cuts = cuts.concat(nodeCuts(currentNode));
         return cuts;
-    }
+    };
+
+    var curtainsUp = function() {
+        $('.under-curtain').show();
+        $('.qtip').remove();
+        $('#preloader').hide();
+    };
+
+    var curtainsDown = function() {
+        $('.qtip').remove();
+        $('.under-curtain').hide();
+        $('#cm-bubbletree').empty();
+        $('#preloader').show();
+    };
 
     var loadData = function() {
-        $('#cm-map').hide();
-        $('#cm-map-legend').hide();
-        $('#preloader').show();
+        curtainsDown();
         // init bubbletree
         new OpenSpending.Aggregator({
             apiUrl: opts.query.apiUrl,
@@ -168,7 +178,6 @@ OpenSpending.BubbleMap = function (config) {
             breakdown: opts.query.breakdown,
             processEntry: opts.query.processEntry,
             callback: function(data) {
-                console.log(data);
                 $('#cm-bubbletree').empty();
                 self.bt = new BubbleTree({
                     data: data,
@@ -203,7 +212,8 @@ OpenSpending.BubbleMap = function (config) {
 
 
             map.onLayerEvent('click', function(d) {
-                selectedRegion = selectedRegion==d.region ? null : d.region;
+                var a = d[opts.map.keyAttribute];
+                selectedRegion = selectedRegion==a ? null : a;
                 loadData();
             });
         }); // map.loadMap(function())
@@ -222,7 +232,7 @@ OpenSpending.BubbleMap = function (config) {
     };
 
     if (opts.table.show) {
-        self.dt = new OpenSpending.DataTable($('#datatable'), {
+        self.dt = new OpenSpending.DataTable($('#cm-datatable'), {
             source: opts.query.apiUrl + '/2/search',
             sorting: opts.table.sorting,
             columns: opts.table.columns,
@@ -235,7 +245,6 @@ OpenSpending.BubbleMap = function (config) {
             });
         self.dt.init();
     }
-    
-    $('#cm-map').hide();
+
     loadData();
 };

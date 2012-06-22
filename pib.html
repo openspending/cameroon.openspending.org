@@ -2,6 +2,7 @@
 layout: default
 title: National Investment Budget
 forum: National
+section: pib
 ---
 
 <h2 class="page-header">National Investment Budget (2011)</h2>
@@ -13,13 +14,13 @@ forum: National
   yepnope([
    { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
      complete: function() {
-        var bubblemap = new OpenSpending.BubbleMap({
+        //var bubblemap = new OpenSpending.BubbleMap({
           query: {
             dataset: 'cm-pib',
             cuts: ['year:2011'],
             drilldowns: ['sector', 'chapter'],
             breakdown: 'region',
-            rootNodeLabel: 'Total (2011)'
+            rootNodeLabel: 'Total'
           },
           map: {
             url: 'img/regions.svg',
@@ -69,13 +70,13 @@ forum: National
     
 {% include bubblemap.html %}
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs under-curtain">
   <li class="active"><a href="#projects" data-toggle="tab">Projects</a></li>
   <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
   <li><a href="#about" data-toggle="tab">About</a></li>
 </ul>
 
-<div class="tab-content">
+<div class="tab-content under-curtain">
   <div class="tab-pane active" id="projects">
     {% include datatable.html %}
   </div>

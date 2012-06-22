@@ -297,3 +297,11 @@ footer a:hover {
 .bti .checkmatrix th.q {
     text-align: left;
 }
+
+body.nwregion #content, body.pib #content{
+    min-height: 70em;
+}
+
+.under-curtain {
+    display: none;
+}
