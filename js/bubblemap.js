@@ -24,10 +24,13 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
 OpenSpending.BubbleMap = function (config) {
     var self = this;
 
+    var formatAmount = BubbleTree.Utils.formatNumber = OpenSpending.Utils.formatAmount;
+
     selectedRegion = null;
     currentNode = null;
 
     opts = $.extend(true, {
+        currency: null,
         query: {
             apiUrl: 'http://openspending.org/api',
             dataset: null,
@@ -57,8 +60,7 @@ OpenSpending.BubbleMap = function (config) {
     var $tooltip = $('<div class="tooltip">Tooltip</div>');
     $('.bubbletree').append($tooltip);
     $tooltip.hide();
-    
-    var formatAmount = BubbleTree.Utils.formatNumber;
+
 
     function updateLegend(title, colors, limits, currency) {
         var currencyLabel = ' (' + currency + ')';
@@ -98,14 +100,15 @@ OpenSpending.BubbleMap = function (config) {
             ],
             limits: chroma.limits(node.breakdowns, 'q', 6, 'amount')
         });
+        var currency = opts.currency || node.currency;
         
         // update map legend
-        updateLegend(node.label, colsc.colors, colsc.classLimits, 
-                     OpenSpending.Utils.currencySymbol(node.currency));
+        updateLegend(node.label, colsc.colors, colsc.classLimits,
+                     OpenSpending.Utils.currencySymbol(currency));
         
         // apply colors to map
         self.map.choropleth({
-            data: function(e) { 
+            data: function(e) {
                 return node.breakdowns[e[opts.map.keyAttribute]];
             },
             colors: function(d) {
@@ -115,12 +118,12 @@ OpenSpending.BubbleMap = function (config) {
             //,duration: 200
         });
         
-        self.map.tooltips({ 
+        self.map.tooltips({
             layer: opts.map.layerName,
             content: function (e) {
                 var v = node.breakdowns[e];
                 if (v === undefined ) return ['', ''];
-                var famount = OpenSpending.Utils.formatAmountWithCommas(v.amount, 0, node.currency);
+                var famount = OpenSpending.Utils.formatAmountWithCommas(v.amount, 0, currency);
                 return [e, '<div class="lbl">'+node.label+'</div><div class="amount">'+famount+'</div>'];
             },
             delay: 300
@@ -154,6 +157,7 @@ OpenSpending.BubbleMap = function (config) {
     };
 
     var curtainsUp = function() {
+        $('.qtip').remove();
         $('.under-curtain').show();
         $('.qtip').remove();
         $('#preloader').hide();
@@ -190,7 +194,7 @@ OpenSpending.BubbleMap = function (config) {
                         qtip: true,
                         delay: 800,
                         content: function(node) {
-                            return [node.label, '<div class="desc">'+(node.description ? node.description : 'No description given')+'</div><div class="amount">'+node.famount+'</div>'];
+                            return [node.label, '<div class="amount">'+node.famount+'</div>'];
                         }
                     },
                     bubbleStyles: opts.bubbleStyles,
@@ -209,7 +213,6 @@ OpenSpending.BubbleMap = function (config) {
                 id: opts.map.layerName,
                 key: opts.map.keyAttribute
             });
-
 
             map.onLayerEvent('click', function(d) {
                 var a = d[opts.map.keyAttribute];
