@@ -14,7 +14,7 @@ section: pib
   yepnope([
    { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
      complete: function() {
-        //var bubblemap = new OpenSpending.BubbleMap({
+        var bubblemap = new OpenSpending.BubbleMap({
           query: {
             dataset: 'cm-pib',
             cuts: ['year:2011'],
