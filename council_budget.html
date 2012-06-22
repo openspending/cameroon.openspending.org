@@ -67,12 +67,44 @@ title: Tignere Council Budget
 <div class="homelink">
     <a href="/index.html">Back to Main Map</a>
 </div>
-<h2 class="page-title">Tignere Council Budget</h2>
+<h2 id="council-name" class="page-title">Council Budget</h2>
 <div class="intro-text"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p></div>
 
 <script src="js/bubblechart.js"></script>
 <script type="text/javascript">
 (function ($) {
+
+    var getURLParameter = function(name){
+        return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search)||[,null])[1]
+        );
+    }
+
+    var councilData = {
+        name:"Tignere",
+        dataset:"cm-tignere",
+        year:"2009",
+        type:"Actual"
+    };
+
+    var councilDataParams = {};
+    var bParams = true;
+    for(var param in councilData){
+        var dataStr = getURLParameter(param);
+        if(dataStr!='null'){
+            councilDataParams[param] = dataStr;
+        }
+        else{
+            bParams = false;
+            console.log("No "+param+" parameter");
+            break;
+        }
+    }
+    if(bParams){
+        councilData = councilDataParams;
+    }
+
+    $("#council-name").text(councilData.name + " Council Budget");
 
   yepnope.errorTimeout = 1000;
   yepnope([
@@ -81,10 +113,11 @@ title: Tignere Council Budget
         var bubblemap = new OpenSpending.BubbleChart({
 
             query: {
-                dataset: 'cm-tignere',
-                cuts: ['year:2009','reporting_type:Actual','financial_flow:EXPENDITURE'],
+                dataset: councilData.dataset,
+                //cuts: ['year:2009','reporting_type:Actual','financial_flow:EXPENDITURE'],
+                cuts: ['year:'+councilData.year,'reporting_type:'+councilData.type,'financial_flow:EXPENDITURE'],
                 drilldowns: ['headaccount', 'subaccount'],
-                rootNodeLabel: 'Total (2009)'
+                rootNodeLabel: 'Total ('+councilData.type+' '+councilData.year+')'
             }
         });
     }

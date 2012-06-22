@@ -18,6 +18,12 @@ section: home
     #map svg .region:hover {
         stroke: #fff;
     }
+    #map .instruction{
+        position:relative;
+        font-size:12px;
+        left:30px;
+        color:#999;
+    }
 
     .intro-container {
         font-size: 17px;
@@ -185,7 +191,11 @@ section: home
 
 <div class="row">
     <div class="span7">
-        <div id="map"></div>
+        <div id="map">
+            <div class="instruction">
+                Click map regions to view budgets
+            </div>
+        </div>
     </div>
     <div class="span5">
 

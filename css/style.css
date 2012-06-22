@@ -19,12 +19,21 @@ h3 {
     font-size: 22px;
     color: #666;
     font-family: "OpenSansSemibold";
-    padding-left:30px;
+    padding-left:0;/*30px;*/
     padding-bottom: 17px;
-    margin: 18px 0;
+    margin: 9px 0 19px 0;
     border-bottom: 1px solid #efefef;
 
 
+}
+.intro-text{
+    width:940px;
+    padding-bottom: 8px;
+}
+
+.instruction{
+    font-size:12px;
+    color:#999;
 }
 
 header {
@@ -69,10 +78,12 @@ header {
     background-position: bottom right;
 }
 
-.homelink {float: left; }
-.homelink a {color: #666;
-    background: transparent url('../img/site/icon_home.png') no-repeat left top;
-    padding-left: 20px;
+/*.homelink {float: left; }*/
+.homelink a {
+    color: #999;
+    font-size: 12px;
+    background: transparent url('../img/site/button_arrow_gray.png') no-repeat left top;
+    padding-left: 10px;
 }
 
 /*
