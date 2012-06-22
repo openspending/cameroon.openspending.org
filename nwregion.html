@@ -4,7 +4,7 @@ title: North-West Region of Cameroon
 forum: Nord-Ouest
 ---
 
-<h2 class="page-header">North-West Region Investment Budget</h2>
+<h2 class="page-header">North-West Region Investment Budget (2010)</h2>
 
 <script src="js/bubblemap.js"></script>
 <script type="text/javascript">
@@ -17,7 +17,7 @@ forum: Nord-Ouest
             query: {
                 dataset: 'cm-nwr-investments',
                 cuts: ['year:2010', 'reporting_type:AMOUNT'],
-                drilldowns: ['cofog1', 'chapter'],
+                drilldowns: ['sector', 'chapter'],
                 rootNodeLabel: 'Total (2010)',
                 breakdown: 'commune'
             },
@@ -83,7 +83,21 @@ forum: Nord-Ouest
     {% include disqus.html %}
   </div>
   <div class="tab-pane" id="about">
-    TODO; also: Link to source data. 
+    <div class="span8">
+        <p>This page displays the investments made in the North-West region of Cameroon
+        in 2010. The figures are budgeted expenditure, as well as engaged and liquidated
+        spending.</p>
+
+        {% include sectors.html %}
+    </div>
+    <div class="span3">
+        <ul>
+          <li>Source data in 
+          <a href="http://data.openspending.org/worldbank/cameroon/Cameroon-NW-Region-Investment-Budget.csv">cleaned and processed</a> form.</li>
+          <li><a href="http://openspending.org/cm-nwr-investments/views/new">Generate custom visualizations</a> at OpenSpending.org</li>
+          <li><a href="http://www.minepat.gov.cm/">Cameroon Ministry of Planning</a></li>
+        </ul>
+    </div>
   </div>
 </div>
 
