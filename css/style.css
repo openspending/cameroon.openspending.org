@@ -207,7 +207,7 @@ footer a:hover {
 .home #call-to-action a {
     color: #fff;
     padding: 10px 10px 10px 35px;
-    background: #c0c0c0 url('img/site/white_star.png') no-repeat 10px 10px;
+    background: #c0c0c0 url('../img/site/white_star.png') no-repeat 10px 10px;
     display: block;
     font-family: "OpenSansBold", Helvetica, sans-serif;
     font-size: 1.1em;
@@ -258,7 +258,7 @@ footer a:hover {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    background: transparent url('img/site/button_arrow_white.png') no-repeat right center;
+    background: transparent url('../img/site/button_arrow_white.png') no-repeat right center;
 }
 
 .home a.budget-link:hover {

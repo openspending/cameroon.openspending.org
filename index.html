@@ -60,7 +60,7 @@ section: home
 
 
     <li><h3><img src="img/site/icon_council_bubble.png">
-        <a href="tignere_council.html">How does my council spend its money?</a>
+        <a href="council.html?name=tignere#/~/total--2009-">How does my council spend its money?</a>
         <small>Tignere, Adamawa</small>
     </h3></li>
 
@@ -100,7 +100,7 @@ section: home
                                     $regionList.append('<li><a href="'+obj.link+'" id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>');
                                     break;
                                 case "council":
-                                    $councilList.append('<li><a href="council.html?name='+obj.name+'" class="budget-link council-budget-link">'+obj.label+'</a></li>');
+                                    $councilList.append('<li><a href="council.html?name='+obj.name+'#/~/total--2009-" class="budget-link council-budget-link">'+obj.label+'</a></li>');
                                     break;
                             }
                         }
