@@ -5,7 +5,19 @@ forum: Nord-Ouest
 section: nwregion
 ---
 
-<h2 class="page-header">North-West Region Investment Budget (2010)</h2>
+<h2 class="page-header">
+  <div class="btn-toolbar pull-right" id="facets">
+    <div class="btn-group">
+      <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
+      <a href="#" id="currency-xaf" class="btn btn-small">CFA Francs</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="factor-percapita" class="btn btn-small">Per capita</a>
+      <a href="#" id="factor-absolute" class="btn btn-small">Absolute</a>
+    </div>
+  </div>
+  North-West Region Investments (2010)
+</h2>
 
 <script src="js/bubblemap.js"></script>
 <script type="text/javascript">
@@ -14,54 +26,122 @@ section: nwregion
   yepnope([
    { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
      complete: function() {
-        var bubblemap = new OpenSpending.BubbleMap({
-            query: {
-                dataset: 'cm-nwr-investments',
-                cuts: ['year:2010', 'reporting_type:AMOUNT'],
-                drilldowns: ['sector', 'chapter'],
-                rootNodeLabel: 'Total',
-                breakdown: 'commune'
-            },
-            map: {
-                url: 'img/north_west_departements.svg',
-                layerName: 'departement',
-                keyAttribute: 'departemen'
-            },
-            table: {
-              columns: [
-                {
-                    name: 'chapter',
-                    label: 'Chapter',
-                    width: '20%',
-                    data: function(d) { return d.chapter.label; }
-                },
-                {
-                    name: 'physical-unit-demanded',
-                    label: 'Unit',
-                    width: '40%',
-                    data: function(d) { return d['physical-unit-demanded']; }
-                },
-                                {
-                    name: 'to',
-                    label: 'Beneficiary',
-                    width: '20%',
-                    data: function(d) { return d['to'].label; }
-                },
-                {
-                    name: 'amount',
-                    label: 'Amount (Fr)',
-                    width: '16%',
-                    data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
-                },
-                {
-                    name: 'details',
-                    label: '',
-                    width: '2%',
-                    data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
-                }
-              ]
+        $.getJSON('/data/population.json', function(population) {
+          population = _.filter(population, function(e) { return e['Region_MapName']=="Nord-Ouest";});
+          var populationByDept = _.groupBy(population, function(r) { return r['Department_MapName']; });
+          _.each(_.keys(populationByDept), function(r) {
+            populationByDept[r] = _.reduce(populationByDept[r], function(e,i) {return e + i['Absolute'];}, 0);
+          });
+          var totalPopulation = _.reduce(_.values(populationByDept), function(e,i) {return e+i;}, 0);
+
+          var selectedCurrency = 'XAF';
+          var selectedFactor = 'factor-absolute';
+
+          var applyFactor = function(amount, region) {
+            if (!amount) {
+              return amount;
             }
-        });
+            if (selectedCurrency == 'USD') {
+              // http://www.xe.com/ucc/convert/?Amount=1&From=USD&To=XAF 
+              amount = amount / 522.010; 
+            };
+            if (selectedFactor == 'factor-percapita') {
+              var pop = populationByDept[region] || totalPopulation;
+              amount = Math.max(1, amount / pop);
+              if (!amount) {
+                foo;
+              }
+              //console.log(amount);
+            };
+            return amount;
+          };
+
+          $('#currency-xaf').click(function(e) {
+            selectedCurrency = 'XAF';
+            updatePage();
+            return false;
+          });
+
+          $('#currency-usd').click(function(e) {
+            selectedCurrency = 'USD';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-absolute').click(function(e) {
+            selectedFactor = 'factor-absolute';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-percapita').click(function(e) {
+            selectedFactor = 'factor-percapita';
+            updatePage();
+            return false;
+          });
+
+          var updatePage = function() {
+            $('#facets a').removeClass('btn-info');
+            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('btn-info');
+            $('#' + selectedFactor).addClass('btn-info');
+
+
+            var bubblemap = new OpenSpending.BubbleMap({
+                currency: selectedCurrency,
+                query: {
+                    dataset: 'cm-nwr-investments',
+                    cuts: ['year:2010', 'reporting_type:AMOUNT'],
+                    drilldowns: ['sector', 'chapter'],
+                    rootNodeLabel: 'Total',
+                    breakdown: 'commune',
+                    processEntry: function(e, data) {
+                      e.amount = applyFactor(e.amount||0, e.region);
+                      return e;
+                    }
+                },
+                map: {
+                    url: 'img/north_west_departements.svg',
+                    layerName: 'departement',
+                    keyAttribute: 'departemen'
+                },
+                table: {
+                  columns: [
+                    {
+                        name: 'chapter',
+                        label: 'Chapter',
+                        width: '20%',
+                        data: function(d) { return d.chapter.label; }
+                    },
+                    {
+                        name: 'physical-unit-demanded',
+                        label: 'Unit',
+                        width: '40%',
+                        data: function(d) { return d['physical-unit-demanded']; }
+                    },
+                                    {
+                        name: 'to',
+                        label: 'Beneficiary',
+                        width: '20%',
+                        data: function(d) { return d['to'].label; }
+                    },
+                    {
+                        name: 'amount',
+                        label: 'Amount (Fr)',
+                        width: '16%',
+                        data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
+                    },
+                    {
+                        name: 'details',
+                        label: '',
+                        width: '2%',
+                        data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+                    }
+                  ]
+                }
+              });
+            };
+            updatePage();
+          });
     }
    }
   ]); // yepnope()   
