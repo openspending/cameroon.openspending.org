@@ -5,7 +5,19 @@ forum: National
 section: pib
 ---
 
-<h2 class="page-header">National Investment Budget (2011)</h2>
+<h2 class="page-header">
+  <div class="btn-toolbar pull-right" id="facets">
+    <div class="btn-group">
+      <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
+      <a href="#" id="currency-xaf" class="btn btn-small">CFA Francs</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="factor-percapita" class="btn btn-small">Per capita</a>
+      <a href="#" id="factor-absolute" class="btn btn-small">Absolute</a>
+    </div>
+  </div>
+  National Investment Budget (2011)
+</h2>
 
 <script src="js/bubblemap.js"></script>
 <script type="text/javascript">
@@ -14,53 +26,124 @@ section: pib
   yepnope([
    { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
      complete: function() {
-        var bubblemap = new OpenSpending.BubbleMap({
-          query: {
-            dataset: 'cm-pib',
-            cuts: ['year:2011'],
-            drilldowns: ['sector', 'chapter'],
-            breakdown: 'region',
-            rootNodeLabel: 'Total'
-          },
-          map: {
-            url: 'img/regions.svg',
-            layerName: 'region',
-            keyAttribute: 'region'
-          },
-          table: {
-            columns: [
-              {
-                  name: 'chapter',
-                  label: 'Chapter',
-                  width: '20%',
-                  data: function(d) { return d.chapter.label; }
-              },
-              {
-                  name: 'libelle-activite-fr',
-                  label: 'Activity',
-                  width: '48%',
-                  data: function(d) { return d['libelle-activite-fr']; }
-              },
-              {
-                  name: 'localite',
-                  label: 'Location',
-                  width: '20%',
-                  data: function(d) { return d.localite; }
-              },
-              {
-                  name: 'amount',
-                  label: 'Amount (Fr)',
-                  width: '8%',
-                  data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
-              },
-              {
-                  name: 'details',
-                  label: '',
-                  width: '2%',
-                  data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+        $.getJSON('/data/population.json', function(population) {
+          var populationByRegion = _.groupBy(population, function(r) { return r['Region_MapName']; });
+          _.each(_.keys(populationByRegion), function(r) {
+            populationByRegion[r] = _.reduce(populationByRegion[r], function(e,i) {return e + i['Absolute'];}, 0);
+          });
+          var totalPopulation = _.reduce(_.values(populationByRegion), function(e,i) {return e+i;}, 0);
+
+          var selectedCurrency = 'XAF';
+          var selectedFactor = 'factor-absolute';
+
+          var applyFactor = function(amount, region) {
+            if (!amount) {
+              return amount;
+            }
+            if (selectedCurrency == 'USD') {
+              // http://www.xe.com/ucc/convert/?Amount=1&From=USD&To=XAF 
+              amount = amount / 522.010; 
+            };
+            if (selectedFactor == 'factor-percapita') {
+              var pop = populationByRegion[region] || totalPopulation;
+              amount = Math.max(1, amount / pop);
+              if (!amount) {
+                foo;
               }
-            ]
-          }
+              //console.log(amount);
+            };
+            return amount;
+          };
+
+          $('#currency-xaf').click(function(e) {
+            selectedCurrency = 'XAF';
+            updatePage();
+            return false;
+          });
+
+          $('#currency-usd').click(function(e) {
+            selectedCurrency = 'USD';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-absolute').click(function(e) {
+            selectedFactor = 'factor-absolute';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-percapita').click(function(e) {
+            selectedFactor = 'factor-percapita';
+            updatePage();
+            return false;
+          });
+
+          var updatePage = function() {
+            //var currencyCode = selectedCurrency == 'currency-xaf' ? 'XAF' : 'USD';
+            $('#facets a').removeClass('btn-info');
+            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('btn-info');
+            $('#' + selectedFactor).addClass('btn-info');
+
+            new OpenSpending.BubbleMap({
+              currency: selectedCurrency,
+              query: {
+                dataset: 'cm-pib',
+                cuts: ['year:2011'],
+                drilldowns: ['sector', 'chapter'],
+                breakdown: 'region',
+                rootNodeLabel: 'Total',
+                processEntry: function(e, data) {
+                  e.amount = applyFactor(e.amount||0, e.region);
+                  return e;
+                }
+              },
+              map: {
+                url: 'img/regions.svg',
+                layerName: 'region',
+                keyAttribute: 'region'
+              },
+              table: {
+                columns: [
+                  {
+                      name: 'chapter',
+                      label: 'Chapter',
+                      width: '20%',
+                      data: function(d) { return d.chapter.label; }
+                  },
+                  {
+                      name: 'libelle-activite-fr',
+                      label: 'Activity',
+                      width: '48%',
+                      data: function(d) { return d['libelle-activite-fr']; }
+                  },
+                  {
+                      name: 'localite',
+                      label: 'Location',
+                      width: '20%',
+                      data: function(d) { return d.localite; }
+                  },
+                  {
+                      name: 'amount',
+                      label: 'Allocation (' + OpenSpending.Utils.currencySymbol(selectedCurrency) + ')',
+                      width: '10%',
+                      data: function(d) { 
+                        var amount = applyFactor(d.amount||0, d.region);
+                        return OpenSpending.Utils.formatAmountWithCommas(amount);
+                      }
+                  },
+                  {
+                      name: 'details',
+                      label: '',
+                      width: '2%',
+                      data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+                  }
+                ]
+              }
+            });
+          };
+
+          updatePage();
         });
     }
    }
