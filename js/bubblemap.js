@@ -114,8 +114,8 @@ OpenSpending.BubbleMap = function (config) {
             }
             //,duration: 200
         });
-        
-        self.map.tooltips({ 
+
+        self.map.tooltips({
             layer: opts.map.layerName,
             content: function (e) {
                 var v = node.breakdowns[e];

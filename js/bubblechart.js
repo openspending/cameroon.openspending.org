@@ -69,7 +69,7 @@ OpenSpending.BubbleChart = function (config) {
         }
 
     };
-    
+
     // init bubbletree
     new OpenSpending.Aggregator({
         apiUrl: opts.query.apiUrl,
