@@ -7,7 +7,27 @@ section: council
 <!--div class="homelink">
     <a href="/index.html">Back to Main Map</a>
 </div-->
-<h2 id="council-name" class="page-title">Council Budget</h2>
+<h2 class="page-title">
+    <div class="btn-toolbar pull-right" id="facets">
+        <div class="btn-group">
+          <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
+          <a href="#" id="currency-xaf" class="btn btn-small">CFA Francs</a>
+        </div>
+        <div class="btn-group">
+          <a href="#" id="type-budget" class="btn btn-small">Budget</a>
+          <a href="#" id="type-actual" class="btn btn-small">Actual</a>
+        </div>
+        <div class="btn-group">
+          <a href="#" id="flow-rev" class="btn btn-small">Revenue</a>
+          <a href="#" id="flow-exp" class="btn btn-small">Expenditure</a>
+        </div>
+        <div class="btn-group">
+          <a href="#" id="year-2008" class="btn btn-small">2008</a>
+          <a href="#" id="year-2009" class="btn btn-small">2009</a>
+        </div>
+    </div>
+    <span id="council-name">Council Budget</span>
+</h2>
 
 <div id="bt-map">
     <div id="preloader" style="text-align: center; padding: 100px"><img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
@@ -31,6 +51,8 @@ section: council
     </div>
 </div>
 
+<div id="disqus_thread"></div>
+
 <script src="js/bubblechart.js"></script>
 <script type="text/javascript">
 
@@ -41,23 +63,99 @@ section: council
      complete: function() {
         var dataset_name = _.reduce(parseQueryString(), function(c, e) {
             return e[0]=='name' ? e[1] : c}, null);
+        var selectedCurrency = 'XAF';
+        var selectedType = 'Actual';
+        var selectedYear = '2009';
+        var selectedFlow = 'EXPENDITURE';
+
         $.getJSON('/data/datasets.json', function(datasets) {
             var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
             $("#council-name").text(dataset.label);
             $("title").text(dataset.label);
 
-            var bubblemap = new OpenSpending.BubbleChart({
 
-                query: {
-                    dataset: dataset.dataset,
-                    cuts: ['year:2009','reporting_type:Actual','financial_flow:EXPENDITURE'],
-                    drilldowns: ['headaccount', 'subaccount'],
-                    rootNodeLabel: 'Total (2009)'
-                }
+            $('#currency-xaf').click(function(e) {
+                selectedCurrency = 'XAF';
+                updatePage();
+                return false;
             });
+
+            $('#currency-usd').click(function(e) {
+                selectedCurrency = 'USD';
+                updatePage();
+                return false;
+            });
+
+            $('#type-actual').click(function(e) {
+                selectedType = 'Actual';
+                updatePage();
+                return false;
+            });
+
+            $('#type-budget').click(function(e) {
+                selectedType = 'Budget';
+                updatePage();
+                return false;
+            });
+
+            $('#flow-rev').click(function(e) {
+                selectedFlow = 'REVENUE';
+                updatePage();
+                return false;
+            });
+
+            $('#flow-exp').click(function(e) {
+                selectedFlow = 'EXPENDITURE';
+                updatePage();
+                return false;
+            });
+
+            $('#year-2008').click(function(e) {
+                selectedYear = '2008';
+                updatePage();
+                return false;
+            });
+
+            $('#year-2009').click(function(e) {
+                selectedYear = '2009';
+                updatePage();
+                return false;
+            });
+
+            var updatePage = function() {
+                $('#facets a').removeClass('btn-info');
+                $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('btn-info');
+                $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('btn-info');
+                $(selectedYear == '2008' ? '#year-2008' : '#year-2009').addClass('btn-info');
+                $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('btn-info');
+                
+                var bubblemap = new OpenSpending.BubbleChart({
+                    currency: selectedCurrency,
+                    query: {
+                        dataset: dataset.dataset,
+                        cuts: ['year:' + selectedYear,'reporting_type:' + selectedType,'financial_flow:' + selectedFlow],
+                        drilldowns: ['headaccount', 'subaccount'],
+                        rootNodeLabel: 'Total (' + selectedYear + ')',
+                        processEntry: function(e, data) {
+                            e.amount = selectedCurrency == 'XAF' ? e.amount : e.amount/522.010;
+                            return e;
+                        }
+                    }
+                });
+            };
+            updatePage();
+
+            var disqus_shortname = 'openspending-cameroon';
+            var disqus_identifier = '/Council:' + dataset_name;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         });
     }
    }
   ]); // yepnope()   
 })(jQuery)
 </script>
+
+{% include disqus.html %}

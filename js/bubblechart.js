@@ -43,17 +43,16 @@ OpenSpending.BubbleChart = function (config) {
 
 
     var onNodeClick = function(node) {
-
+        curtainsUp();
         // show table for top levels only
         if(node.level>=2) return;
 
-
-        $("#cm-budget-panel").css("visibility", "visible");
+        var currency = opts.currency || node.currency;
+        
         $("#cm-budget-table").empty();
-        var currency = node.currency;
-        var amountFmt = OpenSpending.Utils.formatAmountWithCommas(node.amount, 0, currency)
+        var amountFmt = OpenSpending.Utils.formatAmountWithCommas(node.amount, 0, currency);
         $("#cm-budget-table").append('<tr><td class="table-title" colspan="2">'+node.label+' - '+amountFmt+'</td></tr>');
-        $("#cm-budget-table").append('<tr><td class="left-table-title">Amount (Fr)</td><td class="right-table-title">Account</td></tr>');
+        $("#cm-budget-table").append('<tr><td class="left-table-title">Amount ('+OpenSpending.Utils.currencySymbol(currency)+')</td><td class="right-table-title">Account</td></tr>');
 
         var budgetArray = [];
         for(var i=0;i<node.children.length;i++){
@@ -70,6 +69,22 @@ OpenSpending.BubbleChart = function (config) {
 
     };
 
+    var curtainsUp = function() {
+        $('#preloader').hide();
+        $('.under-curtain').show();
+        $('.qtip').remove();
+        $("#cm-budget-panel").css("visibility", "visible");
+    };
+
+    var curtainsDown = function() {
+        $('.qtip').remove();
+        $('.under-curtain').hide();
+        $('#cm-bubbletree').empty();
+        $("#cm-budget-panel").css("visibility", "hidden");
+        $('#preloader').show();
+    };
+
+    curtainsDown();
     // init bubbletree
     new OpenSpending.Aggregator({
         apiUrl: opts.query.apiUrl,
@@ -77,11 +92,8 @@ OpenSpending.BubbleChart = function (config) {
         drilldowns: opts.query.drilldowns,
         cuts: opts.query.cuts,
         rootNodeLabel: opts.query.rootNodeLabel,
+        processEntry: opts.query.processEntry,
         callback: function(data) {
-            //console.log(data);
-            
-            $('#preloader').remove();
-
             self.bt = new BubbleTree({
                 data: data,
                 container: '#cm-bubbletree',
