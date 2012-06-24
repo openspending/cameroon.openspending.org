@@ -1,0 +1,63 @@
+---
+layout: default
+title: Local Council Budget
+section: council
+---
+
+<!--div class="homelink">
+    <a href="/index.html">Back to Main Map</a>
+</div-->
+<h2 id="council-name" class="page-title">Council Budget</h2>
+
+<div id="bt-map">
+    <div id="preloader" style="text-align: center; padding: 100px"><img src="img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">loading javascript libraries</span></div>
+
+    <div id="cm-bt">
+
+        <div class="bubbletree-wrapper">
+            <div id="cm-bubbletree" class="bubbletree"></div>
+
+        </div>
+        <div style="position:absolute;top:515px" class="instruction">Click the circles to see the budget breakdowns</div>
+
+    </div>
+
+    <div id="cm-budget-panel">
+
+        <table id="cm-budget-table" cellpadding="5" >
+        </table>
+
+
+    </div>
+</div>
+
+<script src="js/bubblechart.js"></script>
+<script type="text/javascript">
+
+(function ($) {
+  yepnope.errorTimeout = 1000;
+  yepnope([
+   { load: OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}'),
+     complete: function() {
+        var dataset_name = _.reduce(parseQueryString(), function(c, e) {
+            return e[0]=='name' ? e[1] : c}, null);
+        $.getJSON('/data/datasets.json', function(datasets) {
+            var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
+            $("#council-name").text(dataset.label);
+            $("title").text(dataset.label);
+
+            var bubblemap = new OpenSpending.BubbleChart({
+
+                query: {
+                    dataset: dataset.dataset,
+                    cuts: ['year:2009','reporting_type:Actual','financial_flow:EXPENDITURE'],
+                    drilldowns: ['headaccount', 'subaccount'],
+                    rootNodeLabel: 'Total (2009)'
+                }
+            });
+        });
+    }
+   }
+  ]); // yepnope()   
+})(jQuery)
+</script>

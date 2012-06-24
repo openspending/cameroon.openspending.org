@@ -309,6 +309,72 @@ footer a:hover {
     text-align: left;
 }
 
+/* Local council budgets */
+
+.council #cm-budget-panel {
+    background-color: #fdfdfd;/*#F8F8F8;*/
+    position: relative;
+    top: 0px;
+    width: 380px;
+    min-height: 500px;
+    visibility:hidden;
+    float:right;
+
+}
+
+.council #cm-budget-table {
+    border: 0px; 
+    cellpadding: 4px;
+    margin: 16px;
+    
+}
+
+.council .left-column {
+    text-align: right;
+    font-size: 1em;
+    width:110px;
+    color: #fc5216;
+    font-weight: bold;
+    vertical-align: top;
+}
+
+.council .right-column {
+    text-align: left;
+    font-size:  0.9em;
+    font-weight: 300;
+    color: #585858 ;
+}
+
+.council .table-title {
+    text-align: left;
+    font-size:  1.1em;
+    font-weight: bold;
+    color: #585858;
+    line-height: 1.3em;
+    padding-left: 24px;
+    padding-bottom: 12px;
+}
+
+.council .left-table-title {
+    text-align: right;
+    font-size: 0.9em;
+
+    width:110px;
+    color: #fc5216;
+    font-weight: bold;
+
+}
+
+.council .right-table-title {
+    text-align: left;
+    font-size: 0.9em;
+    color: #585858;
+    font-weight: bold;
+
+}
+
+
+
 body.nwregion #content, body.pib #content{
     min-height: 70em;
 }

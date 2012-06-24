@@ -182,9 +182,9 @@ section: home
     <a href="/contribute.html">Send in your local council data</a>
 </div>
 
-<!--<h2 class="page-title">Cameroon Budget Map</h2>-->
 <h2 class="intro-container">
-    <div class="intro-text">Discover how Cameroon receives and spends its money and see how citizens vote for it to be spent
+    <div class="intro-text">Explore how Cameroon's regions receive and spend their money 
+        <!-- and see how citizens vote for it to be spent -->
     </div >
 </h2>
 
@@ -202,7 +202,7 @@ section: home
         <div id="budget-data">
             <h3 class="panel-label">National Level:</h3>
             <ul class="budget-list">
-                <li><a href="pib.html" id="nib-link" class="budget-link national-budget-link" >National Investment Budget</a>
+                <li><a href="pib.html#/~/total" id="nib-link" class="budget-link national-budget-link" >National Investment Budget</a>
                 </li>
             </ul>
 
@@ -220,11 +220,11 @@ section: home
 <ul id="budget-questions">
 
     <li><h3><img src="img/site/icon_national_bubble.png">
-        <a href="pib.html">What does Cameroon invest in?</a>
+        <a href="pib.html#/~/total">What does Cameroon invest in?</a>
         <small>Cameroon</small>
     </h3></li>
     <li><h3><img src="img/site/icon_regional_bubble.png">
-        <a href="nwregion.html">What does my region invest in?</a>
+        <a href="nwregion.html#/~/total">What does my region invest in?</a>
         <small>North-West Region</small>
     </h3></li>
     <li><h3><img src="img/site/icon_transparency.png">
@@ -248,70 +248,43 @@ section: home
         var selectedRegion = null;
         //var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
 
-        $.ajax({
-            url: '/data/main_map.json',
-            dataType: 'json',
-            contentType: "application/x-www-form-urlencoded;charset=uft-8",
-            error: function (jqXHR, textStatus, errorThrown){
-                console.log(errorThrown);
-            },
-            success: function(map_data) {
-
+        $.getJSON('/data/datasets.json', function(datasets) {
+                var regionDatasets = _.groupBy(datasets, function(ds) {
+                    return ds.region;
+                });
                 window.map = $K.map('#map',500,350);
 
                 var showData = function(region) {
-                    /*
-                    var data = _.groupBy(
-                            _.filter(datasets, function(ds) {
-                                return !ds.region||ds.region==region;
-                            }),
-                        function(e) { return e.level; });
-                    data.regionLabel = region;
-                    console.log(data);
-                    $('#sidebar').html(sidebarTemplate(data));
-                    */
-                    var regionData = map_data[region];
-
+                   var regionData = regionDatasets[region];
 
                     $("#region-title").text(region);
 
                     $("#region-panel").empty();
                     if(regionData){
                         var $regionList = $('<ul class="budget-list"></ul>');
-                        var $councilTitle = $('<h3 id="councils-title" class="panel-label">Councils:</h3>');
                         var $councilList = $('<ul class="budget-list budget-inline"></ul>');
-                        var nRegionLinks = 0;
-                        var nCouncilLinks = 0;
                         for(var key in regionData){
                             var obj = regionData[key];
-                            var budgetCode = obj.budget;
-                            var link = "/"+obj.link;
-                            switch(budgetCode){
-
+                            switch(obj.type){
                                 case "regional":
-                                    $regionList.append('<li><a href="'+link+'" id="rib-link" class="budget-link regional-budget-link">Regional Investment Budget</a></li>');
-                                    nRegionLinks+=1;
+                                    $regionList.append('<li><a href="'+obj.link+'" id="rib-link" class="budget-link regional-budget-link">Regional Investment Budget</a></li>');
                                     break;
 
                                 case "transparency":
-                                    $regionList.append('<li><a href="'+link+'" id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>');
-                                    nRegionLinks+=1;
+                                    $regionList.append('<li><a href="'+obj.link+'" id="bti-link" class="budget-link regional-budget-link">Budget Transparency Index</a>');
                                     break;
                                 case "council":
-                                    $councilList.append('<li><a href="'+link+'" class="budget-link council-budget-link">'+obj.council+'</a></li>');
-                                    nCouncilLinks +=1;
+                                    $councilList.append('<li><a href="council.html?name='+obj.name+'" class="budget-link council-budget-link">'+obj.label+'</a></li>');
                                     break;
                             }
-                            //console.log("budgetCode " + budgetCode);
                         }
-                        if(nRegionLinks>0){
+                        if($regionList.find('li').length>0){
                             $("#region-panel").append($regionList);
                         }
-                        if(nCouncilLinks>0){
-                            $("#region-panel").append($councilTitle);
+                        if($councilList.find('li').length>0){
+                            $("#region-panel").append('<h3 id="councils-title" class="panel-label">Councils:</h3>');
                             $("#region-panel").append($councilList);
                         }
-
 
                     }
                     else{
@@ -363,17 +336,12 @@ section: home
                             layer: 'region',
                             content: function(data) {
                                 var countStr = "";
-                                if(map_data[data]){
-                                    countStr = map_data[data].length.toString();
+                                if(regionDatasets[data]){
+                                    countStr = regionDatasets[data].length.toString();
                                 }
                                 else{
                                     countStr = 'National budget';
                                 }
-
-                                //var count = _.filter(datasets, function(ds) {
-                                //    return !ds.region||ds.region==data;
-                                //}).length;
-
                                 return data + ' (' + countStr + ')';
 
                             },
@@ -399,7 +367,6 @@ section: home
 
                     });
                 });
-            }
         });
     });
 
