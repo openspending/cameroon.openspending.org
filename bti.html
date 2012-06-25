@@ -14,7 +14,7 @@ forum: Amadaoua
     <div class="span4">
         <ul class="nav nav-list facets">
             <li class="nav-header">Compare councils</li>
-            <li><a href="#" class="map-layer" data-layer="score">
+            <li class="active"><a href="#" class="map-layer" data-layer="score">
                 <img src="/img/icons/score_24.png"> Overall score</a></li>
             <li><a href="#" class="map-layer" data-layer="revenue">
                  <img src="/img/icons/revenue_24.png"> Revenue realization</a></li>
@@ -278,6 +278,8 @@ forum: Amadaoua
             }
 
             $(".map-layer").click(function(e) {
+                $('.facets li').removeClass('active');
+                $(e.currentTarget).parents('li').addClass('active');
                 var layer = $(e.currentTarget).data('layer');
                 if (layer == 'score') {
                     colorizeMap(colorizeScores);
