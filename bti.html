@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Local Council Budget Transparency
+title: Budget Transparency in the Adamawa Region
 section: bti
 forum: Amadaoua
 ---
@@ -8,7 +8,81 @@ forum: Amadaoua
 <h2 class="page-header">Budget Transparency in the Adamawa Region</h2>
 
 <div class="row">
-    <div class="span8">
+    <div class="span8 map-area">
+        <div class="legend">
+            <ul class="unstyled legend-option" id="score-legend">
+                <li>
+                    <div class="color" style="background:#023a5b;"></div>
+                    <div class="lbl">42 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#2686bb;"></div>
+                    <div class="lbl">28 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#a8bddc;"></div>
+                    <div class="lbl">15 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">No data</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="rev-legend">
+                <li>
+                    <div class="color" style="background:#005120;"></div>
+                    <div class="lbl">100% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#4fb688;"></div>
+                    <div class="lbl">50% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#95d6c6;"></div>
+                    <div class="lbl">25% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">No data</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="exp-legend">
+                <li>
+                    <div class="color" style="background:#8b2b04;"></div>
+                    <div class="lbl">100% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#f67722;"></div>
+                    <div class="lbl">50% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#fdac67;"></div>
+                    <div class="lbl">25% or more</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">No data</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="doc-legend">
+                <li>
+                    <div class="color" style="background:#562c92;"></div>
+                    <div class="lbl">Publicly distributed</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#6f5daa;"></div>
+                    <div class="lbl">Available on demand</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#aeadd3;"></div>
+                    <div class="lbl">Not published</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#d1d1e7;"></div>
+                    <div class="lbl">Not produced</div>
+                </li>
+            </ul>
+        </div>
         <div id="map"></div>
     </div>
     <div class="span4">
@@ -215,7 +289,7 @@ forum: Amadaoua
                     },
                     key: 'commune',
                     colors: function(d, pathdata) {
-                        if (!d) return '#ddd';
+                        if (!d) return '#ccc';
                         color = colorize(d);
                         dark = chroma.interpolate(color, "#000", .3, 'hsl').hex();
                         $("#ranking tbody tr").each(function(i, e) {
@@ -259,7 +333,7 @@ forum: Amadaoua
 
 
             var colorizeScores = function(d) {
-                if (d.score==0) return chroma.hex('#dddddd');
+                if (d.score==0) return chroma.hex('#cccccc');
                 return score_colors.getColor(d.score);
             }
 
@@ -279,17 +353,22 @@ forum: Amadaoua
 
             $(".map-layer").click(function(e) {
                 $('.facets li').removeClass('active');
+                $('.legend-option').hide();
                 $(e.currentTarget).parents('li').addClass('active');
                 var layer = $(e.currentTarget).data('layer');
                 if (layer == 'score') {
                     colorizeMap(colorizeScores);
+                    $('#score-legend').show();
                 } else if (layer == 'revenue') {
                     colorizeMap(colorizeRevenue);
+                    $('#rev-legend').show();
                 } else if (layer == 'spending') {
                     colorizeMap(colorizeSpending);
+                    $('#exp-legend').show();
                 } else if (layer == 'document') {
                     var doc = $(e.currentTarget).data('document');
                     colorizeMap(colorizeDocument(doc));
+                    $('#doc-legend').show();
                 }
                 return false;
             });

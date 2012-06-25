@@ -73,47 +73,7 @@
     cursor: pointer;
 }
 
-/*
- * map legend
- */
 
-#cm-map-legend {
-    position: absolute;
-    left: 540px;
-    top: 30px;
-    width: 100px;
-    height: 200px;
-}
-
-#cm-map-legend .title {
-    font-style: italic;
-    font-size: 14px;
-    line-height: 19px;
-    margin-bottom: 8px;
-}
-
-#cm-map-legend .row {
-    margin: 0 0 4px;
-}
-
-#cm-map-legend .color {
-    width: 13px;
-    height: 15px;
-    border-radius: 3px;
-    float: left;
-    margin-right: 5px;
-}
-
-#cm-map-legend .lbl {
-    font-size: 11px;
-    color: #444;
-    line-height: 15px;
-    position: relative;
-    top: 2px;
-    white-space: no-wrap;
-    width: 200px;
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
-}
 
 .ui-tooltip-content .amount {
     font-size: 20px;
