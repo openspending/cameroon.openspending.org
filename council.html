@@ -71,7 +71,7 @@ section: council
         $.getJSON('/data/datasets.json', function(datasets) {
             var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
             $("#council-name").text(dataset.label);
-            $("title").text(dataset.label);
+            //$("title").html(dataset.label);
 
 
             $('#currency-xaf').click(function(e) {
