@@ -123,11 +123,11 @@ section: council
             });
 
             var updatePage = function() {
-                $('#facets a').removeClass('btn-info');
-                $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('btn-info');
-                $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('btn-info');
-                $(selectedYear == '2008' ? '#year-2008' : '#year-2009').addClass('btn-info');
-                $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('btn-info');
+                $('#facets a').removeClass('active');
+                $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+                $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('active');
+                $(selectedYear == '2008' ? '#year-2008' : '#year-2009').addClass('active');
+                $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
                 
                 var bubblemap = new OpenSpending.BubbleChart({
                     currency: selectedCurrency,

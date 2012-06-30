@@ -5,7 +5,7 @@ forum: Nord-Ouest
 section: nwregion
 ---
 
-<h2 class="page-header">
+<h2 class="page-title">
   <div class="btn-toolbar pull-right" id="facets">
     <div class="btn-group">
       <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
@@ -81,9 +81,9 @@ section: nwregion
           });
 
           var updatePage = function() {
-            $('#facets a').removeClass('btn-info');
-            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('btn-info');
-            $('#' + selectedFactor).addClass('btn-info');
+            $('#facets a').removeClass('active');
+            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+            $('#' + selectedFactor).addClass('active');
 
 
             var bubblemap = new OpenSpending.BubbleMap({
