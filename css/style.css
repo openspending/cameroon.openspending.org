@@ -343,7 +343,7 @@ footer a:hover {
 
 .bti #map svg .commune {
     stroke: #fff;
-    stroke-width: 1px;
+    stroke-width: 2px;
     cursor: pointer;
 }
 
