@@ -31,6 +31,7 @@ OpenSpending.BubbleMap = function (config) {
 
     opts = $.extend(true, {
         currency: null,
+        loaderText: 'loading spending data',
         query: {
             apiUrl: 'http://openspending.org/api',
             dataset: null,
@@ -46,16 +47,18 @@ OpenSpending.BubbleMap = function (config) {
         map: {
             url: null,
             layerName: null,
-            keyAttribute: null
+            keyAttribute: null,
+            legendText: 'Expenditure on'
         },
         table: {
             show: true,
+            sortTooltip: "Click to sort this column",
             columns: [],
             sorting: [['amount', 'desc']]
         }
     }, config);
 
-    $('#preloader .txt').html('loading spending data');
+    $('#preloader .txt').html(opts.loaderText);
 
     var $tooltip = $('<div class="tooltip">Tooltip</div>');
     $('.bubbletree').append($tooltip);
@@ -68,7 +71,7 @@ OpenSpending.BubbleMap = function (config) {
         $lg.html('');
 
         title = selectedRegion ? title + ' in ' + selectedRegion : title;
-        $lg.append('<div class="title">Expenditure on ' + title + '</div>');
+        $lg.append('<div class="title">' + opts.map.legendText + ' ' + title + '</div>');
         $.each(colors, function(i,col) {
             if (isNaN(limits[i])) limits[i] = 0;
             if (isNaN(limits[i+1])) return;
@@ -83,7 +86,6 @@ OpenSpending.BubbleMap = function (config) {
     }
 
     var onNodeClick = function(node) {
-        $('.qtip').remove();
         curtainsUp();
 
         var 
@@ -157,16 +159,16 @@ OpenSpending.BubbleMap = function (config) {
     };
 
     var curtainsUp = function() {
-        $('.qtip').remove();
+        //$('.qtip').remove();
         $('.under-curtain').show();
-        $('.qtip').remove();
         $('#preloader').hide();
     };
 
     var curtainsDown = function() {
-        $('.qtip').remove();
+        //$('.qtip').remove();
         $('.under-curtain').hide();
         $('#cm-bubbletree').empty();
+        $('#cm-map').empty();
         $('#preloader').show();
     };
 
@@ -183,6 +185,7 @@ OpenSpending.BubbleMap = function (config) {
             processEntry: opts.query.processEntry,
             callback: function(data) {
                 $('#cm-bubbletree').empty();
+                var currency = opts.currency || data.currency;
                 self.bt = new BubbleTree({
                     data: data,
                     container: '#cm-bubbletree',
@@ -194,7 +197,8 @@ OpenSpending.BubbleMap = function (config) {
                         qtip: true,
                         delay: 800,
                         content: function(node) {
-                            return [node.label, '<div class="amount">'+node.famount+'</div>'];
+                            var famount = OpenSpending.Utils.formatAmountWithCommas(node.amount, 0, currency);
+                            return [node.label, '<div class="amount">'+famount+'</div>'];
                         }
                     },
                     bubbleStyles: opts.bubbleStyles,
@@ -202,25 +206,26 @@ OpenSpending.BubbleMap = function (config) {
                 });
             }
         });
+    
+        // init map
+        
+        var map = self.map = $K.map('#cm-map');
+        map.loadStyles('css/map.css', function() {
+            map.loadMap(opts.map.url, function() {
+                map.addLayer({
+                    id: opts.map.layerName,
+                    key: opts.map.keyAttribute
+                });
+
+                map.onLayerEvent('click', function(d) {
+                    var a = d[opts.map.keyAttribute];
+                    selectedRegion = selectedRegion==a ? null : a;
+                    loadData();
+                });
+            }); // map.loadMap(function())
+        }); // map.loadStyles(function())
     };
      
-    // init map
-    
-    var map = self.map = $K.map('#cm-map');
-    map.loadStyles('css/map.css', function() {
-        map.loadMap(opts.map.url, function() {
-            map.addLayer({
-                id: opts.map.layerName,
-                key: opts.map.keyAttribute
-            });
-
-            map.onLayerEvent('click', function(d) {
-                var a = d[opts.map.keyAttribute];
-                selectedRegion = selectedRegion==a ? null : a;
-                loadData();
-            });
-        }); // map.loadMap(function())
-    }); // map.loadStyles(function())
 
     var updateTable = function() {
         if (!opts.table.show)
@@ -249,11 +254,11 @@ OpenSpending.BubbleMap = function (config) {
         self.dt.init();
         $('#cm-datatable thead th').qtip({
             content: {
-                text: "Click to sort this column"
+                text: opts.table.sortTooltip
             },
             delay: 50,
             style: { name: 'light', tip: true },
-            position: { corner: { target: 'topLeft', tooltip: 'bottomLeft' }}
+            position: { corner: { target: 'topMiddle', tooltip: 'bottomMiddle' }}
         });
     }
 

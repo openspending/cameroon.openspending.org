@@ -102,7 +102,9 @@ section: nwregion
                 map: {
                     url: 'img/north_west_departements.svg',
                     layerName: 'departement',
-                    keyAttribute: 'departemen'
+                    keyAttribute: 'departemen',
+                    legendText: selectedFactor == 'factor-percapita' ? 
+                      'Per-capita expenditure on' : 'Expenditure on'
                 },
                 table: {
                   columns: [

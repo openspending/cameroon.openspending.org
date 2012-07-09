@@ -101,7 +101,9 @@ section: pib
               map: {
                 url: 'img/regions.svg',
                 layerName: 'region',
-                keyAttribute: 'region'
+                keyAttribute: 'region',
+                legendText: selectedFactor == 'factor-percapita' ? 
+                  'Per-capita expenditure on' : 'Expenditure on'
               },
               table: {
                 columns: [
