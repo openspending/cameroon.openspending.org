@@ -111,6 +111,8 @@ OpenSpending.BubbleMap = function (config) {
         // apply colors to map
         self.map.choropleth({
             data: function(e) {
+                console.log(e[opts.map.keyAttribute]);
+                console.log(node.breakdowns[e[opts.map.keyAttribute]]);
                 return node.breakdowns[e[opts.map.keyAttribute]];
             },
             colors: function(d) {
@@ -165,7 +167,7 @@ OpenSpending.BubbleMap = function (config) {
     };
 
     var curtainsDown = function() {
-        //$('.qtip').remove();
+        $('.qtip').remove();
         $('.under-curtain').hide();
         $('#cm-bubbletree').empty();
         $('#cm-map').empty();
