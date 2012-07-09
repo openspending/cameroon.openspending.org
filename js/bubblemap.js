@@ -15,7 +15,7 @@ OpenSpending.getBubbleMapDependencies = function(os_path) {
         os_path + '/lib/vendor/datatables/js/jquery.dataTables.js',
         os_path + '/lib/vendor/datatables/dataTables.bootstrap.js',
         os_path + '/app/data_table/openspending.data_table.js',
-        'css/map.css',
+        '/css/map.css',
         '/img/functions/functions.js',
         '/js/bubblemap.js'
         ];
@@ -192,7 +192,7 @@ OpenSpending.BubbleMap = function (config) {
                     bubbleType: 'icon',
                     nodeClickCallback: onNodeClick,
                     firstNodeCallback: onNodeClick,
-                    rootPath: 'img/functions/',
+                    rootPath: '/img/functions/',
                     tooltip: {
                         qtip: true,
                         delay: 800,
@@ -210,7 +210,7 @@ OpenSpending.BubbleMap = function (config) {
         // init map
         
         var map = self.map = $K.map('#cm-map');
-        map.loadStyles('css/map.css', function() {
+        map.loadStyles('/css/map.css', function() {
             map.loadMap(opts.map.url, function() {
                 map.addLayer({
                     id: opts.map.layerName,
