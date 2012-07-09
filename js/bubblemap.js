@@ -247,6 +247,14 @@ OpenSpending.BubbleMap = function (config) {
                 }
             });
         self.dt.init();
+        $('#cm-datatable thead th').qtip({
+            content: {
+                text: "Click to sort this column"
+            },
+            delay: 50,
+            style: { name: 'light', tip: true },
+            position: { corner: { target: 'topLeft', tooltip: 'bottomLeft' }}
+        });
     }
 
     loadData();
