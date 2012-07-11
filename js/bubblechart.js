@@ -12,7 +12,7 @@ OpenSpending.getBubbleChartDependencies = function(os_path) {
         os_path + '/lib/vendor/Tween.js',
         os_path + '/lib/vendor/jquery.history.js',
         os_path + '/lib/vendor/bubbletree/1.0/bubbletree.css',
-        'css/map.css',
+        '/css/map.css',
         '/img/functions/functions.js',
         '/js/bubblechart.js'
         ];
@@ -100,7 +100,7 @@ OpenSpending.BubbleChart = function (config) {
                 bubbleType: 'icon',//'color',
                 nodeClickCallback: onNodeClick,
                 firstNodeCallback: onNodeClick,
-                rootPath: 'img/functions/',
+                rootPath: '/img/functions/',
                 tooltip: {
                     qtip: true,
                     delay: 800,
