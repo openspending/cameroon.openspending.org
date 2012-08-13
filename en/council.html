@@ -13,7 +13,7 @@ section: council
           <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
           <a href="#" id="currency-xaf" class="btn btn-small">CFA Francs</a>
         </div>
-        <div class="btn-group">
+        <div class="btn-group" id="select-type">
           <a href="#" id="type-budget" class="btn btn-small">Budget</a>
           <a href="#" id="type-actual" class="btn btn-small">Actual</a>
         </div>
@@ -21,9 +21,7 @@ section: council
           <a href="#" id="flow-rev" class="btn btn-small">Revenue</a>
           <a href="#" id="flow-exp" class="btn btn-small">Expenditure</a>
         </div>
-        <div class="btn-group">
-          <a href="#" id="year-2008" class="btn btn-small">2008</a>
-          <a href="#" id="year-2009" class="btn btn-small">2009</a>
+        <div class="btn-group" id="select-year">
         </div>
     </div>
     <span id="council-name">Council Budget</span>
@@ -71,8 +69,14 @@ section: council
         $.getJSON('/data/datasets.json', function(datasets) {
             var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
             $("#council-name").text(dataset.label);
-            //$("title").html(dataset.label);
-
+            _.each(dataset.years, function(y) {
+              $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
+            });
+            selectedYear = _.max(dataset.years);
+            if (dataset.reporting_type) {
+              selectedType = dataset.reporting_type;
+              $("#select-type").hide();
+            }
 
             $('#currency-xaf').click(function(e) {
                 selectedCurrency = 'XAF';
@@ -110,14 +114,8 @@ section: council
                 return false;
             });
 
-            $('#year-2008').click(function(e) {
-                selectedYear = '2008';
-                updatePage();
-                return false;
-            });
-
-            $('#year-2009').click(function(e) {
-                selectedYear = '2009';
+            $('#select-year a').click(function(e) {
+                selectedYear = $(e.currentTarget).data('year');
                 updatePage();
                 return false;
             });
@@ -126,9 +124,14 @@ section: council
                 $('#facets a').removeClass('active');
                 $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
                 $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('active');
-                $(selectedYear == '2008' ? '#year-2008' : '#year-2009').addClass('active');
                 $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
                 
+                $('#select-year a').each(function(i, e) {
+                  if ($(e).data('year')==selectedYear) {
+                    $(e).addClass('active');
+                  }
+                });
+
                 var bubblemap = new OpenSpending.BubbleChart({
                     currency: selectedCurrency,
                     query: {
