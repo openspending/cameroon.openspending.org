@@ -71,10 +71,10 @@ strong, b {
   color: #666;
 }
 
-#navmenu ul li a:hover {
+/* #navmenu ul li a:hover {
   text-decoration: none;
   color: #ccc;
-}
+}*/
 
 .logo {
     margin-left: -45px;
