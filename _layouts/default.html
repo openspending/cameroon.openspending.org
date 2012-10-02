@@ -59,6 +59,19 @@
 
   </header>
 
+  {% if page.section != 'home' %}
+    <nav id="navmenu">
+      <div class="container">
+        <ul>
+          <li><a href="pib.html#/~/total">National Investment Budget</a></li>
+          <li><a href="nwregion.html#/~/total">North-West Investment Budget</a></li>
+          <li><a href="bti.html">Adamawa Transparency Index</a></li>
+          <li><a href="council.html?name=tignere#/~/total--2009-">Tignere Council Budget</a></li>
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
+
   <div class="container" id="content">
     {{ content }}
   </div>

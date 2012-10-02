@@ -42,10 +42,38 @@ strong, b {
     color:#999;
 }
 
-header {
+#header {
     margin-top: 0;
     margin-bottom: 1em;
     background-color: #f7f7f7;
+}
+
+#navmenu {
+    margin-top: -1em;
+    margin-bottom: 1em;
+    background-color: #e7e7e7;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#navmenu ul {
+  margin: 0;
+}
+
+#navmenu ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding-right: 2em;
+}
+
+#navmenu ul li a {
+	font-family: "OpenSansSemibold", Helvetica, sans-serif;
+  color: #666;
+}
+
+#navmenu ul li a:hover {
+  text-decoration: none;
+  color: #ccc;
 }
 
 .logo {
