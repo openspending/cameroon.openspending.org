@@ -15,6 +15,10 @@ section: nwregion
       <a href="#" id="factor-percapita" class="btn btn-small">Per capita</a>
       <a href="#" id="factor-absolute" class="btn btn-small">Absolute</a>
     </div>
+    <div class="btn-group">
+      <a href="#" id="filter-amount" class="btn btn-small">Budgeted</a>
+      <a href="#" id="filter-liquidate" class="btn btn-small">Actual</a>
+    </div>
   </div>
   North-West Region Investments (2010)
 </h2>
@@ -36,6 +40,7 @@ section: nwregion
 
           var selectedCurrency = 'XAF';
           var selectedFactor = 'factor-absolute';
+          var selectedFilter = 'AMOUNT';
 
           var applyFactor = function(amount, region) {
             if (!amount) {
@@ -80,9 +85,24 @@ section: nwregion
             return false;
           });
 
+          
+          $('#filter-amount').click(function(e) {
+            selectedFilter = 'AMOUNT';
+            updatePage();
+            return false;
+          });
+
+          $('#filter-liquidate').click(function(e) {
+            selectedFilter = 'LIQUIDATE';
+            updatePage();
+            return false;
+          });
+
+
           var updatePage = function() {
             $('#facets a').removeClass('active');
             $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+            $(selectedFilter == 'AMOUNT' ? '#filter-amount' : '#filter-liquidate').addClass('active');
             $('#' + selectedFactor).addClass('active');
 
 
@@ -90,7 +110,7 @@ section: nwregion
                 currency: selectedCurrency,
                 query: {
                     dataset: 'cm-nwr-investments',
-                    cuts: ['year:2010', 'reporting_type:AMOUNT'],
+                    cuts: ['year:2010', 'reporting_type:' + selectedFilter],
                     drilldowns: ['sector', 'chapter'],
                     rootNodeLabel: 'Total',
                     breakdown: 'commune',
