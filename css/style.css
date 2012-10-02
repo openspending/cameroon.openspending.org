@@ -181,6 +181,10 @@ footer a:hover {
     margin: 0 0 20px 0;
 }
 
+.home #map svg {
+  margin-top: 20px;
+}
+
 .home #map svg .region {
     stroke: #fff;
     stroke-opacity: 1;
@@ -193,18 +197,18 @@ footer a:hover {
 .home #map .instruction{
     position:relative;
     font-size:12px;
-    left:30px;
+    left:20px;
     color:#999;
 }
 
 .home .intro-container {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 25px;
     color: #666;
     font-family: "OpenSansItalic";
-    padding-left:30px;
+    padding-left: 20px;
     padding-bottom: 17px;
-    margin: 6px 0 18px 0;
+    margin: 4px 0 0px 0;
     border-bottom: 1px solid #efefef;
 }
 
@@ -247,12 +251,11 @@ footer a:hover {
 
 .home .budget-list li{
     margin-top: 16px;
-    margin-bottom: 16px;
 }
 
 .home .budget-inline li{
-    display: inline;
-    padding-right:4px;
+    display: inline-block;
+    padding-right:0px;
     line-height:36px;
     /*vertical-align: top;*/
 }
