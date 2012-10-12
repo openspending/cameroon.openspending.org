@@ -1,0 +1,231 @@
+---
+layout: default
+title: Budget National d'Investissement
+forum: National
+section: pib
+---
+
+<h2 class="page-title">
+  <div class="btn-toolbar pull-right" id="facets">
+    <div class="btn-group">
+      <a href="#" id="currency-usd" class="btn btn-small">Dollars US</a>
+      <a href="#" id="currency-xaf" class="btn btn-small">Francs CFA</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="factor-percapita" class="btn btn-small">Par hab.</a>
+      <a href="#" id="factor-absolute" class="btn btn-small">Valeur absolue</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="geo-dept" class="btn btn-small">Departments</a>
+      <a href="#" id="geo-region" class="btn btn-small">Régions</a>
+    </div>
+  </div>
+  Budget national d'investissement (2011)
+</h2>
+
+<script src="/js/bubblemap.js"></script>
+<script type="text/javascript">
+(function ($) {
+  yepnope.errorTimeout = 1000;
+  yepnope([
+   { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
+     complete: function() {
+        $.getJSON('/data/population.json', function(population) {
+          var geos = {
+            'geo-region': {
+              population: 'Region_MapName',
+              url: '/img/regions.svg',
+              layerName: 'region',
+              keyAttribute: 'region',
+              breakdown: 'region'
+            },
+            'geo-dept': {
+              population: 'Departement_MapName',
+              url: '/img/departements.svg',
+              layerName: 'departements',
+              keyAttribute: 'departemen',
+              breakdown: 'departement'
+            },
+          };
+
+          var populationByArea = {};
+          var totalPopulation = -1;
+
+          var selectedCurrency = 'XAF';
+          var selectedFactor = 'factor-absolute';
+          var selectedGeo = 'geo-region';
+
+          var aggregatePopulation = function() {
+            populationByArea = _.groupBy(population, function(r) { 
+              return r[geos[selectedGeo]]; 
+            });
+            _.each(_.keys(populationByArea), function(r) {
+              populationByArea[r] = _.reduce(populationByArea[r], function(e,i) {return e + i['Absolute'];}, 0);
+            });
+            totalPopulation = _.reduce(_.values(populationByArea), function(e,i) {return e+i;}, 0);
+          };
+          
+          var applyFactor = function(amount, area) {
+            if (!amount) {
+              return amount;
+            }
+            if (selectedCurrency == 'USD') {
+              amount = amount / 522.010; 
+            };
+            if (selectedFactor == 'factor-percapita') {
+              var pop = populationByArea[area] || totalPopulation;
+              amount = Math.max(1, amount / pop);
+              if (!amount) {
+                foo;
+              }
+              //console.log(amount);
+            };
+            return amount;
+          };
+
+          $('#currency-xaf').click(function(e) {
+            selectedCurrency = 'XAF';
+            updatePage();
+            return false;
+          });
+
+          $('#currency-usd').click(function(e) {
+            selectedCurrency = 'USD';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-absolute').click(function(e) {
+            selectedFactor = 'factor-absolute';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-percapita').click(function(e) {
+            selectedFactor = 'factor-percapita';
+            updatePage();
+            return false;
+          });
+
+          $('#geo-region').click(function(e) {
+            selectedGeo = 'geo-region';
+            aggregatePopulation();
+            updatePage();
+            return false;
+          });
+
+          $('#geo-dept').click(function(e) {
+            selectedGeo = 'geo-dept';
+            aggregatePopulation();
+            updatePage();
+            return false;
+          });
+
+          var updatePage = function() {
+            //var currencyCode = selectedCurrency == 'currency-xaf' ? 'XAF' : 'USD';
+            $('#facets a').removeClass('active');
+            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+            $('#' + selectedFactor).addClass('active');
+            $('#' + selectedGeo).addClass('active');
+
+            new OpenSpending.BubbleMap({
+              currency: selectedCurrency,
+              query: {
+                dataset: 'cm-pib',
+                cuts: ['year:2011'],
+                drilldowns: ['sector', 'chapter'],
+                breakdown: geos[selectedGeo].breakdown,
+                rootNodeLabel: 'Total',
+                processEntry: function(e, data) {
+                  e.amount = applyFactor(e.amount||0, e[geos[selectedGeo].breakdown]);
+                  return e;
+                }
+              },
+              map: {
+                url: geos[selectedGeo].url,
+                layerName: geos[selectedGeo].layerName,
+                keyAttribute: geos[selectedGeo].keyAttribute,
+                legendText: selectedFactor == 'factor-percapita' ? 
+                  'Dépenses par hab. pour' : 'Dépenses: '
+              },
+              table: {
+                columns: [
+                  {
+                      name: 'chapter',
+                      label: 'Chapitre',
+                      width: '20%',
+                      data: function(d) { return d.chapter.label; }
+                  },
+                  {
+                      name: 'libelle-activite-fr',
+                      label: 'Activité',
+                      width: '48%',
+                      data: function(d) { return d['libelle-activite-fr']; }
+                  },
+                  {
+                      name: 'localite',
+                      label: 'Localité',
+                      width: '20%',
+                      data: function(d) { return d.localite; }
+                  },
+                  {
+                      name: 'amount',
+                      label: 'Allocation (' + OpenSpending.Utils.currencySymbol(selectedCurrency) + ')',
+                      width: '10%',
+                      data: function(d) { 
+                        var amount = applyFactor(d.amount||0, d.region);
+                        return OpenSpending.Utils.formatAmountWithCommas(amount);
+                      }
+                  },
+                  {
+                      name: 'details',
+                      label: '',
+                      width: '2%',
+                      data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+                  }
+                ]
+              }
+            });
+          };
+
+          updatePage();
+        });
+    }
+   }
+  ]); // yepnope()   
+})(jQuery)
+</script>
+    
+{% include bubblemap_fr.html %}
+
+<ul class="nav nav-tabs under-curtain">
+  <li class="active"><a href="#projects" data-toggle="tab">Projets</a></li>
+  <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
+  <li><a href="#about" data-toggle="tab">A propos</a></li>
+</ul>
+
+<div class="tab-content under-curtain">
+  <div class="tab-pane active" id="projects">
+    {% include datatable.html %}
+  </div>
+  <div class="tab-pane" id="discussion">
+    {% include disqus.html %}
+  </div>
+  <div class="tab-pane" id="about">
+    <div class="span8">
+        <p>Cette page affiche les investissements réalisés par le gouvernement du Cameroun au niveau national en 2011. Les chiffres inscrits sont les montants budgétisés et non pas des montants réellement dépensés. Les investissements sont gérés par le Ministère de la Planification (MINEPAT).</p>
+
+        {% include sectors_fr.html %}
+    </div>
+    <div class="span3">
+        <ul>
+          <li>Données sources disponibles au <a href="https://commondatastorage.googleapis.com/ckannet-storage/2012-06-19T164337/BIP-REGIONAL-2011-DA.xls">format brut</a> et 
+          <a href="/data/CM-BIP-REGIONAL-2011-DA 20121002-fr.csv">nettoyées et formattées</a>.</li>
+
+          <li><a href="http://openspending.org/cm-pib/views/new">Générez des visualisations personnalisées</a> sur OpenSpending.org</li>
+          <li><a href="http://datahub.io/dataset/cameroon-public-investment-budget">Jeu de données sur datahub.io</a></li>
+          <li><a href="http://www.minepat.gov.cm/">Ministère de la Planification du Cameroun</a></li>
+        </ul>
+    </div>
+  </div>
+</div>

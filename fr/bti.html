@@ -1,0 +1,415 @@
+---
+layout: default
+title: Transparence budgétaire dans la région Adamaoua
+section: bti
+forum: Amadaoua
+---
+
+<h2 class="page-title">Transparence budgétaire dans la région Adamaoua</h2>
+
+<div class="row">
+    <div class="span8 map-area">
+        <div class="legend">
+            <ul class="unstyled legend-option" id="score-legend">
+                <li>
+                    <div class="color" style="background:#023a5b;"></div>
+                    <div class="lbl">42 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#2686bb;"></div>
+                    <div class="lbl">28 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#a8bddc;"></div>
+                    <div class="lbl">15 points</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">Aucune information</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="rev-legend">
+                <li>
+                    <div class="color" style="background:#005120;"></div>
+                    <div class="lbl">100% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#1d8640;"></div>
+                    <div class="lbl">75% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#4fb688;"></div>
+                    <div class="lbl">50% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#95d6c6;"></div>
+                    <div class="lbl">25% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">Aucune information</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="exp-legend">
+                <li>
+                    <div class="color" style="background:#8b2b04;"></div>
+                    <div class="lbl">100% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#d14501;"></div>
+                    <div class="lbl">75% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#f67722;"></div>
+                    <div class="lbl">50% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#fdac67;"></div>
+                    <div class="lbl">25% ou plus</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#cccccc;"></div>
+                    <div class="lbl">Aucune information</div>
+                </li>
+            </ul>
+            <ul class="unstyled legend-option hidden" id="doc-legend">
+                <li>
+                    <div class="color" style="background:#562c92;"></div>
+                    <div class="lbl">Diffusé publiquement</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#6f5daa;"></div>
+                    <div class="lbl">Disponible à la demande</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#aeadd3;"></div>
+                    <div class="lbl">Aucune publication</div>
+                </li>
+                <li>
+                    <div class="color" style="background:#d1d1e7;"></div>
+                    <div class="lbl">Aucune production</div>
+                </li>
+            </ul>
+        </div>
+        <div id="map"></div>
+    </div>
+    <div class="span4">
+        <ul class="nav nav-list facets">
+            <li class="nav-header">Comparez les conseils</li>
+            <li class="active"><a href="#" class="map-layer" data-layer="score">
+                <img src="/img/icons/score_24.png"> Score global</a></li>
+            <li><a href="#" class="map-layer" data-layer="revenue">
+                 <img src="/img/icons/revenue_24.png"> Réalisation des ressources</a></li>
+            <li><a href="#" class="map-layer" data-layer="spending">
+                 <img src="/img/icons/spending_24.png"> Réalisation des dépenses</a></li>
+
+            <li class="nav-header">Comparez la disponibilité des documents</li>
+            
+            <li><a href="#" class="map-layer" data-layer="document" data-document="adopted">
+                <img src="/img/icons/adopted_24.png"> Budget adopté</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="summary">
+                <img src="/img/icons/summary_24.png"> Résumé du Budget</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="mid_year">   <img src="/img/icons/mid_year_24.png">Rapport en Milieu d’année</a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="end_of_year">
+                <img src="/img/icons/end_of_year_24.png">Rapport de fin d’année </a></li>
+            <li><a href="#" class="map-layer" data-layer="document" data-document="audit_report">
+                <img src="/img/icons/audit_report_24.png"> Rapport d'audit</a></li>
+        </ul>
+    </div>
+</div>
+
+<hr/>
+
+<div class="row">
+    <div class="span8">
+        <!--h3>Ranking</h3-->
+        <table id="ranking" class="table table-condensed">
+            <thead>
+                <tr>
+                    <th class="name">Conseil</th>
+                    <th width="20%">Score</th>
+                    <th>Réalisation des ressources</th>
+                    <th>Réalisation des dépenses</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="span4">
+        <h3>Indice de transparence budgétaire</h3>
+        <p>
+            L'enquête mesure quinze critères concernant la gestion des budgets des conseils locaux: les documents sont-ils produits, publiés et diffusés d'une manière qui permette aux médias et aux citoyens d'examiner le budget?
+        </p>
+        <p>
+            Les données ont été collectées en 2010 et 2011 et comprennent toutes les municipalités de la région d'Adamaoua sauf deux.
+        </p>
+        <ul>
+            <li><a href="/data/bti/BTI_Survey_FR.xlsx">Télécharger l'enquête</a> (xlsx)</li>
+            <li><a href="/data/bti/Indice_de_Transparence_budgetaire.pdf">Documentation de la méthodologie</a> (pdf)</li>
+            
+        </ul>
+    </div>
+</div>
+
+{% include disqus.html %}
+
+<div class="modal hide" id="details-overlay">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h3>Pas de titre</h3>
+    </div>
+    <div class="modal-body">
+    </div>
+</div>
+
+{% raw %}
+<script id="details-overlay-content" type="application/handlebars">
+    <div class="details-content">
+        <table>
+            <tr>
+                <td rowspan="2"><img src="/img/icons/score_32.png"></td>
+                <td class="field">Localité</td>
+                <td colspan="2" class="field">Score</td>
+            </tr>
+
+            <tr>
+                <td class="large">{{rank}} <small>sur 21</small></td>
+                <td colspan="2" class="large">{{score}} <small>points</small></td>
+            </tr>
+
+            <tr>
+                <td rowspan="2"><img src="/img/icons/revenue_32.png"></td>
+                <td class="field">Ressources réalisées</td>
+                <td rowspan="2"><img src="/img/icons/spending_32.png"></td>
+                <td class="field">Dépenses réalisées</td>
+            </tr>
+
+            <tr>
+                <td class="large">{{revenue_realized}}</td>
+                <td class="large">{{spending_realized}}</td>
+            </tr>
+        </table>
+
+        <table class="checkmatrix table table-striped">
+            <tr>
+                <th width="40%" class="q">Documents</th>
+                <th><img src="/img/icons/adopted_24.png" title="Budget adopté"></th>
+                <th><img src="/img/icons/summary_24.png" title="Résumé du budget"></th>
+                <th><img src="/img/icons/mid_year_24.png" title="Rapport en Milieu d’année"></th>
+                <th><img src="/img/icons/end_of_year_24.png" title="Rapport de fin d’année "></th>
+                <th><img src="/img/icons/audit_report_24.png" title="Rapport d'audit"></th>
+            </tr>
+            <tr>
+                <td class="q">Diffusé publiquement</td>
+                <td>{{check documents.adopted.public}}</td>
+                <td>{{check documents.summary.public}}</td>
+                <td>{{check documents.mid_year.public}}</td>
+                <td>{{check documents.end_of_year.public}}</td>
+                <td>{{check documents.audit_report.public}}</td>
+            </tr>
+            <tr>
+                <td class="q">Disponible à la demande</td>
+                <td>{{check documents.adopted.sur_demande}}</td>
+                <td>{{check documents.summary.sur_demande}}</td>
+                <td>{{check documents.mid_year.sur_demande}}</td>
+                <td>{{check documents.end_of_year.sur_demande}}</td>
+                <td>{{check documents.audit_report.sur_demande}}</td>
+            </tr>
+            <tr>
+                <td class="q">Produit mais pas public</td>
+                <td>{{check documents.adopted.non_public}}</td>
+                <td>{{check documents.summary.non_public}}</td>
+                <td>{{check documents.mid_year.non_public}}</td>
+                <td>{{check documents.end_of_year.non_public}}</td>
+                <td>{{check documents.audit_report.non_public}}</td>
+            </tr>
+            <tr>
+                <td class="q">Pas produit</td>
+                <td>{{check documents.adopted.non_produit}}</td>
+                <td>{{check documents.summary.non_produit}}</td>
+                <td>{{check documents.mid_year.non_produit}}</td>
+                <td>{{check documents.end_of_year.non_produit}}</td>
+                <td>{{check documents.audit_report.non_produit}}</td>
+            </tr>
+        </table>
+
+        Etude complète:
+        <div class="pull-right">
+            <a class="btn btn-small" href="data/bti/{{sheet_name}}.pdf"><i class='icon-list-alt'></i>
+            PDF pour {{sheet_name}}</a>
+            <a class="btn btn-small btn-primary" href="data/bti/BTI_Survey_FR.xlsx"><i class='icon-download icon-white'></i> Excel (Etude complète)</a>
+        </div>
+    </div>
+</script>
+{% endraw %}
+
+<script>
+    $(function() {
+        score_colors = new chroma.ColorScale({
+            colors: chroma.brewer.PuBu,
+            limits: [0,43]
+            });
+
+        rev_colors = new chroma.ColorScale({
+            colors: chroma.brewer.BuGn,
+            limits: [0,130]
+            });
+
+        spend_colors = new chroma.ColorScale({
+            colors: chroma.brewer.Oranges,
+            limits: [0,130]
+            });
+
+        doc_colors = new chroma.ColorScale({
+            colors: chroma.brewer.Purples,
+            limits: [-2,5]
+            });
+
+        Handlebars.registerHelper('check', function(flag) {
+            if (!flag) {
+                return new Handlebars.SafeString('');;
+            }
+            return new Handlebars.SafeString('<i class="icon-ok"></i>');
+        });
+
+        $.getJSON('/data/bti.json', function(bti_data) {
+            window.map = $K.map('#map');
+
+            var showDetails = function(commune) {
+                var data = bti_data[commune];
+                var tmpl = Handlebars.compile($("#details-overlay-content").html());
+                var $e = $("#details-overlay");
+                $e.find("h3").html(data.sheet_name);
+                $e.find(".modal-body").html(tmpl(data));
+                $e.modal();
+                $e.find('img[title]').qtip({ style: { name: 'dark', tip: true }, 
+                    position: { corner: { target: 'topMiddle', tooltip: 'bottomMiddle' }}});
+            }
+
+            var colorizeMap = function(colorize) {
+                map.choropleth({
+                    data: function(e) {
+                        return bti_data[e.commune];
+                    },
+                    key: 'commune',
+                    colors: function(d, pathdata) {
+                        if (!d) return '#ccc';
+                        color = colorize(d);
+                        dark = chroma.interpolate(color, "#000", .3, 'hsl').hex();
+                        $("#ranking tbody tr").each(function(i, e) {
+                            if ($(e).data('commune') == d.key) {
+                                $(e).css('color', dark);
+                                $(e).find('a').css('color', dark);
+                            };
+                        });
+                        return color;
+                    }
+                });
+            }
+
+            var sorted_bti_data = _.sortBy(bti_data, function (e) { return e.rank; })
+            _.each(sorted_bti_data, function(k) {
+                var rev = k.revenue_realized||'-';
+                var spe = k.spending_realized||'-'
+                $("#ranking tbody").append("<tr data-commune='"+k.key+"'><td class='name'><a href='#'>"+ k.sheet_name+"</a></td><td>" + k.score + "</td><td>" + rev + "</a></td><td>" + spe + "</td></tr>")
+            });
+
+            $("#ranking tbody a").click(function(e) { 
+                var commune = $(e.currentTarget).parents('tr').data('commune');
+                showDetails(commune);
+                return false;
+            });
+
+            $("#ranking tbody tr").mouseenter(function(e) { 
+                var commune = $(e.currentTarget).data('commune');
+                var path = map.getLayerPath('commune', commune);
+                path.realFill = path.svgPath.attrs.fill;
+                path.svgPath.attr({'fill': '#fdd116'});
+                return false;
+            });
+
+            $("#ranking tbody tr").mouseleave(function(e) { 
+                var commune = $(e.currentTarget).data('commune');
+                var path = map.getLayerPath('commune', commune);
+                path.svgPath.attr({'fill': path.realFill});
+                return false;
+            });
+
+
+            var colorizeScores = function(d) {
+                if (d.score==0) return chroma.hex('#cccccc');
+                return score_colors.getColor(d.score);
+            }
+
+            var colorizeRevenue = function(d) {
+                return rev_colors.getColor(d.revenue_realized_num);
+            }
+
+            var colorizeSpending = function(d) {
+                return spend_colors.getColor(d.spending_realized_num);
+            }
+
+            var colorizeDocument = function(doc) {
+                return function(d) {
+                    return doc_colors.getColor(d.documents[doc].score);
+                };
+            }
+
+            $(".map-layer").click(function(e) {
+                $('.facets li').removeClass('active');
+                $('.legend-option').hide();
+                $(e.currentTarget).parents('li').addClass('active');
+                var layer = $(e.currentTarget).data('layer');
+                if (layer == 'score') {
+                    colorizeMap(colorizeScores);
+                    $('#score-legend').show();
+                } else if (layer == 'revenue') {
+                    colorizeMap(colorizeRevenue);
+                    $('#rev-legend').show();
+                } else if (layer == 'spending') {
+                    colorizeMap(colorizeSpending);
+                    $('#exp-legend').show();
+                } else if (layer == 'document') {
+                    var doc = $(e.currentTarget).data('document');
+                    colorizeMap(colorizeDocument(doc));
+                    $('#doc-legend').show();
+                }
+                return false;
+            });
+
+            $('#ranking').tablesorter();
+
+            map.loadMap('/img/adamawa.svg', function(map) {
+                map.loadStyles('/css/map_styles.css', function() {
+                    map.addLayer({
+                        id: 'commune',
+                        key: 'commune'
+                    });
+
+                    colorizeMap(colorizeScores);
+
+                    var layer = map.getLayer('commune');
+                    for(var i=0;i<layer.paths.length;i++){
+                        var path = layer.paths[i];
+                        path.svgPath.attr({'stroke-width': 1});
+                        path.svgPath.attr({'stroke': '#fff'});
+                    }
+
+                    map.onLayerEvent('click', function(d) {
+                        showDetails(d.commune);
+                    });
+
+                    map.tooltips({
+                        layer: 'commune',
+                        content: function(data) {
+                            return data;
+                        },
+                        style: {
+                            name: 'dark'
+                        }
+                    });
+                });
+            });
+        });
+    });
+</script>
