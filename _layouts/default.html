@@ -42,58 +42,19 @@
 </head>
 <body class="{{page.section}}">
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  <header id="header">
-    <div class="container" >
-        <ul id="nav-menu">
-            <li class="item"><a href="index.html">Home</a></li>
-            <li class="item"><a href="about.html">About</a></li>
-            <li><a href="why.html">Why Budget Transparency?</a></li>
-            <li><a class="nav-button twitter" title="Share on Twitter" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share?text={{page.title}}&url={{site.url}}{{page.url}}&via=openspending','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());">twitter</a></li>
-            <li><a class="nav-button facebook" target="_blank" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}">facebook</a></li>
-        </ul>
-      <h1 id="title"><a href="index.html">{{ site.title }}</a></h1>
-
-      
-    </div>
-
-
-  </header>
+  {% include header.html %}
 
   {% if page.section != 'home' %}
-    <nav id="navmenu">
-      <div class="container">
-        <ul>
-          <li><a href="pib.html#/~/total">National Investment Budget</a></li>
-          <li><a href="nwregion.html#/~/total">North-West Investment Budget</a></li>
-          <li><a href="bti.html">Adamawa Transparency Index</a></li>
-          <li><a href="council.html?name=tignere#/~/total--2009-">Tignere Council Budget</a></li>
-        </ul>
-      </div>
-    </nav>
+
+    {% include navmenu.html %}
+  
   {% endif %}
 
   <div class="container" id="content">
     {{ content }}
   </div>
 
-  <footer>
-    <div class="inner">
-      <div class="container">
-        <div class="row">
-          <div class="span6">
-            {{ site.title }} is a collaboration between the <a href="http://wbi.worldbank.org/wbi/">World Bank</a> and the <a href="http://okfn.org">Open Knowledge Foundation</a>.
-          </div>
-          <div class="offset2 span4">
-            <ul>
-              <li><a href="about.html">About</a>: intro and background</li>
-              <li><a href="contribute.html">Contribute</a> local council information</li>
-              <li><a href="https://github.com/openspending/cameroon.openspending.org">Source code</a> repository</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+  {% include footer.html %}
 
   <script>
     (function ($) {

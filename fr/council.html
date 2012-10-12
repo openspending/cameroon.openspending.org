@@ -1,0 +1,162 @@
+---
+layout: default
+title: Local Council Budget
+section: council
+---
+
+<!--div class="homelink">
+    <a href="/index.html">Back to Main Map</a>
+</div-->
+<h2 class="page-title">
+    <div class="btn-toolbar pull-right" id="facets">
+        <div class="btn-group">
+          <a href="#" id="currency-usd" class="btn btn-small">Dollars US</a>
+          <a href="#" id="currency-xaf" class="btn btn-small">Francs CFA</a>
+        </div>
+        <div class="btn-group" id="select-type">
+          <a href="#" id="type-budget" class="btn btn-small">Budgetisé</a>
+          <a href="#" id="type-actual" class="btn btn-small">Réel</a>
+        </div>
+        <div class="btn-group">
+          <a href="#" id="flow-rev" class="btn btn-small">Revenus</a>
+          <a href="#" id="flow-exp" class="btn btn-small">Dépenses</a>
+        </div>
+        <div class="btn-group" id="select-year">
+        </div>
+    </div>
+    <span id="council-name">Budget du Conseil</span>
+</h2>
+
+<div id="bt-map">
+    <div id="preloader" style="text-align: center; padding: 100px"><img src="/img/ajax-loader.gif" style="vertical-align:top" /> &nbsp;<span class="txt">chargement des librairies javascript</span></div>
+
+    <div id="cm-bt">
+
+        <div class="bubbletree-wrapper">
+            <div id="cm-bubbletree" class="bubbletree"></div>
+
+        </div>
+        <div style="position:absolute;top:515px" class="instruction">Cliquez sur les cercles pour voir le détail du budget</div>
+
+    </div>
+
+    <div id="cm-budget-panel">
+
+        <table id="cm-budget-table" cellpadding="5" >
+        </table>
+
+
+    </div>
+</div>
+
+<div id="disqus_thread"></div>
+
+<script src="/js/bubblechart.js"></script>
+<script type="text/javascript">
+
+(function ($) {
+  yepnope.errorTimeout = 1000;
+  yepnope([
+   { load: OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}'),
+     complete: function() {
+        var dataset_name = _.reduce(parseQueryString(), function(c, e) {
+            return e[0]=='name' ? e[1] : c}, null);
+        var selectedCurrency = 'XAF';
+        var selectedType = 'Actual';
+        var selectedYear = '2009';
+        var selectedFlow = 'EXPENDITURE';
+
+        $.getJSON('/data/datasets.json', function(datasets) {
+            var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
+            $("#council-name").text(dataset.label);
+            _.each(dataset.years, function(y) {
+              $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
+            });
+            selectedYear = _.max(dataset.years);
+            if (dataset.reporting_type) {
+              selectedType = dataset.reporting_type;
+              $("#select-type").hide();
+            }
+
+            $('#currency-xaf').click(function(e) {
+                selectedCurrency = 'XAF';
+                updatePage();
+                return false;
+            });
+
+            $('#currency-usd').click(function(e) {
+                selectedCurrency = 'USD';
+                updatePage();
+                return false;
+            });
+
+            $('#type-actual').click(function(e) {
+                selectedType = 'Actual';
+                updatePage();
+                return false;
+            });
+
+            $('#type-budget').click(function(e) {
+                selectedType = 'Budget';
+                updatePage();
+                return false;
+            });
+
+            $('#flow-rev').click(function(e) {
+                selectedFlow = 'REVENUE';
+                updatePage();
+                return false;
+            });
+
+            $('#flow-exp').click(function(e) {
+                selectedFlow = 'EXPENDITURE';
+                updatePage();
+                return false;
+            });
+
+            $('#select-year a').click(function(e) {
+                selectedYear = $(e.currentTarget).data('year');
+                updatePage();
+                return false;
+            });
+
+            var updatePage = function() {
+                $('#facets a').removeClass('active');
+                $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+                $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('active');
+                $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
+                
+                $('#select-year a').each(function(i, e) {
+                  if ($(e).data('year')==selectedYear) {
+                    $(e).addClass('active');
+                  }
+                });
+
+                var bubblemap = new OpenSpending.BubbleChart({
+                    currency: selectedCurrency,
+                    query: {
+                        dataset: dataset.dataset,
+                        cuts: ['year:' + selectedYear,'reporting_type:' + selectedType,'financial_flow:' + selectedFlow],
+                        drilldowns: ['headaccount', 'subaccount'],
+                        rootNodeLabel: 'Total (' + selectedYear + ')',
+                        processEntry: function(e, data) {
+                            e.amount = selectedCurrency == 'XAF' ? e.amount : e.amount/522.010;
+                            return e;
+                        }
+                    }
+                });
+            };
+            updatePage();
+
+            var disqus_shortname = 'openspending-cameroon';
+            var disqus_identifier = '/Council:' + dataset_name;
+
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        });
+    }
+   }
+  ]); // yepnope()   
+})(jQuery)
+</script>

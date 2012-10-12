@@ -1,0 +1,210 @@
+---
+layout: default
+title: Region Nord-Ouest du Cameroun
+forum: Nord-Ouest
+section: nwregion
+---
+
+<h2 class="page-title">
+  <div class="btn-toolbar pull-right" id="facets">
+    <div class="btn-group">
+      <a href="#" id="currency-usd" class="btn btn-small">Dollars US</a>
+      <a href="#" id="currency-xaf" class="btn btn-small">Francs CFA</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="factor-percapita" class="btn btn-small">Par hab.</a>
+      <a href="#" id="factor-Valeur absolue" class="btn btn-small">Valeur absolue</a>
+    </div>
+    <div class="btn-group">
+      <a href="#" id="filter-amount" class="btn btn-small">Budgétisé</a>
+      <a href="#" id="filter-liquidate" class="btn btn-small">Réel</a>
+    </div>
+  </div>
+  Investissements de la Région Nord-Ouest (2010)
+</h2>
+
+<script src="/js/bubblemap.js"></script>
+<script type="text/javascript">
+(function ($) {
+  yepnope.errorTimeout = 1000;
+  yepnope([
+   { load: OpenSpending.getBubbleMapDependencies('{{site.openspendingjs}}'),
+     complete: function() {
+        $.getJSON('/data/population.json', function(population) {
+          population = _.filter(population, function(e) { return e['Region_MapName']=="Nord-Ouest";});
+          var populationByDept = _.groupBy(population, function(r) { return r['Department_MapName']; });
+          _.each(_.keys(populationByDept), function(r) {
+            populationByDept[r] = _.reduce(populationByDept[r], function(e,i) {return e + i['Valeur absolue'];}, 0);
+          });
+          var totalPopulation = _.reduce(_.values(populationByDept), function(e,i) {return e+i;}, 0);
+
+          var selectedCurrency = 'XAF';
+          var selectedFactor = 'factor-Valeur absolue';
+          var selectedFilter = 'AMOUNT';
+
+          var applyFactor = function(amount, region) {
+            if (!amount) {
+              return amount;
+            }
+            if (selectedCurrency == 'USD') {
+              // http://www.xe.com/ucc/convert/?Amount=1&From=USD&To=XAF 
+              amount = amount / 522.010; 
+            };
+            if (selectedFactor == 'factor-percapita') {
+              var pop = populationByDept[region] || totalPopulation;
+              amount = Math.max(1, amount / pop);
+              if (!amount) {
+                foo;
+              }
+              //console.log(amount);
+            };
+            return amount;
+          };
+
+          $('#currency-xaf').click(function(e) {
+            selectedCurrency = 'XAF';
+            updatePage();
+            return false;
+          });
+
+          $('#currency-usd').click(function(e) {
+            selectedCurrency = 'USD';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-Valeur absolue').click(function(e) {
+            selectedFactor = 'factor-absolute';
+            updatePage();
+            return false;
+          });
+
+          $('#factor-percapita').click(function(e) {
+            selectedFactor = 'factor-percapita';
+            updatePage();
+            return false;
+          });
+
+          
+          $('#filter-amount').click(function(e) {
+            selectedFilter = 'AMOUNT';
+            updatePage();
+            return false;
+          });
+
+          $('#filter-liquidate').click(function(e) {
+            selectedFilter = 'LIQUIDATE';
+            updatePage();
+            return false;
+          });
+
+
+          var updatePage = function() {
+            $('#facets a').removeClass('active');
+            $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
+            $(selectedFilter == 'AMOUNT' ? '#filter-amount' : '#filter-liquidate').addClass('active');
+            $('#' + selectedFactor).addClass('active');
+
+
+            var bubblemap = new OpenSpending.BubbleMap({
+                currency: selectedCurrency,
+                query: {
+                    dataset: 'cm-nwr-investments',
+                    cuts: ['year:2010', 'reporting_type:' + selectedFilter],
+                    drilldowns: ['sector', 'chapter'],
+                    rootNodeLabel: 'Total',
+                    breakdown: 'commune',
+                    processEntry: function(e, data) {
+                      e.amount = applyFactor(e.amount||0, e.region);
+                      return e;
+                    }
+                },
+                map: {
+                    url: '/img/north_west_departements.svg',
+                    layerName: 'departement',
+                    keyAttribute: 'departemen',
+                    legendText: selectedFactor == 'factor-percapita' ? 
+                      'Dépenses par hab. sur' : 'Dépenses sur'
+                },
+                table: {
+                  columns: [
+                    {
+                        name: 'chapter',
+                        label: 'Chapitre',
+                        width: '20%',
+                        data: function(d) { return d.chapter.label; }
+                    },
+                    {
+                        name: 'physical-unit-demanded',
+                        label: 'Unité',
+                        width: '40%',
+                        data: function(d) { return d['physical-unit-demanded']; }
+                    },
+                                    {
+                        name: 'to',
+                        label: 'Bénéficiaire',
+                        width: '20%',
+                        data: function(d) { return d['to'].label; }
+                    },
+                    {
+                        name: 'amount',
+                        label: 'Quantité (Fr)',
+                        width: '16%',
+                        data: function(d) { return OpenSpending.Utils.formatAmountWithCommas(d.amount||0); }
+                    },
+                    {
+                        name: 'details',
+                        label: '',
+                        width: '2%',
+                        data: function(d) { return '<a href="'+d.html_url+'">&raquo;</a>'; }
+                    }
+                  ]
+                }
+              });
+            };
+            updatePage();
+          });
+    }
+   }
+  ]); // yepnope()   
+})(jQuery)
+</script>
+    
+{% include bubblemap_fr.html %}
+
+<div class="under-curtain">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#projects" data-toggle="tab">Projets</a></li>
+    <li><a href="#discussion" data-toggle="tab">Discussion</a></li>
+    <li><a href="#about" data-toggle="tab">A propos</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="projects">
+      {% include datatable.html %}
+    </div>
+    <div class="tab-pane" id="discussion">
+      {% include disqus.html %}
+    </div>
+    <div class="tab-pane" id="about">
+      <div class="span8">
+          <p>Cette page affiche les investissements réalisés dans la région du Nord-Ouest du Cameroun en 2010. Les chiffres représentent les dépenses budgétisées, ainsi que les dépenses engagées et la liquidées.</p>
+
+          {% include sectors_fr.html %}
+      </div>
+      <div class="span3">
+          <ul>
+            <li>Données sources  
+            <a href="http://data.openspending.org/worldbank/cameroon/Cameroon-NW-Region-Investment-Budget.csv">nettoyées et formatées</a>.</li>
+            <li><a href="http://openspending.org/cm-nwr-investments/views/new">Générez des visualisations personnalisées</a> sur OpenSpending.org</li>
+            <li><a href="http://datahub.io/dataset/cm-nwr-investments">Jeu de données sur datahub.io</a></li>
+            <li><a href="http://www.minepat.gov.cm/">Ministère de la Planification du Cameroun</a></li>
+          </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
