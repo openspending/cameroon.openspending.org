@@ -4,3 +4,36 @@ auto: true
 title: Cameroon Budget Inquirer
 openspendingjs: '/js/openspendingjs'
 url: http://cameroon.openspending.org
+
+locales:
+  en:
+    home: "Home"
+    about: "About"
+    why: "Why Budget Transparency"
+    nationalbudget: "National Investment Budget"
+    nwbudget: "North-West Investment Budget"
+    transparencyindex: "Adamawa Transparency Index"
+    councilbudget: "Tignere Council Budget"
+    collaborationbetween: "is a collaboration between the"
+    worldbank: "World Bank"
+    andthe: "and the"
+    intro: "intro and background"
+    contribute: "Contribute"
+    localcouncilinfo: "local council information"
+    sourcecode: "Source code repository"
+
+  fr:
+    home: "Accueil"
+    about: "A propos"
+    why: "Pourquoi la transparence budgétaire?"
+    nationalbudget: "Budget national d'investissement"
+    nwbudget: "Budget d'investissement du Nord-Ouest"
+    transparencyindex: "Indice de transparence d'Adamaoua"
+    councilbudget: "Budget du conseil de Tignere"
+    collaborationbetween: "est une coopération entre"
+    worldbank: "la Banque Mondiale"
+    andthe: "et"
+    intro: "introduction et contexte"
+    contribute: "Contribuer"
+    localcouncilinfo: "des informations sur les conseils locaux"
+    sourcecode: "Code source"
