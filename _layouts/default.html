@@ -1,3 +1,6 @@
+{% capture locale %}{{ page.url | truncate: 3, "" | remove: "/" }}{% endcapture %}
+{% if locale == "" %}{% assign locale = "en" %}{% endif %}
+
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -42,19 +45,58 @@
 </head>
 <body class="{{page.section}}">
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-  {% include header.html %}
+  <header id="header">
+    <div class="container" >
+        <ul id="nav-menu">
+            <li class="item"><a href="index.html">{{ site.locales[locale].home }}</a></li>
+            <li class="item"><a href="about.html">{{ site.locales[locale].about }}</a></li>
+            <li><a href="why.html">{{ site.locales[locale].why }}</a></li>
+            <li><a class="nav-button twitter" title="Share on Twitter" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share?text={{page.title}}&url={{site.url}}{{page.url}}&via=openspending','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());">twitter</a></li>
+            <li><a class="nav-button facebook" target="_blank" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}">facebook</a></li>
+        </ul>
+      <h1 id="title"><a href="index.html">{{ site.title }}</a></h1>
+
+      
+    </div>
+
+
+  </header>
 
   {% if page.section != 'home' %}
-
-    {% include navmenu.html %}
-  
+    <nav id="navmenu">
+      <div class="container">
+        <ul>
+          <li><a href="pib.html#/~/total">{{ site.locales[locale].nationalbudget }}</a></li>
+          <li><a href="nwregion.html#/~/total">{{ site.locales[locale].nwbudget }}</a></li>
+          <li><a href="bti.html">{{ site.locales[locale].transparencyindex }}</a></li>
+          <li><a href="council.html?name=tignere#/~/total--2009-">{{ site.locales[locale].councilbudget }}</a></li>
+        </ul>
+      </div>
+    </nav>
   {% endif %}
 
   <div class="container" id="content">
     {{ content }}
   </div>
 
-  {% include footer.html %}
+  <footer>
+    <div class="inner">
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            {{ site.title }} {{ site.locales[locale].collaborationbetween }} <a href="http://wbi.worldbank.org/wbi/">{{ site.locales[locale].worldbank }}</a> {{ site.locales[locale].andthe }} <a href="http://okfn.org">Open Knowledge Foundation</a>.
+          </div>
+          <div class="offset2 span4">
+            <ul>
+              <li><a href="about.html">{{ site.locales[locale].about }}</a>: {{ site.locales[locale].intro }}</li>
+              <li><a href="contribute.html">{{ site.locales[locale].contribute }}</a> {{ site.locales[locale].localcouncilinfo }}</li>
+              <li><a href="https://github.com/openspending/cameroon.openspending.org">{{ site.locales[locale].sourcecode }}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script>
     (function ($) {
