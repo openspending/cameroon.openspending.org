@@ -7,7 +7,7 @@ OpenSpending.getBubbleChartDependencies = function(os_path) {
         os_path + '/lib/vendor/accounting.js',
         os_path + '/lib/utils/utils.js',
         os_path + '/lib/aggregator.js',
-        os_path + '/lib/vendor/bubbletree/2.0/bubbletree.js',
+        '/js/bubbletree.js',
         os_path + '/lib/vendor/vis4.js',
         os_path + '/lib/vendor/Tween.js',
         os_path + '/lib/vendor/jquery.history.js',
@@ -97,10 +97,15 @@ OpenSpending.BubbleChart = function (config) {
             self.bt = new BubbleTree({
                 data: data,
                 container: '#cm-bubbletree',
-                bubbleType: 'icon',//'color',
+                bubbleType: 'color',
                 nodeClickCallback: onNodeClick,
                 firstNodeCallback: onNodeClick,
+                //minRadiusLabels: 40,
+                //minRadiusAmounts: 20,
+                minRadiusHideLabels: 15,
+                cutLabelsAt: 20,
                 rootPath: '/img/functions/',
+                /*
                 tooltip: {
                     qtip: true,
                     delay: 800,
@@ -108,8 +113,12 @@ OpenSpending.BubbleChart = function (config) {
                         return [node.label, '<div class="desc">'+(node.description ? node.description : 'No description given')+'</div><div class="amount">£ '+node.famount+'</div>'];
                     }
                 },
+                */
+                tooltip: function(node) {
+                        return [node.label, '<div class="desc">'+(node.description ? node.description : 'No description given')+'</div><div class="amount">£ '+node.famount+'</div>'];
+                },
                 bubbleStyles: opts.bubbleStyles,
-                clearColors: true // remove all colors coming from OpenSpending API
+                //clearColors: true // remove all colors coming from OpenSpending API
             });
         }
     });
