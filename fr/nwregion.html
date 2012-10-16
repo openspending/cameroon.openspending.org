@@ -116,6 +116,8 @@ section: nwregion
                     breakdown: 'commune',
                     processEntry: function(e, data) {
                       e.amount = applyFactor(e.amount||0, e.region);
+                      e.chapter.label = e.chapter.label_fr || e.chapter.label;
+                      e.sector.label = e.sector.label_fr || e.sector.label;
                       return e;
                     }
                 },

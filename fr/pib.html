@@ -138,6 +138,8 @@ section: pib
                 rootNodeLabel: 'Total',
                 processEntry: function(e, data) {
                   e.amount = applyFactor(e.amount||0, e[geos[selectedGeo].breakdown]);
+                  e.chapter.label = e.chapter.label_fr || e.chapter.label;
+                  e.sector.label = e.sector.label_fr || e.sector.label;
                   return e;
                 }
               },
