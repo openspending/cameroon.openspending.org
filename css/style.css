@@ -48,6 +48,17 @@ strong, b {
     background-color: #f7f7f7;
 }
 
+.language-menu {
+}
+
+.language-menu a {
+  float: right;
+  font-weight: bold;
+	font-family: "OpenSansSemibold", Helvetica, sans-serif;
+  color: #666;
+  padding: 0.4em;
+}
+
 #navmenu {
     margin-top: -1em;
     margin-bottom: 1em;
