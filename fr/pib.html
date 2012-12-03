@@ -49,7 +49,7 @@ section: pib
           };
 
           var populationByArea = {};
-          var totalPopulation = -1;
+          var totalPopulation = _.reduce(_.values(population), function(e,i) {return e+i['Absolute'];}, 0);
 
           var selectedCurrency = 'XAF';
           var selectedFactor = 'factor-absolute';
@@ -62,9 +62,8 @@ section: pib
             _.each(_.keys(populationByArea), function(r) {
               populationByArea[r] = _.reduce(populationByArea[r], function(e,i) {return e + i['Absolute'];}, 0);
             });
-            totalPopulation = _.reduce(_.values(populationByArea), function(e,i) {return e+i;}, 0);
           };
-          
+
           var applyFactor = function(amount, area) {
             if (!amount) {
               return amount;

@@ -111,8 +111,6 @@ OpenSpending.BubbleMap = function (config) {
         // apply colors to map
         self.map.choropleth({
             data: function(e) {
-                console.log(e[opts.map.keyAttribute]);
-                console.log(node.breakdowns[e[opts.map.keyAttribute]]);
                 return node.breakdowns[e[opts.map.keyAttribute]];
             },
             colors: function(d) {
