@@ -74,6 +74,67 @@
 }
 
 
+/*
+ * map legend
+ */
+
+#wdmmg-map-legend {
+    position: absolute;
+    left: 540px;
+    top: 30px;
+    width: 100px;
+    height: 200px;
+}
+
+#wdmmg-map-legend .title {
+    font-style: italic;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 8px;
+}
+
+#wdmmg-map-legend .row {
+    margin: 0 0 4px;
+}
+
+#wdmmg-map-legend .legend li {
+    padding-top: 7px;
+}
+
+#wdmmg-map-legend .color,
+.legend .color {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    float: left;
+    margin-right: 5px;
+}
+
+#wdmmg-map-legend .lbl,
+.legend .lbl {
+    font-size: 11px;
+    color: #444;
+    line-height: 13px;
+    position: relative;
+    top: 2px;
+    white-space: no-wrap;
+    width: 200px;
+    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#wdmmg-map-legend .legend li .lbl {
+    margin-left: 20px;
+    margin-top: -2px;
+}
+
+#wdmmg-map-legend .legend-option.hidden {
+    display: none;
+}
+
+.under-curtain {
+    display: none;
+}
+
 
 .ui-tooltip-content .amount {
     font-size: 20px;
