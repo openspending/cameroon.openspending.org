@@ -67,7 +67,7 @@ OpenSpending.BubbleMap = function (config) {
 
     function updateLegend(title, colors, limits, currency) {
         var currencyLabel = ' (' + currency + ')';
-        var $lg = $('#cm-map-legend');
+        var $lg = $('#wdmmg-map-legend');
         $lg.html('');
 
         title = selectedRegion ? title + ' in ' + selectedRegion : title;
@@ -82,7 +82,7 @@ OpenSpending.BubbleMap = function (config) {
             row.append('<div class="lbl">'+lbl+'</div>');
             $lg.append(row);
         });
-        $('#cm-map-legend').show();
+        $('#wdmmg-map-legend').show();
     }
 
     var onNodeClick = function(node) {
@@ -151,7 +151,7 @@ OpenSpending.BubbleMap = function (config) {
             opts.query.cuts.concat(opts.query.breakdown+':'+selectedRegion) :
             opts.query.cuts;
     };
-    
+
     var allCuts = function() {
         var cuts = regionCuts();
         cuts = cuts.concat(nodeCuts(currentNode));
@@ -167,8 +167,8 @@ OpenSpending.BubbleMap = function (config) {
     var curtainsDown = function() {
         $('.qtip').remove();
         $('.under-curtain').hide();
-        $('#cm-bubbletree').empty();
-        $('#cm-map').empty();
+        $('#wdmmg-bubbletree').empty();
+        $('#wdmmg-map').empty();
         $('#preloader').show();
     };
 
@@ -184,11 +184,11 @@ OpenSpending.BubbleMap = function (config) {
             breakdown: opts.query.breakdown,
             processEntry: opts.query.processEntry,
             callback: function(data) {
-                $('#cm-bubbletree').empty();
+                $('#wdmmg-bubbletree').empty();
                 var currency = opts.currency || data.currency;
                 self.bt = new BubbleTree({
                     data: data,
-                    container: '#cm-bubbletree',
+                    container: '#wdmmg-bubbletree',
                     bubbleType: 'icon',
                     minRadiusLabels: 40,
                     minRadiusAmounts: 20,
@@ -213,7 +213,7 @@ OpenSpending.BubbleMap = function (config) {
     
         // init map
         
-        var map = self.map = $K.map('#cm-map');
+        var map = self.map = $K.map('#wdmmg-map');
         map.loadStyles('/css/map.css', function() {
             map.loadMap(opts.map.url, function() {
                 map.addLayer({
@@ -244,7 +244,7 @@ OpenSpending.BubbleMap = function (config) {
     };
 
     if (opts.table.show) {
-        self.dt = new OpenSpending.DataTable($('#cm-datatable'), {
+        self.dt = new OpenSpending.DataTable($('#wdmmg-datatable'), {
             source: opts.query.apiUrl + '/2/search',
             sorting: opts.table.sorting,
             columns: opts.table.columns,
@@ -256,7 +256,7 @@ OpenSpending.BubbleMap = function (config) {
                 }
             });
         self.dt.init();
-        $('#cm-datatable thead th').qtip({
+        $('#wdmmg-datatable thead th').qtip({
             content: {
                 text: opts.table.sortTooltip
             },

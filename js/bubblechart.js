@@ -79,7 +79,7 @@ OpenSpending.BubbleChart = function (config) {
     var curtainsDown = function() {
         $('.qtip').remove();
         $('.under-curtain').hide();
-        $('#cm-bubbletree').empty();
+        $('#wdmmg-bubbletree').empty();
         $("#cm-budget-panel").css("visibility", "hidden");
         $('#preloader').show();
     };
@@ -96,7 +96,7 @@ OpenSpending.BubbleChart = function (config) {
         callback: function(data) {
             self.bt = new BubbleTree({
                 data: data,
-                container: '#cm-bubbletree',
+                container: '#wdmmg-bubbletree',
                 bubbleType: 'color',
                 nodeClickCallback: onNodeClick,
                 firstNodeCallback: onNodeClick,

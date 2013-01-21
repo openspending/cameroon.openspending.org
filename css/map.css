@@ -1,5 +1,5 @@
 
-#bt-map {
+#wdmmg-bubblemap {
     position: relative;
     height: 550px;
 }
@@ -8,47 +8,47 @@
  * bubbletree styles
  */ 
  
-#cm-bt {
+#wdmmg-bt {
     width: 550px;
 }
 
-#cm-bt .bubbletree-wrapper {
+#wdmmg-bt .bubbletree-wrapper {
     height: 500px;
     width: 550px;
 }
 
-#cm-bubbletree .label {
+#wdmmg-bubbletree .label {
     background: transparent;
     padding: 0; 
     margin: 0;
 }
 
-#cm-bubbletree .label .amount {
+#wdmmg-bubbletree .label .amount {
     font-weight: normal;
 }
 
-#cm-bubbletree .label .desc {
+#wdmmg-bubbletree .label .desc {
     font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: normal;
     line-height: 1.2em;
 }
 
-#cm-bubbletree .label2 {
+#wdmmg-bubbletree .label2 {
     line-height: 1.2em;
     font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-#cm-bt .bubbletree .label2 span {
+#wdmmg-bt .bubbletree .label2 span {
     background: rgba(255,255,255,.7);
 }
 
-#cm-bubbletree .label2.current {
+#wdmmg-bubbletree .label2.current {
     font-weight: bold;
     font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
 }
 
-#cm-bubbletree .label.current .desc {
+#wdmmg-bubbletree .label.current .desc {
     font-weight: bold;
     font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
@@ -59,7 +59,7 @@
  *
  */
 
-#cm-map {
+#wdmmg-map {
     position: absolute;
     left: 540px;
     top: 50px;
@@ -67,7 +67,7 @@
     height: 500px;
 }
 
-#cm-map svg path {
+#wdmmg-map svg path {
     stroke: #fff;
     stroke-width: 2px;
     cursor: pointer;
