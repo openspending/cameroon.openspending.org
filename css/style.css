@@ -227,6 +227,8 @@ footer a:hover {
 .home #map svg .region {
     stroke: #fff;
     stroke-opacity: 1;
+    stroke-width: 2;
+    cursor: pointer;
 }
 
 .home #map svg .region:hover {
@@ -405,6 +407,25 @@ footer a:hover {
     font-size: 0.9em;
 }
 
+.bti .legend .lbl {
+    font-size: 11px;
+    color: #444;
+    line-height: 13px;
+    position: relative;
+    top: 2px;
+    white-space: no-wrap;
+    width: 200px;
+    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.bti .legend .color {
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    float: left;
+    margin-right: 5px;
+}
+
 .bti .details-content table {
     width: 100%;
     margin-bottom: 2em;
@@ -548,4 +569,8 @@ body.nwregion #content, body.pib #content{
   -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
      -moz-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
           box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.hidden {
+  display: none;
 }

@@ -366,22 +366,22 @@ forum: Amadaoua
 
             $(".map-layer").click(function(e) {
                 $('.facets li').removeClass('active');
-                $('.legend-option').hide();
+                $('.legend-option').addClass('hidden');
                 $(e.currentTarget).parents('li').addClass('active');
                 var layer = $(e.currentTarget).data('layer');
                 if (layer == 'score') {
                     colorizeMap(colorizeScores);
-                    $('#score-legend').show();
+                    $('#score-legend').removeClass('hidden');
                 } else if (layer == 'revenue') {
                     colorizeMap(colorizeRevenue);
-                    $('#rev-legend').show();
+                    $('#rev-legend').removeClass('hidden');
                 } else if (layer == 'spending') {
                     colorizeMap(colorizeSpending);
-                    $('#exp-legend').show();
+                    $('#exp-legend').removeClass('hidden');
                 } else if (layer == 'document') {
                     var doc = $(e.currentTarget).data('document');
                     colorizeMap(colorizeDocument(doc));
-                    $('#doc-legend').show();
+                    $('#doc-legend').removeClass('hidden');
                 }
                 return false;
             });
@@ -389,34 +389,32 @@ forum: Amadaoua
             $('#ranking').tablesorter();
 
             map.loadMap('/img/adamawa.svg', function(map) {
-                map.loadStyles('/css/map_styles.css', function() {
-                    map.addLayer({
-                        id: 'commune',
-                        key: 'commune'
-                    });
+                map.addLayer({
+                    id: 'commune',
+                    key: 'commune'
+                });
 
-                    colorizeMap(colorizeScores);
+                colorizeMap(colorizeScores);
 
-                    var layer = map.getLayer('commune');
-                    for(var i=0;i<layer.paths.length;i++){
-                        var path = layer.paths[i];
-                        path.svgPath.attr({'stroke-width': 1});
-                        path.svgPath.attr({'stroke': '#fff'});
+                var layer = map.getLayer('commune');
+                for(var i=0;i<layer.paths.length;i++){
+                    var path = layer.paths[i];
+                    path.svgPath.attr({'stroke-width': 1});
+                    path.svgPath.attr({'stroke': '#fff'});
+                }
+
+                map.onLayerEvent('click', function(d) {
+                    showDetails(d.commune);
+                });
+
+                map.tooltips({
+                    layer: 'commune',
+                    content: function(data) {
+                        return data;
+                    },
+                    style: {
+                        name: 'dark'
                     }
-
-                    map.onLayerEvent('click', function(d) {
-                        showDetails(d.commune);
-                    });
-
-                    map.tooltips({
-                        layer: 'commune',
-                        content: function(data) {
-                            return data;
-                        },
-                        style: {
-                            name: 'dark'
-                        }
-                    });
                 });
             });
         });
