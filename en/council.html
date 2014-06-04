@@ -62,7 +62,7 @@ section: council
 
         var dataset = '{{site.budgetsDataset}}';
         var cuts = ['council:' + councilName];
-        var drilldowns = ['year'];
+        var drilldowns = ['year', 'reporting_type'];
         new OpenSpending.Aggregator({
             siteUrl: '{{site.openspendingUrl}}',
             dataset: dataset,
@@ -75,12 +75,22 @@ section: council
             var years = _.map(data.children, function(d) { return d.label; });
             years.sort(sortStringAsc);
             selectedYear = years[years.length-1];
+
+            var reportingTypes = [];
+            _.each(data.children, function (year) {
+                _.each(year.children, function (reportingType) {
+                  reportingTypes.push(reportingType.label);
+                });
+            });
+            reportingTypes = _.unique(reportingTypes);
+
             $("#council-name").text(councilName);
             _.each(years, function(y) {
               $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
             });
-            if (data.reporting_type) {
-              selectedType = data.reporting_type;
+
+            if (reportingTypes.length == 1) {
+              selectedType = reportingTypes[0];
               $("#select-type").hide();
             }
 
