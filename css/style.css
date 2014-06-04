@@ -574,3 +574,20 @@ body.nwregion #content, body.pib #content{
 .hidden {
   display: none;
 }
+
+#select-year-div,
+#select-year-div select {
+  width: 75px !important;
+}
+
+#select-year-div .bootstrap-select {
+  margin-bottom: 0px !important;
+}
+
+#select-year-div .dropdown-menu {
+  font-size: 13px;
+}
+
+.hidden {
+  display: none !important;
+}
