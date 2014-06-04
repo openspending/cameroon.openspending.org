@@ -21,8 +21,8 @@ section: council
           <a href="#" id="flow-rev" class="btn btn-small">Revenue</a>
           <a href="#" id="flow-exp" class="btn btn-small">Expenditure</a>
         </div>
-        <div class="btn-group" id="select-year">
-        </div>
+        <select id="select-year">
+        </select>
     </div>
     <span id="council-name">Council Budget</span>
 </h2>
@@ -75,8 +75,8 @@ section: council
 
         function createBubbleChart(data) {
             var years = _.map(data.children, function(d) { return d.label; });
-            years.sort(sortStringAsc);
-            selectedYear = years[years.length-1];
+            years.sort(sortStringDesc);
+            selectedYear = years[0];
 
             var reportingTypes = [];
             _.each(data.children, function (year) {
@@ -88,7 +88,7 @@ section: council
 
             $("#council-name").text(councilName + " Council Budget");
             _.each(years, function(y) {
-              $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
+              $("#select-year").append("<option value='"+y+"'>"+y+"</option>");
             });
 
             if (reportingTypes.length == 1) {
@@ -132,8 +132,8 @@ section: council
                 return false;
             });
 
-            $('#select-year a').click(function(e) {
-                selectedYear = $(e.currentTarget).data('year');
+            $('#select-year').change(function() {
+                selectedYear = $(this).val();
                 updatePage();
                 return false;
             });
@@ -144,11 +144,7 @@ section: council
                 $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('active');
                 $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
                 
-                $('#select-year a').each(function(i, e) {
-                  if ($(e).data('year')==selectedYear) {
-                    $(e).addClass('active');
-                  }
-                });
+                $('#select-year').val(selectedYear);
 
                 var bubblemap = new OpenSpending.BubbleChart({
                     currency: selectedCurrency,
@@ -180,10 +176,10 @@ section: council
    }
   ]); // yepnope()   
 
-  function sortStringAsc(a, b) {
-      if (a > b) {
+  function sortStringDesc(a, b) {
+      if (a < b) {
           return 1;
-      } else if (a < b) {
+      } else if (a > b) {
           return -1;
       } else {
           return 0;
