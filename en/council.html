@@ -13,7 +13,7 @@ section: council
           <a href="#" id="currency-usd" class="btn btn-small">US Dollars</a>
           <a href="#" id="currency-xaf" class="btn btn-small">CFA Francs</a>
         </div>
-        <div class="btn-group" id="select-type">
+        <div class="btn-group hidden" id="select-type">
           <a href="#" id="type-budget" class="btn btn-small">Budget</a>
           <a href="#" id="type-actual" class="btn btn-small">Actual</a>
         </div>
@@ -100,9 +100,9 @@ section: council
             $(".selectpicker").selectpicker();
             $("#select-year-div").removeClass("hidden");
 
-            if (reportingTypes.length == 1) {
-              selectedType = reportingTypes[0];
-              $("#select-type").hide();
+            selectedType = reportingTypes[0];
+            if (reportingTypes.length > 1) {
+              $("#select-type").removeClass("hidden");
             }
 
             $('#currency-xaf').click(function(e) {
