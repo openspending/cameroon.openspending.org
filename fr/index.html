@@ -41,7 +41,7 @@ section: home
     <div class="span3">
         <h3>
             <img src="/img/site/icon_council_bubble.png">
-            <a href="council.html?name=tignere#/~/total--2009-">Comment les conseils dépensent-ils leur argent?</a>
+            <a href="council.html?name=Tignere#/~/total--2009-">Comment les conseils dépensent-ils leur argent?</a>
             <small>Budget du Conseil de Tignere</small>
         </h3>
     </div>
@@ -77,14 +77,47 @@ section: home
 
 <script>
     $(function() {
-        var selectedRegion = null;
+        var selectedRegion = null,
+            cuts = ['division_type:COUNCIL'],
+            drilldowns = ['region', 'council'];
+
         //var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
 
-        $.getJSON('/data/datasets.json', function(datasets) {
+        yepnope([{
+            load: ['{{site.openspendingjs}}/lib/aggregator.js'],
+            complete: function() {
+                new OpenSpending.Aggregator({
+                    siteUrl: '{{site.openspendingUrl}}',
+                    dataset: '{{site.budgetsDataset}}',
+                    cuts: cuts,
+                    drilldowns: drilldowns,
+                    callback: createMap
+                });
+            }
+        }]);
+
+        function createMap(data) {
+            var regionsCouncils = _.groupBy(data.children, function(d) { return d.label });
+            _.each(regionsCouncils, function (region, i) {
+                regionsCouncils[i] = _.map(region[0].children, function (council) {
+                    return {
+                      type: 'council',
+                      name: council.label,
+                      label: 'Budget du conseil de ' + council.label
+                    };
+                });
+            });
+
+            $.getJSON('/data/datasets.json', function(datasets) {
                 var regionDatasets = _.groupBy(datasets, function(ds) {
                     return ds.region;
                 });
                 window.map = $K.map('#map',500,350);
+
+                _.each(regionsCouncils, function (councils, region) {
+                  regionDatasets[region] = regionDatasets[region] || [];
+                  regionDatasets[region] = regionDatasets[region].concat(councils);
+                });
 
                 var showData = function(region) {
                    var regionData = regionDatasets[region];
@@ -196,7 +229,8 @@ section: home
                         }
                     });
                 });
-        });
+            });
+        }
     });
 
 </script>
