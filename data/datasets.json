@@ -10,34 +10,5 @@
         "link": "bti.html",
         "region": "Adamaoua",
         "type": "transparency"
-    },
-    {
-        "name": "tignere",
-        "dataset": "cm-tignere",
-        "label": "Tignere Council Budget",
-        "level": "council",
-        "years": ["2008", "2009"],
-        "region": "Adamaoua",
-        "type": "council"
-    },
-    {
-        "name": "yaounde2",
-        "dataset": "cm-yaounde2",
-        "label": "Yaoundé 2 Council Budget",
-        "level": "council",
-        "reporting_type": "Budget",
-        "years": ["2009", "2010", "2012"],
-        "region": "Centre",
-        "type": "council"
-    },
-    {
-        "name": "yaounde6",
-        "dataset": "cm-yaounde6",
-        "label": "Yaoundé 6 Council Budget",
-        "level": "council",
-        "reporting_type": "Budget",
-        "years": ["2009", "2010", "2011", "2012"],
-        "region": "Centre",
-        "type": "council"
     }
 ]

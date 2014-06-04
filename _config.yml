@@ -4,6 +4,8 @@ auto: true
 title: Cameroon Budget Inquirer
 openspendingjs: '/js/openspendingjs'
 url: http://cameroon.openspending.org
+openspendingUrl: https://openspending.org
+budgetsDataset: "cm-budgets"
 
 locales:
   en:

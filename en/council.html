@@ -53,22 +53,34 @@ section: council
   yepnope([
    { load: OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}'),
      complete: function() {
-        var dataset_name = _.reduce(parseQueryString(), function(c, e) {
+        var datasetName = _.reduce(parseQueryString(), function(c, e) {
             return e[0]=='name' ? e[1] : c}, null);
         var selectedCurrency = 'XAF';
         var selectedType = 'Actual';
         var selectedYear = '2009';
         var selectedFlow = 'EXPENDITURE';
 
-        $.getJSON('/data/datasets.json', function(datasets) {
-            var dataset = _.find(datasets, function(e) { return e.name==dataset_name; });
+        var dataset = '{{site.budgetsDataset}}';
+        var cuts = ['council:' + datasetName];
+        var drilldowns = ['year'];
+        new OpenSpending.Aggregator({
+            siteUrl: '{{site.openspendingUrl}}',
+            dataset: dataset,
+            cuts: cuts,
+            drilldowns: drilldowns,
+            callback: createBubbleChart
+        });
+
+        function createBubbleChart(data) {
+            var years = _.map(data.children, function(d) { return d.label; });
+            years.sort(sortStringAsc);
+            selectedYear = years[years.length-1];
             $("#council-name").text(dataset.label);
-            _.each(dataset.years, function(y) {
+            _.each(years, function(y) {
               $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
             });
-            selectedYear = _.max(dataset.years);
-            if (dataset.reporting_type) {
-              selectedType = dataset.reporting_type;
+            if (data.reporting_type) {
+              selectedType = data.reporting_type;
               $("#select-type").hide();
             }
 
@@ -129,8 +141,11 @@ section: council
                 var bubblemap = new OpenSpending.BubbleChart({
                     currency: selectedCurrency,
                     query: {
-                        dataset: dataset.dataset,
-                        cuts: ['year:' + selectedYear,'reporting_type:' + selectedType,'financial_flow:' + selectedFlow],
+                        dataset: dataset,
+                        cuts: ['council:' + datasetName,
+                               'year:' + selectedYear,
+                               'reporting_type:' + selectedType,
+                               'financial_flow:' + selectedFlow],
                         drilldowns: ['headaccount', 'subaccount'],
                         rootNodeLabel: 'Total (' + selectedYear + ')',
                         processEntry: function(e, data) {
@@ -143,14 +158,24 @@ section: council
             updatePage();
 
             var disqus_shortname = 'openspending-cameroon';
-            var disqus_identifier = '/Council:' + dataset_name;
+            var disqus_identifier = '/Council:' + datasetName;
 
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
             dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        });
+        };
     }
    }
   ]); // yepnope()   
+
+  function sortStringAsc(a, b) {
+      if (a > b) {
+          return 1;
+      } else if (a < b) {
+          return -1;
+      } else {
+          return 0;
+      }
+  };
 })(jQuery)
 </script>
