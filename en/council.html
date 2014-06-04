@@ -86,7 +86,7 @@ section: council
             });
             reportingTypes = _.unique(reportingTypes);
 
-            $("#council-name").text(councilName);
+            $("#council-name").text(councilName + " Council Budget");
             _.each(years, function(y) {
               $("#select-year").append("<a href='#' data-year='"+y+"' class='btn btn-small'>"+y+"</a>");
             });
