@@ -49,12 +49,14 @@ section: council
 <script type="text/javascript">
 
 (function ($) {
+  var bubbleChartDependencies = OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}');
+  var openspendingCommonJSPath = '{{site.openspendingjs}}/src/utils/openspending.common.js';
+  var filesToLoad = bubbleChartDependencies.concat([openspendingCommonJSPath]);
   yepnope.errorTimeout = 1000;
   yepnope([
-   { load: OpenSpending.getBubbleChartDependencies('{{site.openspendingjs}}'),
+   { load: filesToLoad,
      complete: function() {
-        var councilName = _.reduce(parseQueryString(), function(c, e) {
-            return e[0]=='name' ? e[1] : c}, null);
+        var councilName = OpenSpending.Common.parseQueryString().name;
         var selectedCurrency = 'XAF';
         var selectedType = 'Actual';
         var selectedYear = '2009';
