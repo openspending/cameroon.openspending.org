@@ -66,6 +66,7 @@ section: pib
           var selectedCurrency = 'XAF';
           var selectedFactor = 'factor-absolute';
           var selectedGeo = 'geo-region';
+          var selectedYear;
 
           var aggregatePopulation = function() {
             populationByArea = _.groupBy(population, function(r) {
@@ -131,7 +132,11 @@ section: pib
           });
 
           var updatePage = function(year) {
-            year = year || '2011';
+            if (year === undefined) {
+              year = selectedYear;
+            } else {
+              selectedYear = year;
+            };
             //var currencyCode = selectedCurrency == 'currency-xaf' ? 'XAF' : 'USD';
             $('#facets a').removeClass('active');
             $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
@@ -198,14 +203,13 @@ section: pib
             });
           };
 
-          _setupYears(dataset, '#select-year-div', updatePage);
-          updatePage();
+          _setupYearsAndUpdatePage(dataset, '#select-year-div', updatePage);
         });
     }
    }
   ]); // yepnope()   
 
-  function _setupYears(dataset, yearsDivSelector, updatePage) {
+  function _setupYearsAndUpdatePage(dataset, yearsDivSelector, updatePage) {
       var yearsDiv = $(yearsDivSelector),
           yearsSelect = $(yearsDiv).children('select');
 
@@ -224,7 +228,8 @@ section: pib
           $('.selectpicker').selectpicker();
           yearsDiv.removeClass('hidden');
 
-          return years;
+          // Update page
+          yearsSelect.change();
       }
 
       yearsSelect.change(function() {
