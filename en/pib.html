@@ -87,7 +87,6 @@ section: pib
             };
             if (selectedFactor == 'factor-percapita') {
               var pop = populationByArea[area] || totalPopulation;
-              console.log(populationByArea);
               amount = Math.max(1, amount / pop);
             };
             return amount;
