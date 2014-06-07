@@ -23,7 +23,7 @@ OpenSpending.BubbleChart = function (config) {
 
     opts = $.extend(true, {
         query: {
-            apiUrl: 'http://openspending.org/api',
+            apiUrl: 'https://openspending.org/api',
             dataset: null,
             drilldowns: [],
             cuts: [],

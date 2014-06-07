@@ -33,7 +33,7 @@ OpenSpending.BubbleMap = function (config) {
         currency: null,
         loaderText: 'loading spending data',
         query: {
-            apiUrl: 'http://openspending.org/api',
+            apiUrl: 'https://openspending.org/api',
             dataset: null,
             drilldowns: [],
             cuts: [],
