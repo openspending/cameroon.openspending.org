@@ -6,6 +6,7 @@ openspendingjs: '/js/openspendingjs'
 url: http://cameroon.openspending.org
 openspendingUrl: https://openspending.org
 budgetsDataset: "cm-budgets"
+pibDataset: "cm-pib"
 
 locales:
   en:
