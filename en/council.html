@@ -65,7 +65,7 @@ section: council
      complete: function() {
         var councilName = OpenSpending.Common.parseQueryString().name;
         var selectedCurrency = 'XAF';
-        var selectedType = 'Actual';
+        var selectedType = 'ACTUAL';
         var selectedYear = '2009';
         var selectedFlow = 'EXPENDITURE';
 
@@ -118,13 +118,13 @@ section: council
             });
 
             $('#type-actual').click(function(e) {
-                selectedType = 'Actual';
+                selectedType = 'ACTUAL';
                 updatePage();
                 return false;
             });
 
             $('#type-budget').click(function(e) {
-                selectedType = 'Budget';
+                selectedType = 'BUDGET';
                 updatePage();
                 return false;
             });
@@ -150,7 +150,7 @@ section: council
             var updatePage = function() {
                 $('#facets a').removeClass('active');
                 $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
-                $(selectedType == 'Budget' ? '#type-budget' : '#type-actual').addClass('active');
+                $(selectedType == 'ACTUAL' ? '#type-budget' : '#type-actual').addClass('active');
                 $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
                 
                 $('#select-year').val(selectedYear);
