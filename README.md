@@ -50,8 +50,17 @@ This contains the data for the Councils' Budget pages. The source CSV has the co
   * INVESTMENT
 * Expense type
 * Region
+  * Extrême-Nord
+  * Nord
+  * Adamaoua
+  * Est
+  * Sud
+  * Centre
+  * Ouest
+  * Nord-Ouest
+  * Sud-Ouest
+  * Littoral
 * Council
 * Division type
   * COUNCIL
   * REGION
-
