@@ -150,7 +150,7 @@ section: council
             var updatePage = function() {
                 $('#facets a').removeClass('active');
                 $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
-                $(selectedType == 'ACTUAL' ? '#type-budget' : '#type-actual').addClass('active');
+                $(selectedType == 'BUDGET' ? '#type-budget' : '#type-actual').addClass('active');
                 $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
                 
                 $('#select-year').val(selectedYear);
