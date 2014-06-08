@@ -24,4 +24,34 @@ The site can be generated with this command from the repository root:
 
 This will run an HTTP server at port 4000 to serve the site. 
 
+Datasets
+--------
+
+The data on the site comes from 2 datasets: cm-budgets and cm-pib.
+
+### cm-budgets
+
+This contains the data for the Councils' Budget pages. The source CSV has the columns:
+
+* Head-account
+* Head-Account Description
+* Sub-account
+* Sub-account Description
+* Year
+* Reporting Type
+  * Actual
+  * Budget
+* Amount
+* Revenue/Expenditure
+  * REVENUE
+  * EXPENDITURE
+* Recurrent/Investment
+  * RECURRENT
+  * INVESTMENT
+* Expense Type
+* Region
+* Council
+* Division type
+  * COUNCIL
+  * REGION
 
