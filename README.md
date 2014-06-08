@@ -64,3 +64,5 @@ This contains the data for the Councils' Budget pages. The source CSV has the co
 * Division type
   * COUNCIL
   * REGION
+
+The sub-bullet points describe the valid values for that specific column.
