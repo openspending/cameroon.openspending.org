@@ -34,13 +34,13 @@ The data on the site comes from 2 datasets: cm-budgets and cm-pib.
 This contains the data for the Councils' Budget pages. The source CSV has the columns:
 
 * Head-account
-* Head-Account Description
+* Head-account description
 * Sub-account
-* Sub-account Description
+* Sub-account description
 * Year
-* Reporting Type
-  * Actual
-  * Budget
+* Reporting type
+  * ACTUAL
+  * BUDGET
 * Amount
 * Revenue/Expenditure
   * REVENUE
@@ -48,7 +48,7 @@ This contains the data for the Councils' Budget pages. The source CSV has the co
 * Recurrent/Investment
   * RECURRENT
   * INVESTMENT
-* Expense Type
+* Expense type
 * Region
 * Council
 * Division type
