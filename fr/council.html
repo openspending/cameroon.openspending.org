@@ -94,9 +94,14 @@ section: council
             reportingTypes = _.unique(reportingTypes);
 
             $("#council-name").text("Budget du Conseil " + councilName);
+
+            var selectYear = $('#select-year');
             _.each(years, function(y) {
-              $("#select-year").append("<option value='"+y+"'>"+y+"</option>");
+              selectYear.append("<option value='"+y+"'>"+y+"</option>");
             });
+            if (years.length < 2) {
+              selectYear.attr('disabled', true);
+            }
             $(".selectpicker").selectpicker();
             $("#select-year-div").removeClass("hidden");
 
