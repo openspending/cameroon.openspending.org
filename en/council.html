@@ -21,6 +21,10 @@ section: council
           <a href="#" id="flow-rev" class="btn btn-small">Revenue</a>
           <a href="#" id="flow-exp" class="btn btn-small">Expenditure</a>
         </div>
+        <div class="btn-group">
+          <a href="#" id="recinv-rec" class="btn btn-small">Recurrent</a>
+          <a href="#" id="recinv-inv" class="btn btn-small">Investment</a>
+        </div>
         <div class="btn-group hidden" id="select-year-div">
           <select id="select-year" class="selectpicker" data-width="100%">
           </select>
@@ -68,6 +72,7 @@ section: council
         var selectedType = 'ACTUAL';
         var selectedYear = '2009';
         var selectedFlow = 'EXPENDITURE';
+        var selectedRecInv = 'RECURRENT';
 
         var dataset = '{{site.budgetsDataset}}';
         var cuts = ['council:' + councilName];
@@ -146,6 +151,18 @@ section: council
                 return false;
             });
 
+            $('#recinv-rec').click(function(e) {
+                selectedRecInv = 'RECURRENT';
+                updatePage();
+                return false;
+            });
+
+            $('#recinv-inv').click(function(e) {
+                selectedRecInv = 'INVESTMENT';
+                updatePage();
+                return false;
+            });
+
             $('#select-year').change(function() {
                 selectedYear = $(this).val();
                 updatePage();
@@ -157,6 +174,7 @@ section: council
                 $(selectedCurrency == 'XAF' ? '#currency-xaf' : '#currency-usd').addClass('active');
                 $(selectedType == 'BUDGET' ? '#type-budget' : '#type-actual').addClass('active');
                 $(selectedFlow == 'EXPENDITURE' ? '#flow-exp' : '#flow-rev').addClass('active');
+                $(selectedRecInv == 'RECURRENT' ? '#recinv-rec' : '#recinv-inv').addClass('active');
                 
                 $('#select-year').val(selectedYear);
 
@@ -167,7 +185,8 @@ section: council
                         cuts: ['council:' + councilName,
                                'year:' + selectedYear,
                                'reporting_type:' + selectedType,
-                               'financial_flow:' + selectedFlow],
+                               'financial_flow:' + selectedFlow,
+                               'recinv:' + selectedRecInv],
                         drilldowns: ['headaccount', 'subaccount'],
                         rootNodeLabel: 'Total (' + selectedYear + ')',
                         processEntry: function(e, data) {
