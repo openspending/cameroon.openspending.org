@@ -4,12 +4,12 @@ a {
 }
 
 body {
-    font-family: "OpenSansRegular", Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 h1, h2, h3 {
     font-weight: normal;
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
 }
 
 h3 {
@@ -17,21 +17,20 @@ h3 {
 }
 
 strong, b {
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
     font-weight: normal;
 }
 
 .page-title {
     font-size: 22px;
     color: #666;
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
     padding-left:0;/*30px;*/
     padding-bottom: 17px;
     margin: 9px 0 19px 0;
     border-bottom: 1px solid #efefef;
-
-
 }
+
 .intro-text{
     width:940px;
     padding-bottom: 8px;
@@ -54,7 +53,7 @@ strong, b {
 .language-menu a {
   float: right;
   font-weight: bold;
-	font-family: "OpenSansSemibold", Helvetica, sans-serif;
+	font-family: "Open Sans", sans-serif;
   color: #666;
   padding: 0.4em;
 }
@@ -78,7 +77,7 @@ strong, b {
 }
 
 #navmenu ul li a {
-	font-family: "OpenSansSemibold", Helvetica, sans-serif;
+	font-family: "Open Sans", sans-serif;
   color: #666;
 }
 
@@ -154,7 +153,8 @@ footer {
 
 footer a {
     color: #fff;
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
 footer a:hover {
@@ -167,7 +167,7 @@ footer a:hover {
     font-weight: normal;
 	background: transparent url('../img/site/grey_map.png') no-repeat 0 10px;
 	height: 50px;
-	font-family: "OpenSansSemibold", Helvetica, sans-serif;
+	font-family: "Open Sans", sans-serif;
 }
 
 #title a {
@@ -187,7 +187,7 @@ footer a:hover {
     float: right;
     font-size: 1.0em;
 	list-style-type:none;
-	 font-family: "OpenSansSemibold", Helvetica, sans-serif;
+	 font-family: "Open Sans", sans-serif;
 }
 
 #nav-menu li {
@@ -246,7 +246,8 @@ footer a:hover {
     font-size: 18px;
     line-height: 25px;
     color: #666;
-    font-family: "OpenSansItalic";
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
     padding-left: 20px;
     padding-bottom: 17px;
     margin: 4px 0 0px 0;
@@ -266,7 +267,7 @@ footer a:hover {
     padding: 10px 10px 10px 35px;
     background: #c0c0c0 url('../img/site/white_star.png') no-repeat 10px 10px;
     display: block;
-    font-family: "OpenSansBold", Helvetica, sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.1em;
 }
 
@@ -303,7 +304,7 @@ footer a:hover {
 
 .home .budget-link{
     font-size: 16px;/*10.998px;*/
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
     line-height: 16px; /*14px;*/
     color: #ffffff;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -384,7 +385,7 @@ footer a:hover {
 }
 
 .home .budget-region {
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
 }
 
 
@@ -469,7 +470,7 @@ footer a:hover {
 }
 
 .bti #ranking a {
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
 }
 
 .bti .nav.facets img {
@@ -556,8 +557,8 @@ body.nwregion #content, body.pib #content{
 }
 
 .table th {
-    font-weight: normal;
-    font-family: "OpenSansSemibold";
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
 }
 
 .btn.active,

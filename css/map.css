@@ -28,14 +28,15 @@
 }
 
 #wdmmg-bubbletree .label .desc {
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: normal;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
     line-height: 1.2em;
 }
 
 #wdmmg-bubbletree .label2 {
     line-height: 1.2em;
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
 }
 
 #wdmmg-bt .bubbletree .label2 span {
@@ -44,13 +45,13 @@
 
 #wdmmg-bubbletree .label2.current {
     font-weight: bold;
-    font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
 }
 
 #wdmmg-bubbletree .label.current .desc {
     font-weight: bold;
-    font-family: OpenSansSemibold, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 12px;
 }
 
@@ -119,7 +120,8 @@
     top: 2px;
     white-space: no-wrap;
     width: 200px;
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
 }
 
 #wdmmg-map-legend .legend li .lbl {
@@ -279,8 +281,8 @@
     color: #fff;
     border-radius: 5px 5px 0 0;
     font-size: 12px;
-    font-weight: 300;
-    font-family: "OpenSansLight","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: lighter;
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .ui-tooltip-default .ui-tooltip-icon{
