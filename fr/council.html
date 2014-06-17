@@ -22,7 +22,7 @@ section: council
           <a href="#" id="flow-rev" class="btn btn-small">Revenus</a>
           <a href="#" id="flow-exp" class="btn btn-small">Dépenses</a>
         </div>
-        <div class="btn-group">
+        <div class="btn-group hidden" id="recinv">
           <a href="#" id="recinv-rec" class="btn btn-small">Récurrent</a>
           <a href="#" id="recinv-inv" class="btn btn-small">Investissement</a>
         </div>
@@ -76,7 +76,7 @@ section: council
 
         var dataset = '{{site.budgetsDataset}}';
         var cuts = ['council:' + councilName];
-        var drilldowns = ['year', 'reporting_type'];
+        var drilldowns = ['year', 'reporting_type', 'recinv'];
         new OpenSpending.Aggregator({
             siteUrl: '{{site.openspendingUrl}}',
             dataset: dataset,
@@ -91,12 +91,17 @@ section: council
             selectedYear = years[0];
 
             var reportingTypes = [];
+            var recInvTypes = [];
             _.each(data.children, function (year) {
                 _.each(year.children, function (reportingType) {
                   reportingTypes.push(reportingType.label);
+                  _.each(reportingType.children, function (recInv) {
+                    recInvTypes.push(recInv.label);
+                  });
                 });
             });
             reportingTypes = _.unique(reportingTypes);
+            recInvTypes = _.unique(recInvTypes);
 
             $("#council-name").text("Budget du Conseil " + councilName);
 
@@ -113,6 +118,11 @@ section: council
             selectedType = reportingTypes[0];
             if (reportingTypes.length > 1) {
               $("#select-type").removeClass("hidden");
+            }
+
+            selectedRecInv = recInvTypes[0];
+            if (recInvTypes.length > 1) {
+              $("#recinv").removeClass("hidden");
             }
 
             $('#currency-xaf').click(function(e) {
