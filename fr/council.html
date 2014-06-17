@@ -14,7 +14,7 @@ section: council
           <a href="#" id="currency-usd" class="btn btn-small">Dollars US</a>
           <a href="#" id="currency-xaf" class="btn btn-small">Francs CFA</a>
         </div>
-        <div class="btn-group hidden" id="select-type">
+        <div class="btn-group">
           <a href="#" id="type-budget" class="btn btn-small">Budgetisé</a>
           <a href="#" id="type-actual" class="btn btn-small">Réel</a>
         </div>
@@ -22,7 +22,7 @@ section: council
           <a href="#" id="flow-rev" class="btn btn-small">Revenus</a>
           <a href="#" id="flow-exp" class="btn btn-small">Dépenses</a>
         </div>
-        <div class="btn-group hidden" id="recinv">
+        <div class="btn-group">
           <a href="#" id="recinv-rec" class="btn btn-small">Récurrent</a>
           <a href="#" id="recinv-inv" class="btn btn-small">Investissement</a>
         </div>
@@ -116,13 +116,21 @@ section: council
             $("#select-year-div").removeClass("hidden");
 
             selectedType = reportingTypes[0];
-            if (reportingTypes.length > 1) {
-              $("#select-type").removeClass("hidden");
+            if (selectedType && reportingTypes.length < 2) {
+              if (selectedType == 'ACTUAL') {
+                $('#type-budget').attr('disabled', true);
+              } else {
+                $('#type-actual').attr('disabled', true);
+              }
             }
 
             selectedRecInv = recInvTypes[0];
-            if (recInvTypes.length > 1) {
-              $("#recinv").removeClass("hidden");
+            if (selectedRecInv && recInvTypes.length < 2) {
+              if (selectedRecInv == 'RECURRENT') {
+                $('#recinv-inv').attr('disabled', true);
+              } else {
+                $('#recinv-rec').attr('disabled', true);
+              }
             }
 
             $('#currency-xaf').click(function(e) {

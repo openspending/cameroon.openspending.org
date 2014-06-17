@@ -582,7 +582,8 @@ body.nwregion #content, body.pib #content{
           box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
 }
 
-.btn.active {
+.btn.active,
+.btn[disabled] {
   cursor: pointer;
   pointer-events: none;
 }
