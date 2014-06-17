@@ -408,6 +408,10 @@ footer a:hover {
     font-size: 0.9em;
 }
 
+.bti .legend li {
+    margin: 0 0 4px;
+}
+
 .bti .legend .lbl {
     font-size: 11px;
     color: #444;
