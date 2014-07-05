@@ -229,17 +229,6 @@ footer a:hover {
   margin-top: 20px;
 }
 
-.home #map svg .region {
-    stroke: #fff;
-    stroke-opacity: 1;
-    stroke-width: 2;
-    cursor: pointer;
-}
-
-.home #map svg .region:hover {
-    stroke: #fff;
-}
-
 .home #map .instruction{
     position:relative;
     font-size:12px;
@@ -396,12 +385,6 @@ footer a:hover {
 
 
 /* Budget Transparency Index */
-
-.bti #map svg .commune {
-    stroke: #fff;
-    stroke-width: 2px;
-    cursor: pointer;
-}
 
 .bti .map-area {
     position: relative;

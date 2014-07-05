@@ -389,32 +389,34 @@ forum: Amadaoua
             $('#ranking').tablesorter();
 
             map.loadMap('/img/adamawa.svg', function(map) {
-                map.addLayer({
-                    id: 'commune',
-                    key: 'commune'
-                });
+                map.loadStyles('/css/map_styles.css', function() {
+                    map.addLayer({
+                        id: 'commune',
+                        key: 'commune'
+                    });
 
-                colorizeMap(colorizeScores);
+                    colorizeMap(colorizeScores);
 
-                var layer = map.getLayer('commune');
-                for(var i=0;i<layer.paths.length;i++){
-                    var path = layer.paths[i];
-                    path.svgPath.attr({'stroke-width': 1});
-                    path.svgPath.attr({'stroke': '#fff'});
-                }
-
-                map.onLayerEvent('click', function(d) {
-                    showDetails(d.commune);
-                });
-
-                map.tooltips({
-                    layer: 'commune',
-                    content: function(data) {
-                        return data;
-                    },
-                    style: {
-                        name: 'dark'
+                    var layer = map.getLayer('commune');
+                    for(var i=0;i<layer.paths.length;i++){
+                        var path = layer.paths[i];
+                        path.svgPath.attr({'stroke-width': 1});
+                        path.svgPath.attr({'stroke': '#fff'});
                     }
+
+                    map.onLayerEvent('click', function(d) {
+                        showDetails(d.commune);
+                    });
+
+                    map.tooltips({
+                        layer: 'commune',
+                        content: function(data) {
+                            return data;
+                        },
+                        style: {
+                            name: 'dark'
+                        }
+                    });
                 });
             });
         });

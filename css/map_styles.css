@@ -1,0 +1,26 @@
+/* Home page */
+
+.home #map svg .region {
+    stroke: #fff;
+    stroke-opacity: 1;
+    stroke-width: 2;
+    cursor: pointer;
+}
+
+.home #map svg .region:hover {
+    stroke: #fff;
+}
+
+/* Budget Transparency Index */
+
+.bti #map svg .commune {
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+}
+
+#wdmmg-map svg path {
+    stroke: #fff;
+    stroke-width: 2px;
+    cursor: pointer;
+}

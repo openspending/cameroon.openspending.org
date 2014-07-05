@@ -181,52 +181,54 @@ section: home
 
                 // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg region_communes.svg
                 map.loadMap('/img/regions.svg', function(map) {
-                    map.addLayer({
-                        id: 'region',
-                        key: 'region'
+                    map.loadStyles('/css/map_styles.css', function() {
+                        map.addLayer({
+                            id: 'region',
+                            key: 'region'
 
-                    });
+                        });
 
-                    var layer = map.getLayer('region');
-                    for(var i=0;i<layer.paths.length;i++){
-                        var path = layer.paths[i];
-                        //setPathCol(path, false, false);
-                        path.svgPath.attr({'fill': '#199a7b'});
-                        path.svgPath.attr({'stroke-width': 1});
-                        path.svgPath.attr({'stroke': '#fff'});
-                    }
-
-                    map.tooltips({
-                        layer: 'region',
-                        content: function(data) {
-                            var countStr = "";
-                            if(regionDatasets[data]){
-                                countStr = regionDatasets[data].length.toString();
-                            }
-                            else{
-                                countStr = 'Budget National';
-                            }
-                            return data + ' (' + countStr + ')';
-
-                        },
-                        style: {
-                            name: 'dark'
+                        var layer = map.getLayer('region');
+                        for(var i=0;i<layer.paths.length;i++){
+                            var path = layer.paths[i];
+                            //setPathCol(path, false, false);
+                            path.svgPath.attr({'fill': '#199a7b'});
+                            path.svgPath.attr({'stroke-width': 1});
+                            path.svgPath.attr({'stroke': '#fff'});
                         }
-                    });
 
-                    map.onLayerEvent('click', function(d) {
-                        selectRegion(d.region);
-                        showData(d.region);
-                    });
+                        map.tooltips({
+                            layer: 'region',
+                            content: function(data) {
+                                var countStr = "";
+                                if(regionDatasets[data]){
+                                    countStr = regionDatasets[data].length.toString();
+                                }
+                                else{
+                                    countStr = 'Budget National';
+                                }
+                                return data + ' (' + countStr + ')';
 
-                    map.onLayerEvent('mouseover', function(d) {
-                        setRegionCol(d.region, true, false);
-                    });
+                            },
+                            style: {
+                                name: 'dark'
+                            }
+                        });
 
-                    map.onLayerEvent('mouseout', function(d) {
-                        if(d.region!=selectedRegion){
-                            setRegionCol(d.region, false, false);
-                        }
+                        map.onLayerEvent('click', function(d) {
+                            selectRegion(d.region);
+                            showData(d.region);
+                        });
+
+                        map.onLayerEvent('mouseover', function(d) {
+                            setRegionCol(d.region, true, false);
+                        });
+
+                        map.onLayerEvent('mouseout', function(d) {
+                            if(d.region!=selectedRegion){
+                                setRegionCol(d.region, false, false);
+                            }
+                        });
                     });
                 });
             });
