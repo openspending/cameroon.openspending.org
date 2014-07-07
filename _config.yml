@@ -27,7 +27,7 @@ locales:
     sourcecode: "Source code repository"
 
   fr:
-    title: "Explorateur budgétaire du Cameroun"
+    title: "Explorateur budgétaire"
     home: "Accueil"
     about: "À propos "
     why: "Pourquoi la transparence budgétaire?"
