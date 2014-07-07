@@ -10,6 +10,7 @@ pibDataset: "cm-pib"
 
 locales:
   en:
+    title: "Cameroon Budget Inquirer"
     home: "Home"
     about: "About"
     why: "Why Budget Transparency"
