@@ -10,10 +10,11 @@ section: home
 
 <div class="span8">
 
-<h2>Publier et explorer les budgets des communes sur Cameroun Budget Inquirer<h2>
-<p>Ce guide vous explique étape par étape la procédure de publication des budgets des communes du Cameroun sur le site OpenSpending afin de pouvoir ensuite visualiser et explorer les données sur ce site Cameroon Budget Inquirer <http://cameroon.openspending.org>.</p>
+<h2>Publier et explorer les budgets des communes sur Cameroun Budget Inquirer</h2>
+<p>Ce guide vous explique étape par étape la procédure de publication des budgets des communes du Cameroun sur le site OpenSpending afin de pouvoir ensuite visualiser et explorer les données sur ce site Cameroon Budget Inquirer.</p>
 
-<p>Pour une introduction à l'outil OpenSpending, veuillez vous reporter au guide OpenSpending <http://community.openspending.org/help/guide/fr/> également disponible en ligne.</p>
+<p>Pour une introduction à l'outil OpenSpending, veuillez vous reporter au <a href="http://community.openspending.org/help/guide/fr/" target="_blank">guide OpenSpending </a></p>
+
 <h3>Introduction</h3>
 <p>Les budgets des communes du Cameroun sont essentiellement disponibles auprès des mairies sous format papier. L'association ASSOAL et ses partenaires ont donc entrepris une collecte et une saisie numérique de ces budgets rendant ainsi possible un partage et une réutilisation en ligne des données.</p> 
 
@@ -21,15 +22,15 @@ section: home
 
 <p>Les principales étapes pour publier les données budgétaires des communes sur OpenSpending :</p>
 
-<ul>
-<li>1. Vérification des données numériques saisies depuis le format papier</li>
-<li>2. Nettoyage et préparation des données pour OpenSpending</li>
-<li>3. Partage des données sur DataHub.io</li>
-<li>4. Publication des données sur OpenSpending.org</li>
-<li>5. Visualisation et exploration des données sur Cameroun Budget Inquirer</li>
-</ul>
+<ol>
+<li>Vérification des données numériques saisies depuis le format papier</li>
+<li>Nettoyage et préparation des données pour OpenSpending</li>
+<li>Partage des données sur DataHub.io</li>
+<li>Publication des données sur OpenSpending.org</li>
+<li>Visualisation et exploration des données sur Cameroun Budget Inquirer</li>
+</ol>
 
-<p>Pour débuter, examinons le modèle - ou format - de jeu de données retenu pour la publication.</p>
+<p>Pour débuter, examinons le modèle, ou format, de jeu de données retenu pour la publication.</p>
 
 
 
@@ -144,7 +145,7 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 </tr>
 </table>
 
-<p><a src="http://datahub.io/dataset/budget-douala5/resource/59149a2c-607a-4d5b-8f4d-5628da27f96a" target="_blank">Exemple du budget de la commune de Douala 5 pour l'année 2010 dans le bon format
+<p><a href="http://datahub.io/dataset/budget-douala5/resource/59149a2c-607a-4d5b-8f4d-5628da27f96a" target="_blank">Exemple du budget de la commune de Douala 5 pour l'année 2010 dans le bon format
 </a></p>
 
 <h3>1. Vérification des données numériques saisies</h3> 
@@ -236,15 +237,13 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 <h4>Trucs et astuces pour Excel</h4>
 <p><i>Les procédures pour LibreOffice ou OpenOffice sont sensiblement les mêmes.</i></p>
 
-</div>
-</div>
-<p><b>Supprimer les retours à la ligne dans votre jeu de données :</b></br>
+<p><em>Supprimer les retours à la ligne dans votre jeu de données :</em></br>
 Option Trouver et Remplacer (CTRL H) -> trouver ''\n'' remplacer tout par '' '' (espace blanc);</p> 
 
-<p><b>Éviter que Excel remplace le séparateur point en virgule ou n'ajoute un séparateur automatiquement :</b></br>
+<p><em>Éviter que Excel remplace le séparateur point en virgule ou n'ajoute un séparateur automatiquement :</em></br>
 Clique droit sur la colonne (en haut), option Format et choisissez Format Texte (et non Format nombre).</p>
 
-<p><b>Transformer 710100 en 710.100<b></br> 
+<p><em>Transformer 710100 en 710.100<em></br> 
 Créer une nouvelle colonne à droite de votre colonne Sub-account qui se trouve colonne C. Ajouter titre Sub-account à la nouvelle colonne.</br>
 Dans première cellule en dessous du titre ajouter la fonction suivante :</br>
 Pour Excel en anglais : =CONCATENATE(LEFT(C2,3),".",RIGHT(C2,3))</br>
@@ -263,25 +262,28 @@ Pour Excel en français : =CONCATENER(GAUCHE(C2,3),".",DROITE(C2,3))</br>
 <p>Pour la publication des jeux de données des budget des communes du Cameroun sur datahub.io, nous avons choisi d'organiser les données par communes et ensuite par années.</p>
 
 <p>Voici la procédure de publication :</p>
-<ul>
-<li>1. Créer un compte sur datahub.io</li>
-<li>2. Rejoindre le groupe Cameroun Budget Inquirer <http://datahub.io/organization/about/openspending-cameroon> en envoyant une demande au contact suivant contact@cameroon.openspending.org et en précisant dans votre demande le nom de votre profile sur datahub.</li>
-<li>3. Une fois ajouté au groupe, allez sur la page dédiée, cliquez sur le bouton “Add Dataset”</li>
-<li>4. Renseignez ensuite votre jeu de données en indiquant le titre (Budget_[NomCommune]), une description, le type de licence (Ouverte), des mots clés.</li>
-<li>5. Modifier la visibilité pour rendre votre jeu de données “public” et cliquer ensuite sur “Next: Add Data”.</li>
-<li>6. Une fois sur la page ”Add data”, importer un le fichier CSV depuis votre ordinateur en cliquant sur “Upload a file”. Puis indiquer ensuite le nom de la ressource (Budget_[NomCommune]_[Année]), ajouter une description et préciser le format (csv).</li>
-<li>7. Cliquer ensuite sur “Save and add another”.</li>
-<li>8. Votre jeu de données est maintenant téléchargeable et pré-visualisable en ligne. Répéter la procédure pour tous les jeux de données à votre disposition.</li>
-</ul>
+<ol>
+<li>Créer un compte sur datahub.io</li>
+<li>Rejoindre le groupe Cameroun Budget Inquirer <http://datahub.io/organization/about/openspending-cameroon> en envoyant une demande au contact suivant contact@cameroon.openspending.org et en précisant dans votre demande le nom de votre profile sur datahub.</li>
+<li>Une fois ajouté au groupe, allez sur la page dédiée, cliquez sur le bouton “Add Dataset”</li>
+<li>Renseignez ensuite votre jeu de données en indiquant le titre (Budget_[NomCommune]), une description, le type de licence (Ouverte), des mots clés.</li>
+<li>Modifier la visibilité pour rendre votre jeu de données “public” et cliquer ensuite sur “Next: Add Data”.</li>
+<li>Une fois sur la page ”Add data”, importer un le fichier CSV depuis votre ordinateur en cliquant sur “Upload a file”. Puis indiquer ensuite le nom de la ressource (Budget_[NomCommune]_[Année]), ajouter une description et préciser le format (csv).</li>
+<li>Cliquer ensuite sur “Save and add another”.</li>
+<li>Votre jeu de données est maintenant téléchargeable et pré-visualisable en ligne. Répéter la procédure pour tous les jeux de données à votre disposition.</li>
+</ol>
 
 <h3>4. Publication des données sur OpenSpending.org</h3>
 <p>Une fois vos données disponibles en ligne, il ne vous reste plus qu'à les ajouter au jeu de données budget des communes du cameroun sur le site openspending.org.</p> 
 
 <p>Pour ce faire, contactez l'administrateur du groupe OpenSpending sur assoalcam@yahoo.fr. Il se chargera de valider et ajouter vos données au jeu de données sur OpenSpending.</p> 
 
-<p>Pour en apprendre d'avantage sur la publication de données sur OpenSpending, consultez le guide dédié <http://community.openspending.org/help/guide/fr/>.</p>
+<p>Pour en apprendre d'avantage sur la publication de données sur OpenSpending, consultez le <a href="http://community.openspending.org/help/guide/fr/" target="_blank">guide dédié</a>.</p>
 
 <h3>5. Visualisation et exploration des données sur Cameroun Budget Inquirer</h3>
-Une fois que vous aurez reçu confirmation de la publication des données sur le site OpenSpending.org vous pourrez alors les explorer et les visualiser sur le site  http://cameroon.openspending.org<p>
+<p>Une fois que vous aurez reçu confirmation de la publication des données sur le site OpenSpending.org vous pourrez alors les explorer et les visualiser sur le site  http://cameroon.openspending.org</p>
 
-<p><b>C'est maintenant le moment de faire connaître votre travail, sur les réseaux sociaux, sur votre blog, auprès de la presse.</b></p> 
+<p><em>C'est maintenant le moment de faire connaître votre travail, sur les réseaux sociaux, sur votre blog, auprès de la presse.</em></p>
+
+</div>
+</div> 
