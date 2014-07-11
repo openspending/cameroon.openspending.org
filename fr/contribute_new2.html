@@ -4,13 +4,17 @@ title: Participer
 section: home
 ---
 
-<h2 class="page-title">Test</h2>
+<h2 class="page-title">Contribuer</h2>
 
 <div class="row">
 
 <div class="span8">
 
-<h2>Publier et explorer les budgets des communes sur Cameroun Budget Inquirer</h2>
+<p>
+Ce site a été conçu avec les données des communes et régions du Cameroun, mais il reste encore du travail à faire pour compléter l'ensemble des collectivités territoriales du pays. Et vous pouvez nous aider ! Que vous soyez un conseiller municipal ou un citoyen, publier les données de votre commune. Nous vous expliquons ci-dessous comment faire.
+</p>	
+</br>
+<h3>Publier et explorer les budgets des communes sur l'explorateur budgétaire du Cameroun</h3>
 </br>
 <p>Ce guide vous explique étape par étape comment préparer et publier les données budgétaires des communes pour pouvoir ensuite les explorer sur Cameroon Budget Inquirer.</p>
 
@@ -19,7 +23,7 @@ section: home
 <h3>Introduction</h3>
 <p>Les budgets des communes du Cameroun sont essentiellement disponibles auprès des mairies sous format papier. L'association <a href="www.assoal.org/" target="_blank">ASSOAL</a> et ses partenaires ont donc entrepris une collecte et une saisie numérique de ces budgets rendant ainsi possible un partage et une réutilisation en ligne des données.</p> 
 
-<p>Nous vous expliquons ici comment publier ces informations sur le site OpenSpending dans un format qui permettra également à tout un chacun de les explorer sur le site Cameroun Budget Inquirer.</p>
+<p>Nous vous expliquons ici comment publier ces informations sur le site OpenSpending dans un format qui permettra également à tout un chacun de les explorer sur le site l'explorateur budgétaire du Cameroun.</p>
 
 <p>Les principales étapes pour publier les données budgétaires des communes sur OpenSpending :</p>
 
@@ -28,7 +32,7 @@ section: home
 <li>Nettoyage et préparation des données pour OpenSpending</li>
 <li>Partage des données sur DataHub.io</li>
 <li>Publication des données sur OpenSpending.org</li>
-<li>Visualisation et exploration des données sur Cameroun Budget Inquirer</li>
+<li>Visualisation et exploration des données sur l'explorateur budgétaire du Cameroun</li>
 </ol>
 
 <p>Pour débuter, examinons le modèle, ou format, de jeu de données retenu pour la publication.</p>
@@ -37,7 +41,7 @@ section: home
 
 <h3>Format OpenSpending du jeu de données des budgets des communes du Cameroun</h3>
 
-<p>Cameroun Budget Inquirer utilise des modèles (canevas) prédéfinis de données. Pour pouvoir publier vos données et les visualiser sur Cameroun Budget Inquirer, vous devez respecter le modèle prédéfini et formater vos jeux de données en fonction. Cela signifie faire correspondre les champs et formats des colonnes du jeu de données source en fonction du jeu de données de destination (utilisé par OpenSpending).</p>
+<p>L'explorateur budgétaire du Cameroun utilise des modèles (canevas) prédéfinis de données. Pour pouvoir publier vos données et les visualiser sur l'explorateur budgétaire du Cameroun, vous devez respecter le modèle prédéfini et formater vos jeux de données en fonction. Cela signifie faire correspondre les champs et formats des colonnes du jeu de données source en fonction du jeu de données de destination (utilisé par OpenSpending).</p>
 
 <p>Pour les données budgétaires des communes, le jeu de données doit comporter les champs suivants :</p>
 
@@ -53,54 +57,54 @@ section: home
 </thead> 
 <tbody>
 <tr>
-<td>Head-account</td>
+<td><kbd>Head-account</kbd></td>
 <td>Référence numérique du compte principal</td>
 <td>Nombre à 3 chiffres sans séparateur</td>
 <td></td> 
 <td>Ex : 700</td>
 </tr>
-<td>Head-account description</td>
+<td><kbd>Head-account description</kbd></td>
 <td>Description du compte (ligne budgétaire)</td>
 <td>Texte</td>
 <td></td>
 <td></td>
 <tr>
-<td>Sub-account</td>
+<td><kbd>Sub-account</kbd></td>
 <td>Référence numérique du compte principal</td>
 <td>Nombre à 3 chiffres incluant head-account et point comme séparateur</td>
 <td></td>
 <td>700.101</td>
 </tr>
 <tr>
-<td>Sub-account description</td>
+<td><kbd>Sub-account description</kbd></td>
 <td>Description du compte secondaire (ligne budgétaire secondaire)</td>
 <td>Texte</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Amount</td>
+<td><kbd>Amount</kbd></td>
 <td>Montant de l’investissement en FCFA</td>
 <td>Nombre avec une décimale (point pour séparateur décimale)</td>
 <td></td>
 <td>Ex : 1000000.0</td>
 </tr>
 <tr>
-<td>Year</td>
+<td><kbd>Year</kbd></td>
 <td>Année du budget</td>
 <td>Date : AAAA</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Division type</td>
+<td><kbd>Division type</kbd></td>
 <td>Type de collectivité du budget (Région ou Commune)</td>
 <td>Texte</td>
-<td>COUNCIL REGION</td>
+<td>COUNCIL</br>REGION</td>
 <td>Obligatoire pour visualisation</td>
 </tr>
 <tr>
-<td>Region</td>
+<td><kbd>Region<kbd></td>
 <td>Nom de la région</td>
 <td>Texte</td>
 <td>Extrême-Nord Nord</br>
@@ -112,36 +116,35 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 <td>Obligatoire pour visualisation</td>
 </tr>
 <tr>
-<td>Council</td>
+<td><kbd>Council</kbd></td>
 <td>Nom de la commune</td>
 <td>Texte</td>
 <td></td>
 <td>Ex : Yaounde1</td>
 </tr>
 <tr>
-<td>Expense_type</td>
+<td><kbd>Expense type</kbd></td>
 <td>Description du type de dépense</td>
 <td>Texte</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>Revenue/Expenditure</td>
+<td><kbd>Revenue/Expenditure</kbd></td>
 <td>Type de ligne budgétaire (dépense ou recette)</td>
 <td>Texte</td>
-<td>REVENUE</td>
-<td>EXPENDITURE</td>
+<td>REVENUE</br>EXPENDITURE</td>
 <td></td>
 </tr>
 <tr>
-<td>Recurrent/Investment</td>
+<td><kbd>Recurrent/Investment</kbd></td>
 <td>Type de dépense ou recette (fonctionnent ou investissement)</td>
 <td>Texte</td>
-<td>RECURRENT INVESTMENT </td>
+<td>RECURRENT</br>INVESTMENT </td>
 <td></td>
 </tr>
 <tr>
-<td>Reporting type</td>
+<td><kbd>Reporting type</kbd></td>
 <td>Statut du budget (plannifié ou exécuté)</td>
 <td>Texte</td>
 <td>BUDGET</br>ACTUAL</td>
@@ -159,27 +162,30 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 
 <p>Pour cela analysons un extrait du budget d'une commune au Cameroun (voir image ci-dessous) information par information et voyons ensuite à quels champs celles-ci correspondent dans le modèle numérique OpenSpending correspondant (cf tableau à la suite) :</p>
 
+<img src="/img/council_budget.jpg" class="img-responsive" alt="Responsive image">
+</br>
+</br>
 <table class="table table-striped">
 <thead>
 <tr>
 <th>Information budget papier</th>
 <th>Description</th>
-<th>Champs correspondant pour modèle numérique OpenSpending</th>
+<th>Correspondance OpenSpending</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>[Nom de la commune] </td>
 <td>Non présent sur l'image ci-dessous mais affichée sur la page de titre du document. Ici il s'agit de la commune de Douala 5.</td>
-<td>Council</td>
+<td><kbd>Council</kbd></td>
 </tr>
 <td>Recettes / Revenue</td>
 <td>Un budget prévoit les recettes et dépenses. Il s'agit ici d'informations sur les recettes du budget 2010.</td>
-<td>Revenue/Expenditure</td>
+<td><kbd>Revenue/Expenditure</kbd></td>
 <tr></tr>
 <td>Exercice 2010</td>
 <td>Année budgétaire votée. Ici il s'agit donc du budget de la commune de Douala 5 voté et plannifié pour l'année 2010.</td>
-<td>Year (sauf pour colonnes budgets précédent, cf suite tableau)</td>
+<td><kbd>Year</kbd> (sauf pour colonnes budgets précédent, cf suite tableau)</td>
 <tr></tr>
 <td>Titre </td>
 <td>Colonne vide. </td>
@@ -187,31 +193,31 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 </tr><tr>
 <td>Chapitre, article, paragraphe</td>
 <td>Numéro identifiant la ligne budgétaire dans la nomenclature budgétaire. Exemple : 7.12 identifie la recette  “Taxes communales directes”, 712.100 identifie la recette secondaire “Produit de la taxe d'eau”</td>
-<td>Head-account ou Sub-account</td>
+<td><kbd>Head-account</kbd> ou <kbd>Sub-account</kbd></td>
 </tr><tr>
 <td>Nature de la recette</td>
 <td>Description de la ligne budgétaire</td>
-<td>Head-account description ou Sub-account description</td>
+<td><kbd>Head-account description</kbd> ou <kbd>Sub-account description</kbd></td>
 </tr><tr>
 <td>Recette exécutées et portées au dernier compte administratif 2008</td>
 <td>Montant de la ligne budgétaire exécutée pour l'année N-2 au présent exercice fiscal. Il s'agit ici du budget exécuté pour l'année 2008.</td>
-<td>Amount (pour Year N-2 et Reporting type ACTUAL)</td>
+<td><kbd>Amount</kbd> (pour <kbd>Year</kbd> = N-2 et <kbd>Reporting type</kbd> = ACTUAL)</td>
 </tr><tr>
 <td>Prévisions de l'exercice précédent 2009</td>
 <td>Montant de la ligne budgétaire plannifiée pour l'année N-1 au présent exercice fiscal. Il s'agit ici du budget plannifié pour l'année 2009.</td>
-<td>Amount (pour Year N-1 et Reporting type BUDGET)</td>
+<td><kbd>Amount</kbd> (pour <kbd>Year</kbd> = N-1 et <kbd>Reporting type</kbd> = BUDGET)</td>
 </tr><tr>
-<td>Prévisions de recette de l’exercice votée par le conseil municipal<td>
-<td>Montant de la ligne budgétaire plannifiée pour le présent exercice fiscal. Il s'agit ici du budget plannifié pour l'année 2010.<td>
-<td>Amount (pour Year N et Reporting type BUDGET)<td>
+<td>Prévisions de recette de l’exercice votée par le conseil municipal</td>
+<td>Montant de la ligne budgétaire plannifiée pour le présent exercice fiscal. Il s'agit ici du budget plannifié pour l'année 2010.</td>
+<td><kbd>Amount</kbd> (pour <kbd>Year</kbd> N et <kbd>Reporting type</kbd> = BUDGET)</td>
 </tr><tr>
 <td>Prévisions de recette retenue par l'autorité de tutelle</td>
 <td>Montant de la ligne budgétaire plannifiée pour le présent exercice fiscal et retenue par l'autorité de tutelle (département ou région pour commune). Il s'agit ici du budget plannifié pour l'année 2010.</td>
-<td>Si présent, remplace Amount (pour Year N et Reporting type BUDGET)</td>
+<td>Si présent, remplace <kbd>Amount</kbd> (pour <kbd>Year</kbd> = N et <kbd>Reporting type</kbd> = BUDGET)</td>
 </tr><tr>
 <td>Observations</td>
 <td>Observation sur la ligne budgétaire</td>
-<td>Si présent Expense_type</td>
+<td>Si présent <kbd>Expense_type</kbd></td>
 </tr>
 </tbody>
 </table>
@@ -221,7 +227,7 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 
 <p>Lorsque vous saisissez manuellement des données ou extrayez des données depuis un fichier PDF, votre fichier Excel ou CSV résultant contient très souvent des erreurs de saisie ou conversion telles que des cellules mal positionnées ou divisées, des problèémes dans les numéros des lignes budgétaires, etc. Il est important de corriger ces erreurs avant d'aller plus loin.</p> 
 
-<p>Votre jeu de données contient également des termes récurrents tels que les noms de communes, de programmes. Vous devez vous assurer que ces références sont partout écrites de la même façon. Cela facilitera l'analyse ultérieure des données.</p> 
+<p>Votre jeu de données contient également des termes récurrents tels que les noms de communes, de programmes. Vous devez vous assurer que ces références sont partout écrites de la même façon. Cela facilitera l'analyse ultérieure des données.</p>
 
 <p>Enfin, pour publier un jeu de données sur OpenSpending, vous devez vous assurer de la qualité des données et éviter par exemple les cellules vides, et convertir les dates et montants dans le bon format.</p> 
 
@@ -229,8 +235,9 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 
 <p>Open Refine est un puissant outil pour nettoyer rapidement votre jeu de données. Nous utiliserons Refine principalement pour sa fonction “Cluster” qui vous aide à identifier les différentes cellules qui pourraient représenter la même référence, et ensuite vous permet d'attribuer un terme unique à toutes ces cellules.</p>
 
-
-<p>Nous utilisons Excel ou LibreOffice Calc pour toutes les autres opérations : agréger des cellules divisées ; convertir des montants dans la bonne devise ; remplir des cellules vides avec une valeur par défaut.</p>
+<img src="/img/refine.jpg" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</br>
+<p>Nous utilisons Excel ou LibreOffice Calc pour toutes les autres opérations : agréger des cellules divisées ; convertir des montants dans la bonne devise ; remplir des cellules vides avec une valeur par ddatahub.iéfaut.</p>
 
 <p>Voici les tâches que vous aurez ainsi à exécuter :</p>
 <ul>
@@ -242,7 +249,7 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 <li>Sauvegarder votre fichier au format CSV séparateur virgule</li>
 </ul>
 
-
+</br>
 <h4>Trucs et astuces pour Excel</h4>
 <p>Les procédures pour LibreOffice ou OpenOffice sont sensiblement les mêmes.</p>
 
@@ -252,47 +259,61 @@ Ouest Nord-Ouest Sud-Ouest Littoral</td>
 <h5>Éviter que Excel remplace le séparateur point en virgule ou n'ajoute un séparateur automatiquement :</h5>
 <p>Clic droit sur la colonne (en haut), option Format et choisissez Format Texte (et non Format nombre).</p>
 
-<h5>Transformer 710100 en 710.100</h5> 
-<p>Créer une nouvelle colonne à droite de votre colonne Sub-account qui se trouve colonne C. Ajouter titre Sub-account à la nouvelle colonne.</br>
-Dans première cellule en dessous du titre ajouter la fonction suivante :</br>
-Pour Excel en anglais : =CONCATENATE(LEFT(C2,3),".",RIGHT(C2,3))</br>
-Pour Excel en français : =CONCATENER(GAUCHE(C2,3),".",DROITE(C2,3))</br>
-
+<h5>Transformer 710100 en 710.100</h5>
+<p>Créer une nouvelle colonne à droite de votre colonne <kbd>Sub-account</kbd> qui se trouve dans la colonne C. Ajouter titre <kbd>Sub-account</kbd> à la nouvelle colonne.</br></br>
+Dans la première cellule en dessous du titre ajouter la fonction suivante :</br>
+Pour Excel en anglais : <code>=CONCATENATE(LEFT(C2,3),".",RIGHT(C2,3))</code></br>
+Pour Excel en français : <code>=CONCATENER(GAUCHE(C2,3),".",DROITE(C2,3))</code>
+</br>
+</br>
 Faire ensuite un double clic en bas à gauche pour appliquer la fonction à toutes les cellules de la colonne.</p>
 
 <p>Copier la colonne. Faire ensuite un clic droit sur la cellule de titre, option collage spéciale et décochez formule. Cliquer sur OK. Ainsi les valeurs de la colonne ne dépendent plus de la colonne de gauche. Supprimer colonne de gauche Sub-account.</p>
 
 <p>Enfin formater votre colonne au format Texte pour éviter que Excel ne la considère comme un nombre à décimales.
-
+</br>
 <h3>3. Partage des données sur DataHub.io</h3>
 
-<p>Avant de pouvoir publier les données sur OpenSpending il vous faut partager les données en ligne (votre jeu de données doit disposer d'une URL propre). Nous utiliserons <a href="http://datahub.io" target="_blank">http://datahub.io</a> qui est un site de publication et de gestion de jeux de données.</p> 
+<p>Avant de pouvoir publier les données sur OpenSpending il vous faut partager les données en ligne (votre jeu de données doit disposer d'une URL propre). Nous utiliserons <a href="http://datahub.io" target="_blank">http://datahub.io</a> qui est un site de publication et de gestion de jeux de données.</p>
 
-<p>Pour la publication des jeux de données des budget des communes du Cameroun sur datahub.io, nous avons choisi d'organiser les données par communes et ensuite par années.</p>
+<p>Pour la publication des jeux de données des budget des communes du Cameroun sur o, nous avons choisi d'organiser les données par communes et ensuite par années.</p>
 
 <p>Voici la procédure de publication :</p>
 <ol>
-<li>Créer un compte sur datahub.io</li>
-<li>Rejoindre le groupe <a href="http://datahub.io/organization/about/openspending-cameroon" target="_blank">OpenSpending Cameroun</a> en envoyant une demande au contact suivant assoalcam@yahoo.fr et en précisant dans votre demande le nom de votre profile sur datahub.</li>
-<li>Une fois ajouté au groupe, allez sur la page dédiée, cliquez sur le bouton “Add Dataset”</li>
-<li>Renseignez ensuite votre jeu de données en indiquant le titre (Budget_[NomCommune]), une description, le type de licence (Ouverte), des mots clés.</li>
-<li>Modifier la visibilité pour rendre votre jeu de données “public” et cliquer ensuite sur “Next: Add Data”.</li>
-<li>Une fois sur la page ”Add data”, importer un le fichier CSV depuis votre ordinateur en cliquant sur “Upload a file”. Puis indiquer ensuite le nom de la ressource (Budget_[NomCommune]_[Année]), ajouter une description et préciser le format (csv).</li>
-<li>Cliquer ensuite sur “Save and add another”.</li>
-<li>Votre jeu de données est maintenant téléchargeable et pré-visualisable en ligne. Répéter la procédure pour tous les jeux de données à votre disposition.</li>
+<li>Créer un compte sur datahub.io</li></br>
+<li>Rejoindre le groupe <a href="http://datahub.io/organization/about/openspending-cameroon" target="_blank">OpenSpending Cameroun</a> en envoyant une demande au contact suivant <a>assoalcam@yahoo.fr</a> et en précisant dans votre demande le nom de votre profile sur datahub.</li></br>
+<li>Une fois ajouté au groupe, allez sur la page dédiée, cliquez sur le bouton “Add Dataset”
+<img src="/img/datahub.png" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
+
+<li>Renseignez ensuite votre jeu de données en indiquant le titre (Budget_[NomCommune]), une description, le type de licence (Ouverte), des mots clés.</li></br>
+<li>Modifier la visibilité pour rendre votre jeu de données “public” et cliquer ensuite sur “Next: Add Data”.</li></br>
+<li>Une fois sur la page ”Add data”, importer un le fichier CSV depuis votre ordinateur en cliquant sur “Upload a file”. Puis indiquer ensuite le nom de la ressource (Budget_[NomCommune]_[Année]), ajouter une description et préciser le format (csv).
+<img src="/img/upload-datahub.png" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
+<li>Cliquer ensuite sur “Save and add another”.</li></br>
+<li>Votre jeu de données est maintenant téléchargeable et pré-visualisable en ligne. Répéter la procédure pour tous les jeux de données à votre disposition.
+<img src="/img/datahub2.jpg" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
 </ol>
 
 <h3>4. Publication des données sur OpenSpending.org</h3>
-<p>Une fois vos données disponibles en ligne, il ne vous reste plus qu'à les ajouter au jeu de données budget des communes du cameroun sur le site openspending.org.</p> 
+<p>Une fois vos données disponibles en ligne, il ne vous reste plus qu'à les ajouter au <a href="https://openspending.org/cm-budgets/" target="_blank">jeu de données budget des communes du cameroun</a> sur le site openspending.org.</p> 
 
-<p>Pour ce faire, contactez l'administrateur du groupe OpenSpending sur assoalcam@yahoo.fr. Il se chargera de valider et ajouter vos données au jeu de données sur OpenSpending.</p> 
+<p>Pour ce faire, contactez l'administrateur du groupe OpenSpending sur <a>assoalcam@yahoo.fr</a>. Il se chargera de valider et ajouter vos données au jeu de données sur OpenSpending.</p> 
 
 <p>Pour en apprendre d'avantage sur la publication de données sur OpenSpending, consultez le <a href="http://community.openspending.org/help/guide/fr/" target="_blank">guide dédié</a>.</p>
 
-<h3>5. Visualisation et exploration des données sur Cameroun Budget Inquirer</h3>
+</br>
+<h3>5. Visualisation et exploration des données sur l'explorateur budgétaire du Cameroun</h3>
 <p>Une fois que vous aurez reçu confirmation de la publication des données sur le site OpenSpending.org vous pourrez alors les explorer et les visualiser directement sur ce site.</p>
 
-<p>C'est maintenant le moment de faire connaître votre travail, sur les réseaux sociaux, sur votre blog, auprès de la presse.</p>
+<img src="/img/dataviz-os-cameroon.jpg" class="img-responsive" alt="Responsive image">
+
+<p style="font-weight:bold">C'est maintenant le moment de faire connaître votre travail, sur les réseaux sociaux, sur votre blog, auprès de la presse.</p>
 
 </div>
 </div> 
