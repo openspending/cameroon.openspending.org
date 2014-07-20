@@ -1,5 +1,6 @@
 pygments: true
 auto: true
+exclude: ["vendor"]
 
 title: Cameroon Budget Inquirer
 openspendingjs: '/js/openspendingjs'
