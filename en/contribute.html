@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Contribute
+title: Participer
 section: home
 ---
 
@@ -10,63 +10,307 @@ section: home
 
 <div class="span8">
 
-<p>This site has been designed with data from a few local councils and regions of Cameroon but there is still work to do to complete the image of Cameroon's spending and you can help... Whether you are a local councillor or a concerned citizen, get involved and upload data for your region!</p>
+<p>
+This site has been built with the data from councils and regions of Cameroon, but there is still work to do to complete all local councils across the country. And you can help! Whether you are a civil servant or a citizen, you can publish data from your locality. We explain below how to. 
+</p>	
+</br>
+<h3>Publish and explore council budgets data on Cameroon Budget Inquirer</h3>
+</br>
+<p>This guide explains step by step how to prepare and publish budget data to be able to explore them on Cameroon Budget Inquirer.</p>
 
-<h3>Get Involved</h3>
+<p>For an introduction to OpenSpending, please refer to the <a href="http://community.openspending.org/help/guide/" target="_blank">OpenSpending guide</a></p>
 
-<p>Anyone can contribute their local council's data, visualise it and link it to the map based navigation. The aim is to get as complete a picture of Cameroon's finance as possible, and to keep building this up as a resource, contributing data year on year. Here's how:</p>
+<h3>Introduction</h3>
 
-<h4>Get your data into the OpenSpending Format</h4>
+<p>Councils budgets in Cameroon are mainly available from municipalities in paper format. <a href="www.assoal.org/" target="_blank">ASSOAL</a> association and its partners have undertaken to collect and digitize these budgets, making it possible to share and reuse data online.</p> 
 
-<p>Follow <a href="https://docs.google.com/document/d/1_rkkAD0X-7uJg1SzTJdSfCS5ZWqshMihdr6WZgcQPwo/edit#heading=h.4c0petnshpj8">the guidelines</a> to learn what you are aiming for. If you want to see what some sample data could look like, take a look at the <a href="http://bit.ly/LuxGjm">template</a>.</p>
+<p>We explain here how to publish these data on the OpenSpending website in a format that will also allow everyone to explore the data on the Cameroon Budget Inquirer website. </p>
 
-<p>Some of the modifications can be done in a spreadsheet program such as Excel, however there are more powerful tools which can help with large-scale transformations such as <a href="http://code.google.com/p/google-refine/">Google Refine</a>. Read the <a href="https://docs.google.com/document/d/1bD3KztcPdc3Ffe5_xlVl--N2wBVydUtpUDJpq2d6sK8/edit#heading=h.d1ub48are7ej">Google Refine tutorial</a> for more information.</p>
-
-<h4>Upload your data to the web</h4>
-
-<p>Next, you need to get your CSV file online. There are numerous ways to do this, Dropbox, exporting your data directly from a Google Docs (File > Publish to the Web > Publish a CSV). We've used the DataHub to publish our data. If you've never used it before here's a quick demo of how to upload a dataset.</p>
-
-<p>The video below details how this can be done:</p>
-
-<iframe src="http://player.vimeo.com/video/43720463" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/43720463">Uploading Data to the DataHub</a> from <a href="http://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-
-<h4>Import your data into OpenSpending</h4>
-
-<p>Next add information about your dataset to make it easily findable in OpenSpending. Again, the video tutorial below walks you through doing this:</p>
-
-<iframe src="http://player.vimeo.com/video/43259079" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/43259079">OpenSpending Upload: Stage 1</a> from <a href="http://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-
-<p>Further related information is available on the <a href="https://openspending.org/help/data-loading.html">OpenSpending site</a>.
-
-<h4>Create a model for your data</h4>
-
-<p>Next, tell OpenSpending how to understand your data by creating a model.</p>
-
-<iframe src="http://player.vimeo.com/video/43760979" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/43760979">OpenSpending Upload: Step 2 - Create a Model</a> from <a href="http://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-
-<p>If that's all gone well, you'll be able to move on to creating visualisations (video coming soon - watch this space!) and if not and you have some errors watch the video below to see what to do next.</p>
-
-<h4>Fix any errors</h4>
-
-<p>It doesn't always go right the first time you try and load your data - here's what to do if you have made a mistake either in your model or your data.</p>
-
-<iframe src="http://player.vimeo.com/video/43762097" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/43762097">How to Fix Errors in OpenSpending</a> from <a href="http://vimeo.com/okf">Open Knowledge Foundation</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
-
-<h4>Visualisations</h4>
-
-<p>Now you are finished, and visualisations will automatically be generated from the data you uploaded into OpenSpending. All you have to do is:</p>
+<p>These are the main steps to publish budget data on OpenSpending:</p>
 
 <ol>
-    <li>Link up the data to Cameroon.OpenSpending.org. There is a tutorial on this <a href="https://docs.google.com/document/d/1Kc7TcT6mE2D_cNBHd2pK8GuhrziKWQjYihtrxlTGdPc/edit">here</a></li>
-    <li>If you are adding data for a new region of Cameroon (as opposed to new data relating to a new financial year for an area of Cameroon which already has a map selector) - you will need to create a new sub-national map selector. Instructions on how to do this can be found <a href="https://docs.google.com/document/d/1c0mJDOdfNOqsirYKDC96adHBi0W2bKicNyiI6w1xHVg/edithere">here</a>.</li>
+<li>Data validation</li>
+<li>Data cleaning</li>
+<li>Data sharing on DataHub.io</li>
+<li>Data publication on OpenSpending.org</li>
+<li>Data visualisation and exploration on Cameroon.OpenSpending.org</li>
 </ol>
 
-<h3>Questions?</h3>
+<p>To start, let's have a look to the model of the dataset we use for budget council data</p>
 
-<p>If you have any technical questions about adding data to the site, please feel free to <a href="mailto:info@openspending.org?Subject=Support:%20Cameroon.OpenSpending.org">
-contact the OpenSpending team</a></p>
 
+<h3>OpenSpending model for Budget Council Dataset</h3>
+
+<p>The Cameroon Budget Inquirer uses a predefined dataset model. You must comply with this model in order to be able to publish and visualize your data on Budget Cameroon Inquirer website. This means matching fields and format of columns from the original dataset to the dataset of destination (used by OpenSpending).</p>
+
+<p>For budget council data, the dataset must have the following fields:</p>
+
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Titre</th>
+<th>Description</th>
+<th>Format</th>
+<th>Possible value</th>
+<th>Notes</th>
+</tr>
+</thead> 
+<tbody>
+<tr>
+<td><kbd>Head-account</kbd></td>
+<td>Numerical value for the head account</td>
+<td>Three digits number without separator</td>
+<td></td> 
+<td>Ex: 700</td>
+</tr>
+<td><kbd>Head-account description</kbd></td>
+<td>Description of head account</td>
+<td>Text</td>
+<td></td>
+<td></td>
+<tr>
+<td><kbd>Sub-account</kbd></td>
+<td>Numerical value for the sub account</td>
+<td>Six digits number including head-account and point as separator</td>
+<td></td>
+<td>700.101</td>
+</tr>
+<tr>
+<td><kbd>Sub-account description</kbd></td>
+<td>Description of sub account</td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>Amount</kbd></td>
+<td>Investiment amount in FCFA</td>
+<td>Number with decimal separator (point)</td>
+<td></td>
+<td>Ex : 1000000.0</td>
+</tr>
+<tr>
+<td><kbd>Year</kbd></td>
+<td>Year of budget</td>
+<td>Date: YYYY</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>Division type</kbd></td>
+<td>Type of administrative division (Region or Council)</td>
+<td>Text</td>
+<td>COUNCIL</br>REGION</td>
+<td>Mandatory for visualization</td>
+</tr>
+<tr>
+<td><kbd>Region<kbd></td>
+<td>Name of the Region</td>
+<td>Text</td>
+<td>Extrême-Nord Nord</br>
+Adamaoua</br>
+Est</br>
+Sud</br> 
+Centre</br> 
+Ouest Nord-Ouest Sud-Ouest Littoral</td>
+<td>Mandatory for visualization</td>
+</tr>
+<tr>
+<td><kbd>Council</kbd></td>
+<td>Council name</td>
+<td>Text</td>
+<td></td>
+<td>Ex: Yaounde1</td>
+</tr>
+<tr>
+<td><kbd>Expense_type</kbd></td>
+<td>Expense type description</td>
+<td>Text</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>Revenue/Expenditure</kbd></td>
+<td>Type or budget row (revenue or expenditure)</td>
+<td>Text</td>
+<td>REVENUE</br>EXPENDITURE</td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>Recurrent/Investment</kbd></td>
+<td>Type of spending (recurrent or investment)</td>
+<td>Text</td>
+<td>RECURRENT</br>INVESTMENT </td>
+<td></td>
+</tr>
+<tr>
+<td><kbd>Reporting type</kbd></td>
+<td>Budget status (planned or executed)</td>
+<td>Text</td>
+<td>BUDGET</br>ACTUAL</td>
+<td>ACTUAL = Executed</td>
+</tr>
+</tbody>
+</table>
+</br>
+<p><a href="http://datahub.io/dataset/budget-douala5/resource/59149a2c-607a-4d5b-8f4d-5628da27f96a" target="_blank">See example with Douala 5 council budget data for fiscal year 2010</a></p>
+
+<h3>1. Validation of data collected from paper version</h3> 
+
+<p>You need to make sure that the data entered in digital format (Excel or CSV) includes all information from the paper version.</p> 
+
+<p>Let's see with a paper extract from a budget council in Cameroon (see picture below) and check information by information what they correspond to in the OpenSpending model (see following table):</p>
+
+<img src="/img/council_budget.jpg" class="img-responsive" alt="Responsive image">
+</br>
+</br>
+<table class="table table-striped">
+<thead>
+<tr>
+<th>Paper version</th>
+<th>Description</th>
+<th>OpenSpending version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[Council Name] </td>
+<td>Not available on the picture but appearing on the cover of the budget book. For this one, it is Douala 5 council.</td>
+<td><kbd>Council</kbd></td>
+</tr>
+<td>Recettes / Revenue</td>
+<td>A budget plans expenditures and revenue. Here we have data on revenue.</td>
+<td><kbd>Revenue/Expenditure</kbd></td>
+<tr></tr>
+<td>Exercice 2010</td>
+<td>Adopted fical year. Here we have budget data for fiscal year 2010.</td>
+<td><kbd>Year</kbd> (except for columns refering to previous budget's year, see below)</td>
+<tr></tr>
+<td>Title</td>
+<td>Empty</td>
+<td>Do not report</td>
+</tr><tr>
+<td>Head, subhead, paragraph</td>
+<td>Number that identifies the budget rows (account, subaccount) in the budget classification. For instance 7.12 identifies the account "Direct council taxe". 712.100 identifies the subaccount "Proceeds of water tax".</td>
+<td><kbd>Head-account</kbd> or <kbd>Sub-account</kbd></td>
+</tr><tr>
+<td>Nature of revenue</td>
+<td>Text description of the accoun or subaccount</td>
+<td><kbd>Head-account description</kbd> or <kbd>Sub-account description</kbd></td>
+</tr><tr>
+<td>Executed revenue reported in the previous administrative account</td>
+<td>Executed budget for the year N-2 of the written Fiscal year. Therefore, here we have executed budget for yeat 2008.</td>
+<td><kbd>Amount</kbd> (for <kbd>Year</kbd> = N-2 and <kbd>Reporting type</kbd> = ACTUAL)</td>
+</tr><tr>
+<td>Revenue estimated for the previous fiscal year.</td>
+<td>Estimated revenue of the year N-1 of the the fiscal year. Here, we have estimated revenue for year 2009.</td>
+<td><kbd>Amount</kbd> (for <kbd>Year</kbd> = N-1 and <kbd>Reporting type</kbd> = BUDGET)</td>
+</tr><tr>
+<td>Revenue estimated voted by the municipal council.<td>
+</td>Revenue estimated the current fiscal year (2010).</td>
+<td><kbd>Amount</kbd> (for <kbd>Year</kbd> N and <kbd>Reporting type</kbd> = BUDGET)</td>
+</tr><tr>
+<td>Revenue estimated approved by the supervisory authority.</td>
+<td>Revenue approved by a superior authority (Department or Region).</td>
+<td>If exist, replace<kbd>Amount</kbd> (for <kbd>Year</kbd> = N and <kbd>Reporting type</kbd> = BUDGET)</td>
+</tr><tr>
+<td>Observations</td>
+<td>Observation on the budget row</td>
+<td>If exist <kbd>Expense_type</kbd></td>
+</tr>
+</tbody>
+</table>
+
+</br>
+<h3>2. Data cleaning</h3>
+
+<p>When you manually enter or extract data from a PDF file, your resulting Excel or CSV file often contains conversion or seizure errors such as misplaced or splitted cells, etc. It is important to correct these errors before proceeding any further.</p> 
+
+<p>Your data set also contains recurring terms such as the names of projects. You must ensure that these references are all written in the same way. This will facilitate subsequent data analysis.</p>
+
+<p>Finally, to publish a dataset on OpenSpending, you must ensure the quality of the data, like avoiding  empty cells, and convert the dates and amounts in the correct format.</p> 
+
+<p>All these steps are part of the data cleaning process. Here, we use two main tools, a spreadsheet application such as LibreOffice Calc or Microsoft Excel and <a href="http://openrefine.org/" target="_blank">Open Refine</a>, a tool to clean data.</p>
+
+<p>Open Refine is a powerful tool to quickly clean your dataset. We will use Refine mainly for its "Cluster" feature that helps you identify the different cells that could represent the same reference, and then allows you to assign a unique term to all these cells.</p>
+
+<img src="/img/refine.jpg" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</br>
+<p>We use Excel or LibreOffice Calc for all other operations: aggregate divided cells; convert amounts in the correct currency; fill empty cells with a default value</p>
+
+<p>Here are the tasks you may have to execute:</p>
+<ul>
+<li> Assign a default value to empty cells where value is required (for example, add "0" in the  column amount if the cell is empty, make sure that all cells head-account and sub-account do have a number) </li>
+<li> Concatenate values ​​splited into multiple cells </li>
+<li> Assign a unique value to the same references in the whole dataset (use standards if appropriate. For instance with names of communes use Yaounde6 but not Yaoundé 6th) </li>
+<li> Convert amounts in the right currency if necessary (here FCFA) </li>
+<li> Convert dates into Open Spending format (YYYY, ex: 2010) </li>
+<li> Save your file as a CSV with comma separated values </li>
+</ul>
+
+</br>
+<h4>Tips and tricks for Excel</h4>
+<p>Tips and tricks for LibreOffice or OpenOffice are quite similars.</p>
+
+<h5>Remove line breaks in your data set:</h5>
+<p>Option Search and Replace (CTRL H) -> search "\n" replace all by " " (white space);</p> 
+
+<h5>Avoid Excel replacing automatically comma separator with a point separator or add a separator:</h5>
+<p>Right click on the column (top), select option Format and then select Text as format (not number).</p>
+
+<h5>Transform 710100 into 710.100</h5>
+<p>Create a new column on the right of your column<kbd>Sub-account</kbd> which should be column C. Add title <kbd>Sub-account</kbd> to the new column.</br></br>
+In the first following cell of the new colum add the following function:</br>
+For Excel in english: <code>=CONCATENATE(LEFT(C2,3),".",RIGHT(C2,3))</code></br>
+For Excel in french: <code>=CONCATENER(GAUCHE(C2,3),".",DROITE(C2,3))</code>
+</br>
+</br>Then right click in the bottom-left corner of the cell to apply the function to all cells in the column.</p>
+
+<p>Copy the column. Then right click on the header cell, option special paste and uncheck formula. Click on OK. Remove the unusefull column Sub-account on the left.</p>
+
+<p>Finally format your column to Text format to avoid Excel to consider it as a column with numbers and add separators.</br>
+<h3>3. Data sharing on DataHub.io</h3>
+
+<p>In order to be able to publish you data on OpenSpending you need to share you data online (your dataset must have its own URL). We will use <a href="http://datahub.io" target="_blank">http://datahub.io</a> a dataset management and publication tool.</p>
+
+<p>We choose to organize our datasets first by councils and then by years on datahub.</p>
+
+<p>Here is the publication process:</p>
+<ol>
+<li>Register on <a href="http://datahub.io" target="_blank">datahub.io</a></li></br>
+<li>Join the group <a href="http://datahub.io/organization/about/openspending-cameroon" target="_blank">OpenSpending Cameroun</a>. You need to send a request to <a>assoalcam@yahoo.fr</a> and indicate your datahub user name.</li></br>
+<li>Once added to the group, go to the group page and click on “Add Dataset”
+<img src="/img/datahub.png" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
+
+<li>Describe your dataset by setting a title (Budget_[CouncilName]), a description, the type of license (open) and keywords.</li></br>
+<li>Modify visibility to make your data “public” et then click on “Next: Add Data”.</li></br>
+<li>Once on the page ”Add data”, import CSV file from your computer by clicking on “Upload a file”. Indicate the name of the ressource (Budget_[CouncilName]_[Year]), add a description and specify the format (CSV).</br>
+<img src="/img/upload-datahub.png" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
+<li>Click on “Save and add another”.</li></br>
+<li>Your dataset is now downloadable and viewable online. Repeat the procedure for all datasets available.</br>
+<img src="/img/datahub2.jpg" class="img-responsive" alt="Responsive image" style="max-width:80%">
+</li></br>
+</br>
+</ol>
+
+<h3>4. Data publication on OpenSpending.org</h3>
+<p>Once your dataset is available online, you just have to add it to the <a href="https://openspending.org/cm-budgets/" target="_blank">budget council dataset</a> on openspending.org website.</p> 
+
+<p>To do so, send a request to <a>assoalcam@yahoo.fr</a> with the link of your dataset. The admin will check and add you data on OpenSpending.</p> 
+
+<p>If you want to learn more on how to use OpenSpending go to the <a href="http://community.openspending.org/help/guide/" target="_blank">OpenSpending guide</a>.</p>
+
+</br>
+<h3>5. Data visualization and exploration</h3>
+<p>Once you have received confirmation of the publication of your data on OpenSpending.org website then you can explore and visualize the data directly on this website.</p>
+
+<img src="/img/dataviz-os-cameroon.jpg" class="img-responsive" alt="Responsive image">
+
+<p style="font-weight:bold">Well done. It's now time to communicate your work! Use social media, publish an article on your Blog and contact the press.</p>
 
 </div>
-
-</div>
+</div> 
