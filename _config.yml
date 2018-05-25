@@ -24,6 +24,7 @@ locales:
     contribute: "Contribute"
     localcouncilinfo: "local council information"
     sourcecode: "Source code repository"
+    privacy: "Privacy policy"
 
   fr:
     title: "Explorateur budgétaire"
@@ -43,3 +44,4 @@ locales:
     contribute: "Contribuer"
     localcouncilinfo: "aux informations sur les communes"
     sourcecode: "Code source"
+    privacy: "Politique de confidentialité"

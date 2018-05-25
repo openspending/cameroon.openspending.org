@@ -43,9 +43,6 @@
   <script src="/js/all.min.js"></script>
   -->
 
-  <style>
-
-  </style>
 </head>
 <body class="{{page.section}}">
   <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -64,7 +61,7 @@
         </ul>
       <h1 id="title"><a href="index.html">{{ site.locales[locale].title }}</a></h1>
 
-      
+
     </div>
 
 
@@ -94,11 +91,12 @@
       <div class="container">
         <div class="row">
           <div class="span6">
-            {{ site.locales[locale].title }} {{ site.locales[locale].collaborationbetween }} <a href="http://wbi.worldbank.org/wbi/">{{ site.locales[locale].worldbank }}</a> {{ site.locales[locale].andthe }} <a href="http://okfn.org">Open Knowledge Foundation</a>, {{site.locales[locale].withcontribution }}<a href="http://www.assoal.org">{{ site.locales[locale].assoal }}</a>.
+            {{ site.locales[locale].title }} {{ site.locales[locale].collaborationbetween }} <a href="http://wbi.worldbank.org/wbi/">{{ site.locales[locale].worldbank }}</a> {{ site.locales[locale].andthe }} <a href="http://okfn.org">Open Knowledge International</a>, {{site.locales[locale].withcontribution }}<a href="http://www.assoal.org">{{ site.locales[locale].assoal }}</a>.
           </div>
-          <div class="offset2 span4">
+          <div class="offset1 span5">
             <ul>
               <li><a href="about.html">{{ site.locales[locale].about }}</a>: {{ site.locales[locale].intro }}</li>
+              <li><a href="https://okfn.org/privacy-policy/">{{ site.locales[locale].privacy }}</a></li>
               <li><a href="contribute.html">{{ site.locales[locale].contribute }}</a> {{ site.locales[locale].localcouncilinfo }}</li>
               <li><a href="https://github.com/openspending/cameroon.openspending.org">{{ site.locales[locale].sourcecode }}</a></li>
             </ul>
@@ -110,23 +108,10 @@
 
   <script>
     (function ($) {
-      window.qTipConfig = { style: { name: 'light', tip: true }, 
+      window.qTipConfig = { style: { name: 'light', tip: true },
                     position: { corner: { target: 'bottomMiddle', tooltip: 'topMiddle' }}};
       $('a[title]').qtip(qTipConfig);
     }(jQuery));
-  </script>
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-8271754-50']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
   </script>
 </body>
 </html>

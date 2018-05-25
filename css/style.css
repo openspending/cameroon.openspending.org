@@ -152,6 +152,7 @@ footer {
     height:80px;
     color: #fff;
     padding-top: 2em;
+    padding-bottom: 2em;
     background-color: #475c57;
     margin: 30px 0 0 0;
 }
@@ -196,12 +197,12 @@ footer a:hover {
 }
 
 #nav-menu li {
-    float: left; 
+    float: left;
     margin-right: 10px;
 }
 
 #nav-menu li.item {
-    border-right: 1px solid #666666; 
+    border-right: 1px solid #666666;
     padding-right: 10px;
 }
 
@@ -494,10 +495,10 @@ footer a:hover {
 }
 
 .council #cm-budget-table {
-    border: 0px; 
+    border: 0px;
     cellpadding: 4px;
     margin: 16px;
-    
+
 }
 
 .council .left-column {
