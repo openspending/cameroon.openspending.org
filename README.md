@@ -20,7 +20,7 @@ Generate the site
 
 The site can be generated with this command from the repository root: 
 
-    jekyll --server --auto 
+    jekyll serve --watch 
 
 This will run an HTTP server at port 4000 to serve the site. 
 
